@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <title>Foire aux Cartographie des questions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Comment voulez-vous créer gratuitement des cartes avec des milliers d&#39;endroits? Et d&#39;autres questions cartographie commune, géocodage en particulier en vrac.">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+    <link rel="stylesheet" href="/css/responsive-video.css">
+
+    <style>
+
+        html,
+        body {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+        }
+
+
+        /* header stuff */
+
+        #background {
+            background: url("/img/emm_home_img.png") no-repeat scroll 0 100% transparent;
+
+            float: left;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        #banner {
+            /* background: url("header_bg.png") repeat-x scroll 0 100% #E5E5E5;    */
+            /*  background: url("header_bg.png") repeat-x scroll 0 100% blue;      */
+            background-color: #E7E7E7;
+            float: left;
+            width: 100%;
+            min-height: 70px;
+        }
+
+        #navHeader {
+            float: right;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+
+        #navHeader ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navHeader li {
+            display: inline;
+            margin-left: 1px;
+        }
+
+        #background h1 {
+            float: left;
+            height: 50px;
+            margin: 0;
+            width: 300px;
+        }
+
+
+        #spacing {
+            height: 80px;
+        }
+
+
+        #header2 h1 span {
+            left: -500em;
+            position: absolute;
+        }
+
+
+        #footer {
+            min-height: 60px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+
+        }
+
+        li.footerItem {
+            display: inline;
+            white-space:nowrap;
+            padding-right: 5px;
+        }
+
+        ul.footerList {
+            display: inline-block;
+            margin: 20px 0 10px 25px;
+            padding: 0       ;
+        }
+
+        textarea, input[type="text"] {
+            width: 300px;
+        }
+
+
+        @media (max-width: 979px) {
+            #spacing {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #banner {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #spacing {
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            textarea, input[type="text"] {
+                width: 206px;
+            }
+        }
+
+
+
+
+        /* Wrapper for page content to push down footer */
+        #container {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -60px;
+        }
+        .container .credit {
+            margin: 20px ;
+        }
+
+        #sendMessageForm > p > label {
+            margin-bottom: 0px;
+        }
+        #sendMessageForm > p {
+            margin: 0;
+        }
+
+        #sendMessageForm > p > span {
+            margin-left: 5px;
+            background-color: red;
+            color: white;
+        }
+
+
+        #push {
+            height: 60px;
+        }
+
+        .clickDiv {
+            color: #0088CC;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.js" type="text/javascript"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+
+                <li id="easyMaps" ><a href="/fr/" id="homeLink">Plans faciles</a></li>
+                <li id="advancedMaps"><a href="/fr/advanced" id="advancedLink">Maps Recherche avancée</a></li>
+                <li id="support" class="active"><a href="/fr/support/" id="featuresLink">Soutien</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="/fr/contact" id="contactLink">Contactez nous</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div id="mainContent">
+        <div class="row-fluid">
+            <div class="span1">   <!--left nav        -->
+            </div>
+            <div class="span10">
+
+                <div class="row-fluid" >
+                    <div class="span3" >
+                        <div>
+                            <ul class="nav nav-list bs-docs-sidenav affix">
+                                <li class=""><a href="/fr/contact" title="Contactez nous"><i class="icon-chevron-right"></i>Contactez nous</a></li>
+
+
+                                <li class="active"><a href="/fr/faq/" title="Questions fréquemment posées"><i class="icon-chevron-right"></i>FAQ</a></li>
+                                <li class=""><a href="/fr/findMyMaps" title="Trouvez toutes vos cartes par adresse e-mail"><i class="icon-chevron-right"></i> Trouvez vos cartes</a></li>
+                                <li class=""><a href="/fr/tools/pdf/" title="Convertir une image en un fichier pdf"><i class="icon-chevron-right"></i> Image to PDF</a></li>
+
+                                <li class=""><a href="/fr/support/privacy-policy.html" title="politique de confidentialité"><i class="icon-chevron-right"></i> politique de confidentialité</a></li>
+                                <li class=""><a href="/fr/tools/url-encoder.html" title="Encoder vos urls"><i class="icon-chevron-right"></i>Encoder Url</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="span9">
+
+                        <h4>Questions courantes et leurs réponses (FAQ)</h4>
+
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#how-many-address-can-i-map">
+                                        Combien d&#39;adresses puis-je ajouter à une carte?
+                                    </a>
+                                </div>
+                                <div id="how-many-address-can-i-map" class="accordion-body collapse ">
+                                    <div class="accordion-inner">
+                                        Vous pouvez ajouter plus de 10.000 emplacements uniques par jour à votre carte. Il faudra des heures pour les géocoder, mais il est faisable. Si vous avez déjà la latitude et la longitude, les données peuvent être ajoutés en moins de 5 secondes.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#map-over-250-locations">
+                                        Comment puis-je ajouter plus de 250 articles à une carte?
+                                    </a>
+                                </div>
+                                <div id="map-over-250-locations" class="accordion-body collapse in">
+                                    <div class="accordion-inner">
+
+                                        <p> Vous pouvez ajouter des milliers d&#39;emplacements par jour à votre carte. La limite est d&#39;au moins 10.000 emplacements.</p>
+
+                                        <p>Seuls les 250 adresses à la fois peuvent être traitées, après 250 emplacements géo-codage va à une exploration.
+                                        </p>
+
+                                        <h5> Regardez la vidéo de l&#39;échantillon de la façon de mapper des centaines ou des milliers d&#39;articles.</h5>
+                                        <div class="flex-video widescreen" temprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                            <span style="display: none;" itemprop="name">How to make a map with over 500 locations</span>
+                                            <meta itemprop="duration" content="T04M09S" />
+                                            <meta itemprop="thumbnailURL" content="http://i.ytimg.com/vi/obTs0HwnVKo/hqdefault.jpg" />
+                                            <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/obTs0HwnVKo" />
+                                                <iframe  src="https://www.youtube.com/embed/obTs0HwnVKo" frameborder="0" allowfullscreen></iframe>
+                                            <span style="display: none;" itemprop="description">Make a map with easymapmaker.com with over 500 locations from your excel or other spreadsheet data.  Go to http://www.easymapmaker.com to make your own map.</span>
+                                            </div>
+
+
+
+
+
+                                        <p>Une fois que 250 adresses sont effectuées, enregistrer votre carte et un lien vers la masse géocodage seront affichés. Cliquez sur ce lien et les emplacements seront automatiquement géo-codées par lots de 250 et enregistrées automatiquement pour vous. Une fois toutes les adresses ont être géocodées la page d&#39;édition sera chargé. Avec licence gratuite de Google, il peut prendre plus d&#39;une heure pour traiter 5.000 adresses.
+                                        </p>
+
+
+                                        <!--  Copy all your data into the form and map it.  After saving your map, a url to bulk geocode the remaining items will be shown.
+                                          The bulkgeo page will process 250 unique addresses, save the data then reload the page and go again.  Once it is done, it will redirect you to the edit page.abs
+                                          If you have more than 2500 unique addresses, you will need to save the bulkgeo url (it's the same as the edit page url but with bulkgeo instead of edit) and
+                                          have your items process the next day?-->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#free-mapping-service">
+                                        Quoi de neuf, pourquoi votre service gratuit?
+                                    </a>
+                                </div>
+                                <div id="free-mapping-service" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Notre service est 100% gratuit. Nous ne payons google quelque chose à utiliser leur API. Notre équipe fait de l&#39;argent grâce à leur travail quotidien. Si vous voulez faire un don, vous pouvez.
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="2NWFJ9V2XVSU4">
+                                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#custom-logo">
+                                        Puis-je remplacer le logo EasyMapMaker sur ma carte?
+                                    </a>
+                                </div>
+                                <div id="custom-logo" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Oui. Ajoutez le paramètre suivant à votre carte: logo = &lt;url codée&gt;. Vous pouvez encoder votre URL en utilisant notre
+										<a href="/fr/tools/url-encoder.html">
+										outil d&#39;encodage URL
+										</a>.
+                                        <p>Un exemple est la suivante:<a
+                                            href="http://www.easymapmaker.com/map/58890adb2af63457f31769e607d7501f?logo=http%3A%2F%2Fwww.easymapmaker.com%2Fcluster_images%2Fsemi_opaq%2F45_blue.png" target="_blank"> 
+											</p>
+                                            http://www.easymapmaker.com/map/58890adb2af63457f31769e607d7501f?logo=http%3A%2F%2Fwww.easymapmaker.com%2Fcluster_images%2Fsemi_opaq%2F45_blue.png</a>
+                                        <p/>
+                                        <p>Une autre façon d&#39;ajouter un logo personnalisé est d&#39;utiliser des cartes de pointe et de télécharger un logo dans la section Personnalisation.</p>
+                                        <p>La taille de l&#39;image par défaut est 45x45 pixels et le remplacement devrait idéalement être la même.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#custom-css">
+                                        Puis-je changer la police ou ajouter un style personnalisé à ma carte?
+                                    </a>
+                                </div>
+                                <div id="custom-css" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Oui. Ajoutez le paramètre suivant à votre carte: css = &lt;url codée&gt;. Vous pouvez encoder votre URL en utilisant notre
+										<a href="/fr/tools/url-encoder.html">outil d&#39;encodage URL</a>.
+                                       Un exemple est la suivante: <a
+                                            href="http://www.easymapmaker.com/map/58890adb2af63457f31769e607d7501f?css=http%3A%2F%2Fwww.easymapmaker.com%2Fcssoverride%2Fhideimg.css" target="_blank">
+                                            http://www.easymapmaker.com/map/58890adb2af63457f31769e607d7501f?css=http%3A%2F%2Fwww.easymapmaker.com%2Fcssoverride%2Fhideimg.css</a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#delete-edit-map">
+                                        Comment puis-je mettre à jour ou supprimer une carte existante?
+                                    </a>
+                                </div>
+                                <div id="delete-edit-map" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                       Si vous avez entré une adresse email lorsque vous avez enregistré votre carte. Il aurait dû inclure une URL pour modifier la carte. La carte peut également être retiré de cette page. Parfois, les e-mails iront dans le dossier spam ou courrier indésirable, de sorte que vous pouvez vérifier là aussi. Si vous voulez une liste de toutes vos cartes pour une adresse de courriel, allez à <a href="/findMyMaps" target="_blank">http://www.easymapmaker.com/findMyMaps</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#custom-map-code">
+                                        Faites-vous des personnalisations?
+                                    </a>
+                                </div>
+                                <div id="custom-map-code" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Non, nous ne ferons rien personnalisé. Nous allons ajouter des fonctionnalités en fonction des demandes. Il y a beaucoup de fonctions que nous prévoyons d&#39;ajouter, mais il n&#39;y a pas eu de demandes pour eux. Sentez-vous libre de demander des fonctions dans notre <a href="/contact" target="_blank">page de contact</a>.
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#google-hosted-map">
+                                        Comment puis-je consulter mes données sur google maps?
+                                    </a>
+                                </div>
+                                <div id="google-hosted-map" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Si vous avez généré le kml, vous pouvez l&#39;importer sur une carte google (hébergé par google).
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#problem-with-map">
+                                        Il y a un problème avec la fonctionnalité de _fill_in_the_blank (Il y a un bug).
+                                    </a>
+                                </div>
+                                <div id="problem-with-map" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        S&#39;il vous plaît laissez-nous savoir via notre <a href="/contact">page de contact</a> si quelque chose ne fonctionne pas. Parfois, Google va faire un changement et casser quelque chose; parfois nous faire un changement et casser quelque chose, et d&#39;autres fois quelque chose ne fonctionne tout simplement pas comme il est censé le faire.
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#hide-data">
+                                        Est-il possible de ne pas afficher une liste de données ci-dessous la carte?
+                                    </a>
+                                </div>
+                                <div id="hide-data" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Oui, vous pouvez désactiver les données sur le bas de la page. Si vous allez à la page d&#39;édition (qui devrait être dans un courriel envoyé après l&#39;enregistrement de la carte), il est l&#39;article d&#39;un &#39;Plan Mise en page&#39;. Vous avez la possibilité de désactiver les données montrant en dessous de la page.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#map-no-address">
+                                        Puis-je faire une carte sans adresse?
+                                    </a>
+                                </div>
+                                <div id="map-no-address" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Oui. Si vous avez un lieu de latitude et de longitude, celles-ci peuvent être mappé rapidement. Si vous avez seulement une partie d&#39;une adresse, comme un code postal ou une ville, état, puis celles-ci peuvent être mappé ainsi.
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#countries-supported">
+                                        Quels sont les pays pris en charge?
+                                    </a>
+                                </div>
+                                <div id="countries-supported" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Google Maps prend en charge les pays figurant sur leur <a href="https://developers.google.com/maps/coverage" target="_blank">Carte Page de couverture</a>.
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#dynamic-map-from-database">
+                                        Puis-je tirer coordonnées à partir d&#39;une base de données pour créer une carte dynamique?
+                                    </a>
+                                </div>
+                                <div id="dynamic-map-from-database" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        No. A cette époque notre solution ne supporte pas tirer des données d&#39;une base de données.
+
+                                        <p>Voici un extrait si vous voulez faire rapidement votre propre solution pour obtenir des données à partir d&#39;une base de données sur une carte:</p>
+                                        <a href="https://developers.google.com/maps/articles/phpsqlajax_v3" target="_blank">échantillon Google de base de données</a>.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#mobile-maps">
+                                       Faites votre travail de cartes sur les appareils mobiles et les tablettes?
+                                    </a>
+                                </div>
+                                <div id="mobile-maps" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Oui. La plupart des appareils mobiles et tablettes sont pris en charge. Cependant, certaines fonctions ne sont pas entièrement pris en charge sur tous les appareils.
+                                        <p>cartes mobiles / tablettes sont également en mesure d&#39;utiliser les services de localisation lorsqu&#39;il est activé.</p>
+
+                                        <p>Des plans de construction et d&#39;édition peuvent être effectuées sur les appareils mobiles et les tablettes, mais il est déconseillé et non pris en charge.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#donate">
+                                        Puis-je vous acheter une bière ou un café?
+                                    </a>
+                                </div>
+                                <div id="donate" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                       Nous acceptons maintenant les dons, mais il ne faut pas.
+
+
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="2NWFJ9V2XVSU4">
+                                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#map-group-colors">
+                                       Comment puis-je attribuer des couleurs différentes pour les différents éléments dans mes données établies de sorte qu&#39;ils peuvent être identifiés sur la carte.?
+                                    </a>
+                                </div>
+                                <div id="map-group-colors" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                      Les couleurs sont automatiquement attribués sur la base de la colonne que vous définissez comme le groupe. Il y a jusqu&#39;à 10 (20 pour les cartes de pointe) de couleurs différentes qui sont utilisées. Si une colonne a plus de 10 (20 pour les cartes de pointe) valeurs uniques différentes, ils seront regroupés dans des gammes. Il est préférable de définir la plage vous et l&#39;utiliser pour le groupe (si vous avez plus de 10 valeurs uniques dans une colonne).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#map-pie-charts">
+                                       Comment puis-je obtenir des camemberts ma carte?
+                                    </a>
+                                </div>
+                                <div id="map-pie-charts" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Les graphiques circulaires sont activés automatiquement lorsque vous allumez le clustering et de définir un groupe de votre carte (voir la question ci-dessus pour les groupes).
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#map-remain-active">
+                                       Combien de temps mon plan restera actif?
+                                    </a>
+                                </div>
+                                <div id="map-remain-active" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Les cartes seront toujours actifs, sauf si elles ne sont pas modifiées ou vu dans les 90 derniers jours. Ils peuvent être supprimés en tout temps avant cela par la personne qui a fait la carte.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#print-image-pdf" href="#print-image-pdf">
+                                        Comment puis-je imprimer ma carte, l&#39;enregistrer comme une image ou un fichier PDF?
+                                    </a>
+                                </div>
+                                <div id="print-image-pdf" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <p>Pour enregistrer votre carte comme un fichier pdf, utilisez Google Chrome ou Safari d&#39;imprimer la carte et l&#39;enregistrer comme un fichier PDF au lieu de l&#39;imprimer.</p>
+
+
+                                        Vous pouvez enregistrer votre carte comme une image en prenant une capture d&#39;écran de votre carte (alt + écran d&#39;impression fonctionne normalement, ou essayer ctrl + écran d&#39;impression). Une fois que vous avez une capture d&#39;écran, vous devriez être capable de le coller dans un outil d&#39;édition d&#39;images tels que paint.net. La taille de la carte peut être aussi grande que la fenêtre de votre navigateur Web si vous ne l&#39;intégrer. Si vous enregistrez votre carte comme une image et que vous voulez convertir au format PDF, vous pouvez utiliser notre <a href="/tools/pdf/" title="convert your image to a pdf file"> image pour l&#39;outil de conversion de pdf</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span1">   <!--right nav        -->
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="push"></div>
+
+</div>
+<!-- end container-->
+
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        //console.log( "ready!" );
+
+        var hashElement = window.location.hash.substr(1);
+
+        if(hashElement.length > 0 ) {
+            $('#map-over-250-locations').removeClass('in');
+
+            if(  $('#' + hashElement).length > 0)
+            {
+                $('#' + hashElement).addClass('in');
+            }
+        }
+
+    });
+
+    /*$(".accordion-toggle").click(function() {
+   // alert("click called");
+    return false;
+    });(*/
+
+
+</script>
+
+
+   <div id="footer">
+       <div>
+		
+			<ul class="footerList">
+			  <li class="footerItem"><a href="/fr/">Accueil</a></li>
+			  <li class="footerItem"><a href="/fr/features/">Caractéristiques</a></li>
+			  <li class="footerItem"><a href="/fr/faq/">FAQ</a></li>
+			  <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+			  <li class="footerItem"><a href="/fr/contact">Contactez nous</a></li>
+              <li class="footerItem"><a href="/fr/support/privacy-policy.html">politique de confidentialité</a></li>
+			</ul>
+		   
+		   
+       </div>
+   </div>
+
+
+</body>
+</html>
+

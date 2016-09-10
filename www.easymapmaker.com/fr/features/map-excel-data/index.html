@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="fr" lang="fr">
+<head>
+    <title>Faire une carte à partir d&#39;Excel (XLS ou XLSX) ou d&#39;autres données de feuille de calcul</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Créer une carte à partir d&#39;adresses Excel, les codes postaux, les codes postaux, les villes, états, pays ou d&#39;autres données d&#39;un tableur, d&#39;ajouter des filtres">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+    <style>
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../fr.1.html" id="homeLink">Plans faciles</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Maps Recherche avancée</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Caractéristiques</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contactez nous</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Caractéristiques</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Traduire les informations d&#39;adresse en coordonnées cartographiables"><i class="icon-chevron-right"></i> géocodage d&#39;adresses</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Ajouter des filtres de carte et carte personnalisée étiquettes"><i class="icon-chevron-right"></i> Maps Recherche avancée</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Faites des Google Maps sans codage"><i class="icon-chevron-right"></i> Personnalisés Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Trouver les tendances géographiques et faire plus avec vos données"><i class="icon-chevron-right"></i> L&#39;analyse des données</a></li>
+                            <li class=""><a href="../directions/index.html" title="Obtenir les directions sur toutes vos cartes"><i class="icon-chevron-right"></i> Directions</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Modifier les paramètres et la carte à l&#39;aide de notre page d&#39;édition" ><i class="icon-chevron-right"></i> Modifier Plans</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Ajouter des cartes à votre site sans effort"><i class="icon-chevron-right"></i> Plans intégrés</a></li>
+                            <li class="active"><a href="index.html" title="Carte vos données Excel avec une pâte et un clic de bouton"><i class="icon-chevron-right"></i> Cartes de données Excel</a></li>
+                            <!-- <li class=""><a href="/fr/features/ip_address_geocoding/" title="Utilisez notre maison services IP de géolocalisation pour mapper les adresses IP"><i class="icon-chevron-right"></i> Adresse IP géocodage</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Générer un document KML de vos données excel"><i class="icon-chevron-right"></i> KML pour Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Ajouter de grandes quantités de données sur votre carte."><i class="icon-chevron-right"></i> Grands ensembles de données</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="support de la carte pour iPhone, iPad, Android et autres appareils populaires"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="D&#39;excellents outils pour les agents immobiliers"><i class="icon-chevron-right"></i>Outils immobiliers</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Faire des cartes pour des rapports personnalisés"><i class="icon-chevron-right"></i> Compte-rendu</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Recherche et de filtrage mappés données"><i class="icon-chevron-right"></i> Recherche et filtrage</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="le support de SSL et les données de carte sécurisé"><i class="icon-chevron-right"></i> Plans sécurisés</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="overview">
+                        <div class="page-header">
+                            <h2>Mettez vos données Excel et la feuille de calcul dans un Plan</h2>
+                        </div>
+
+                        <p><a href="../../../fr.1.html">EasyMapMaker</a> Notre service a été conçu pour combler deux applications populaires (données de feuille de calcul Excel et Google Maps) et de les transformer en une seule. Prenez vos données Excel ou d&#39;autres applications de feuille de calcul pour le prochain niveau de l&#39;adresse de la cartographie ou des données de géolocalisation. Vous pouvez mapper des nombreux types de lieux, dont les suivants: les pays, les états (et les provinces), les villes, zip (et postaux) codes, des rues et des adresses spécifiques de la rue. Le plus spécifique l&#39;adresse, l&#39;écoute la broche plus fine machine sera mis sur la carte. Si vous pouvez copier et coller des données, vous pouvez mapper.
+                        </p>
+
+
+                        <p>Utiliser des cartes de pointe lors du filtrage, dissimulation de données, texte de direction, filtrage à distance basé sur, ou d&#39;exporter les données sur la carte est souhaitée. <p>
+                        <h5>filtres</h5>
+                        Nos filtres de données de regulat permettent jusqu&#39;à 200 éléments à filtrer sur et il peut y avoir jusqu&#39;à 12 filtres. Multiselect filtre tous les tous les éléments uniques à filtrer sur moins qu&#39;ils sont vides.
+                        <h5>Naviagation (directions) et Distance filtrage</h5>
+                            La navigation direction gauche (plus d&#39;options) inclut l&#39;option d&#39;affichage des directions sur la carte ainsi que le tour détaillée un itinéraire d&#39;un point à un autre. Le filtre permet à proximité d&#39;un cercle à afficher (si désiré), ainsi qu&#39;un filtre en fonction de la distance à partir d&#39;un emplacement. La distance de cet emplacement peut être affiché dans les données sous la carte.
+                        </p>
+
+
+
+
+                        <!-- <p> TODO: add a sample map here</p> -->
+                        <!-- http://www.easymapmaker.com/map/sample-direction-map  -->
+
+                        <h3>cartes complexes peuvent maintenant être rendus facilement</h3>
+                        <ol>
+                            <li>Copier et coller des données de votre feuille de calcul dans <a href="../../../fr.1.html">EasyMapMaker</a></li>
+                            <li>Définissez les options appropriées (en option)</li>
+                            <li>(Facultatif pour les cartes de pointe) Réglez les éléments à afficher et filtres</li>
+                            <li>Cliquez sur &quot;Faire de carte&quot; (tout est fait!)</li>
+                        </ol>
+
+                        <!-- <p> TODO: add a sample video here</p> -->
+
+
+                        <p>Prenez votre Excel (tableur) des données au niveau suivant en le mettant sur une carte et d&#39;ajouter vos propres filtres personnalisés.</p>
+
+                    </section>
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+            <ul class="footerList">
+                <li class="footerItem"><a href="../../../fr.1.html">Accueil</a></li>
+                <li class="footerItem"><a href="../../features.1.html">Caractéristiques</a></li>
+                <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+                <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+                <li class="footerItem"><a href="../../contact.html">Contactez nous</a></li>
+                <li class="footerItem"><a href="../../support/privacy-policy.html">politique de confidentialité</a></li>
+            </ul>
+        </div>
+
+
+
+</body>
+
+</html>

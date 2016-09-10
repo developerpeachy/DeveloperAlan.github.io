@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <title>Karte mehrere Standorte und große Datenmengen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karte mehrere Standorte auf einem kundenspezifischen Google-Karte schnell und einfach. Sie können Tausende von Gegenständen in einer Zeit von Excel (xls) Tabellendaten zuordnen">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+    <link rel="stylesheet" href="../../../css/responsive-video.css">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+        /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+        #GeoAddresses {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        #GeoAddresses > ol > li{
+            margin-bottom: 7px;
+        }
+        #GeoAddresses > p {
+            margin-bottom: 15px;
+        }
+                                   */
+        @media (max-width: 480px) {
+            #ipadImg {
+                max-width: 300px;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../de.1.html" id="homeLink">einfache Karten</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Erweiterte Karten</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Eigenschaften</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Kontaktieren Sie uns</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Eigenschaften</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Übersetzen Adressinformationen in mappable Koordinaten"><i class="icon-chevron-right"></i> Adresse Geokodierung</a></li>
+                            <li class=""><a href="../advanced/index.html" title="In Karte Filter und kundenspezifische Kartenbeschriftungen"><i class="icon-chevron-right"></i> Erweiterte Karten</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Machen Sie Kundenspezifische Google Maps ohne Codierung"><i class="icon-chevron-right"></i> Benutzerdefinierte Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Finden geographische Trends und mehr tun, mit Ihren Daten"><i class="icon-chevron-right"></i> Datenanalyse</a></li>
+                            <li class=""><a href="../directions/index.html" title="Route auf das Kartenmaterial"><i class="icon-chevron-right"></i> Wegbeschreibung</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Bearbeiten Sie Ihre Einstellungen und Stadtplan unsere Bearbeitungsseite mit" ><i class="icon-chevron-right"></i> Bearbeiten Karten</a></li>
+                            <li class=""><a href="../embedded/index.html" title="In Karten auf Ihre Website mühelos"><i class="icon-chevron-right"></i> Embedded Karten</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Ordnen Sie Ihre Excel-Daten mit einer Paste und eine Schaltfläche klicken"><i class="icon-chevron-right"></i> Excel-Datenkarten</a></li>
+                            <!-- <li class=""><a href="/de/features/ip_address_geocoding/" title="Nutzen Sie unser in Haus ip Geolocation-Dienst IP-Adressen zuzuordnen"><i class="icon-chevron-right"></i> IP-Adresse Geokodierung</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Generieren Sie eine KML-Dokument von Ihrem Excel-Daten"><i class="icon-chevron-right"></i> KML für Google Earth</a></li>
+                            <li class="active"><a href="index.html" title="In großen Mengen von Daten auf Ihren Karten."><i class="icon-chevron-right"></i> Große Datenmengen</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="Karte Unterstützung für iPhone, iPad, Android und andere beliebte Geräte"><i class="icon-chevron-right"></i>Mobile maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="Große Werkzeuge für Immobilienmakler"><i class="icon-chevron-right"></i>Immobilien Extras</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Machen Sie Karten für benutzerdefinierte Berichte"><i class="icon-chevron-right"></i> Berichterstattung</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Such- und Filterkennfelddaten"><i class="icon-chevron-right"></i> Suchen und Filtern</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="SSL-Unterstützung und sichere Kartendaten"><i class="icon-chevron-right"></i> Sichere Karten</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="GeoAddresses">
+                        <div class="page-header">
+                            <h2>Karte mehrere (oder Tausende) von Standorten auf einer Karte kostenlos</h2>
+                        </div>
+
+                        <p>Wie kann man Hunderte, wenn nicht Tausende von Standorten (Postleitzahlen, Städte, Staaten, Postleitzahlen, Ländern, Längen- und Breitengrade, etc.) auf der Karte schnell? EasyMapMaker.com wurde für diesen Zweck entwickelt wurde. Wenn Sie kopieren und Hunderte oder Tausende von Elementen einfügen, können Sie diese Karte.</p>
+
+                        <!-- <p> TODO: add a sample video here</p> -->
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <p> Schauen Sie sich die Beispiel-Video, wie Hunderte oder Tausende von Artikeln abzubilden.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-video widescreen" temprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                            <span style="display: none;" itemprop="name">How to make a map with over 500 locations</span>
+                            <meta itemprop="duration" content="T04M09S" />
+                            <meta itemprop="thumbnailURL" content="http://i.ytimg.com/vi/obTs0HwnVKo/hqdefault.jpg" />
+                            <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/obTs0HwnVKo" />
+                            <iframe  src="https://www.youtube.com/embed/obTs0HwnVKo" frameborder="0" allowfullscreen></iframe>
+                            <span style="display: none;" itemprop="description">Make a map with easymapmaker.com with over 500 locations from your excel or other spreadsheet data.  Go to http://www.easymapmaker.com to make your own map.</span>
+                        </div>
+
+                        <p>Google Maps ermöglicht die Zuordnung von bis zu 100.000 Stück auf maps.Our Dienst nicht eine Obergrenze für die Menge an Daten setzen die zugeordnet werden können, so können Sie erlaubt auf die maximale Datenmenge Karte auf.
+                        </p>
+                        <p>Warum für Dienstleistungen bezahlen, die die Datenmenge begrenzen, die verwendet werden können, wenn Sie mehr thandata, dass ältere Versionen von Excel abbilden würde sogar unterstützen?
+                        </p>
+                        <p>
+                            Um große Mengen von Daten zugeordnet werden, alle einzelnen Marker können nicht sichtbar. Cluster oder die Gruppierung der Nähe Marker wird unterstützt und automatisch eingestellt, wenn es mehr als 150 Artikel. Die Karten können 2500 Markierungen der Regel werden auf dem Browser ohne Performance-Probleme ab. Kombination Marker, die so dicht wie 100 in einem Cluster werden kann, ermöglicht leicht für große Daten abgebildet werden. Zoomen auf die Karte ermöglicht es, die einzelnen Marker sichtbar zu sein.
+                        </p>
+
+
+                        <h3>
+                            Es gibt 2 Möglichkeiten larges Datenmengen zur Karte
+                        </h3>
+                        <h5>1. Daten mit Längen- und Breitenkoordinaten</h5>
+                        <ol>
+                            <li>Achten Sie darauf, Ihre Daten über die erforderlichen Längen- und Breitenkoordinaten</li>
+                            <li>Machen Sie eine Karte auf unserer <a href="../../../de.1.html">regulär</a> oder <a href="../../advanced.html">fortgeschritten</a> Kartenerstellung Seite</li>
+                            <li>Save the Map</li>
+                        </ol>
+
+                        <h5 id="bulkgeo">2. Daten mit Adressen (keine Längen- und Breitenkoordinaten)</h5>
+                        <p>Die zweite Option ist, wenn Ihre Daten nicht Längen- und Breitengrade hat.</p>
+                        <ol>
+                            <li>Machen Sie eine Karte auf unseren regelmäßigen oder erweiterte Kartenherstellung Seite</li>
+                            <li>Speichern Sie die Karte nach 250 Koordinaten haben kartiert</li>
+                            <li>Klicken Sie auf den Link, der automatisch auf Masse-geo erzeugt wird, um die restlichen Daten (gelb markierten Teil in Bild)
+                                <br>
+                                <img src="http://www.easymapmaker.com/img/features/bulk_url_highlighted_50.png">
+                            </li>
+                            <li>Geokodierte Stellen werden automatisch gespeichert, nachdem alle 250 Standorten verarbeitet wurden.</li>
+
+                            <li>Nachdem alle Stellen verarbeitet worden sind, wird die Bearbeitungs Karte Seite geladen keine endgültige Anpassungen vorzunehmen.</li>
+
+                        </ol>
+
+                       <!-- <p>TODO: add some images</p> -->
+
+
+
+                        <p></p>
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../de.1.html">Zuhause</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Eigenschaften</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Kontaktieren Sie uns</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">Datenschutz-Bestimmungen</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

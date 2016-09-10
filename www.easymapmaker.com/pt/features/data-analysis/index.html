@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="pt" lang="pt">
+<head>
+    <title>Spreadsheets mapa para análise de dados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fazer análise de dados complexos com baseados em localização de dados e adicionar filtros para ver seus dados de uma forma totalmente nova">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+
+    <style>
+
+        #outMapDiv {
+            width: 600px;
+        }
+
+        @media (max-width: 767px) {
+            #outMapDiv {
+                width: 400px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            #outMapDiv {
+                width: 300px;
+            }
+        }
+                              /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+
+        section > p {
+            margin-bottom: 15px;
+        }
+                                       */
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../pt.1.html" id="homeLink">Mapas fáceis</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Mapas avançados</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Características</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contate-nos</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Características</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Traduzir informações de endereço em coordenadas mapeáveis"><i class="icon-chevron-right"></i> Address Geocoding</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Adicionar filtros mapa e etiquetas de mapa personalizado"><i class="icon-chevron-right"></i> Mapas avançados</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Faça o costume do Google Maps sem qualquer codificação"><i class="icon-chevron-right"></i> Personalizados do Google Maps</a></li>
+                            <li class="active"><a href="index.html" title="Encontrar as tendências geográficas e fazer mais com seus dados"><i class="icon-chevron-right"></i> Análise de dados</a></li>
+                            <li class=""><a href="../directions/index.html" title="Obter instruções sobre todos os seus mapas"><i class="icon-chevron-right"></i> Instruções</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Edite suas configurações e mapa usando a nossa página de edição" ><i class="icon-chevron-right"></i> Edit Maps</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Adicionar mapas para o seu site sem esforço"><i class="icon-chevron-right"></i> Mapas embutidos</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Mapear os dados do Excel com uma pasta e um clique de botão"><i class="icon-chevron-right"></i> Mapas de dados do Excel</a></li>
+                            <!-- <li class=""><a href="/pt/features/ip_address_geocoding/" title="Use o nosso em casa serviço de geolocalização ip para mapear endereços IP"><i class="icon-chevron-right"></i> IP Address Geocoding</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Gerar um documento KML a partir de seus dados excel"><i class="icon-chevron-right"></i> KML para o Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Adicionar grandes quantidades de dados para os seus mapas."><i class="icon-chevron-right"></i> Grandes conjuntos de dados</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="suporte Mapa para iPhone, iPad, Android e outros dispositivos populares"><i class="icon-chevron-right"></i>Mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="Ótimas ferramentas para agentes imobiliários"><i class="icon-chevron-right"></i>Ferramentas de imóveis</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Fazer mapas para relatórios personalizados"><i class="icon-chevron-right"></i> relatórios</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Pesquisar e filtrar dados mapeada"><i class="icon-chevron-right"></i> Pesquisando e Filtragem</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="suporte SSL e os dados de mapa seguro"><i class="icon-chevron-right"></i> Mapas de seguros</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="DataAnalysis">
+                        <div class="page-header">
+                            <h2>Visualizar e mapear os dados de localização para encontrar tendências</h2>
+                        </div>
+
+                        <p>Adicionar outro elemento para os dados da planilha típicos, visualizando os dados de localização em um mapa. Os mapas podem ser criados com filtros para permitir a análise ainda melhor. Mapeamento, filtragem e visualização de dados é rápido e fácil.</p>
+
+                        <p>
+                        <div class="outer-div-center">
+                        <div class="inner-div-center" id="outMapDiv">
+                        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="../../../map/cities_median_income.html"/>
+                        </iframe>
+                        </div>
+                    </div></p>
+
+                        <p>O exemplo acima mostra cidades com altos rendimentos medianos e filtragem ativado por uma série de a população da cidade.</p>
+
+                        <p><a href="http://www.easymapmaker.com">EasyMapMaker</a> allows até 12 filtros para ser seleccionado a partir do separador mapas avançada. Até 200 itens pode ser filtrado. Excel faz a adição personalizada varia fácil, e EasyMapMaker permite que os intervalos para ser escondido de os dados resultantes.</p>
+
+                        <p>Os dados também podem ser agrupadas (ou categorizadas) e exibidas em um gráfico de pizza, quando o agrupamento está activado. Os dados são agrupados automaticamente em intervalos, se houver mais de 10 categorias. Categorizar os dados no mapa é tão fácil como a criação do grupo de guia das opções de mapa.</p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+		<li class="footerItem"><a href="../../../pt.1.html">Início</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Características</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">Perguntas frequentes</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contate-nos</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">política de Privacidade</a></li>
+    </ul>
+
+
+</div>
+
+</body>
+
+</html>

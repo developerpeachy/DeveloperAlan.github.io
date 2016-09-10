@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+
+<title>Create a map: easily map multiple locations from excel data - EasyMapMaker</title>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Map multiple locations from Excel (xls) spreadsheet data on a custom google map.  Create free maps. View maps on Mobile, Tablet, and Computers">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+
+    <meta name="apple-mobile-web-app-title" content="Map Maker">
+    <LINK REL="apple-touch-icon-precomposed" HREF="/apple-touch-icon.png" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-config" content="none"/>
+
+<link rel="alternate" hreflang="es" href="https://www.easymapmaker.com/es" />
+<link rel="alternate" hreflang="de" href="https://www.easymapmaker.com/de" />
+<link rel="alternate" hreflang="pt" href="https://www.easymapmaker.com/pt" />
+<link rel="alternate" hreflang="pl" href="https://www.easymapmaker.com/pl" />
+<link rel="alternate" hreflang="ja" href="https://www.easymapmaker.com/ja" />
+<link rel="alternate" hreflang="fi" href="https://www.easymapmaker.com/fi" />
+<link rel="alternate" hreflang="fr" href="https://www.easymapmaker.com/fr" />
+<link rel="alternate" hreflang="it" href="https://www.easymapmaker.com/it" />
+<link rel="alternate" hreflang="ko" href="https://www.easymapmaker.com/ko" />
+<link rel="alternate" hreflang="ru" href="https://www.easymapmaker.com/ru" />
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="image_src" href="http://www.easymapmaker.com/img/facebook_emm_180.png" />
+
+
+    <!--  -->  <link rel="stylesheet" href="https://www.easymapmaker.com/css/home.min.css">
+    <style>
+
+
+            .features img{
+                float: left;
+            }
+            .features h4{
+                margin-left: 20px;   padding-left: 10px;    padding-top: 20px;   overflow: hidden;
+            }
+            .features p{
+                display:inline-block;  margin-left: 20px;    overflow: hidden;  font-family: verdana;
+                font-size: 1.1em;
+            }
+
+        ul.footerList {
+            display: block;
+            list-style-type: none;
+            margin: 20px 0 10px 25px;
+            padding: 0 0 0 20px;
+            text-align: left;
+        }
+
+
+        li.footerItem {
+            display: block;
+
+        }
+
+        .index-social a div {
+            float: left;
+        }
+
+    </style>
+
+
+    <!--
+        -->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/lte-ie-8.css"><![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+    <!--
+
+
+    -->
+
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40200441-1', 'easymapmaker.com');
+        ga('send', 'pageview');
+
+    </script>
+
+
+    <!---->
+    <script src="compiled/main_index_control.js.min" type="text/javascript"></script>
+
+
+
+
+</head>
+<body onload="init();">
+
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+            <li id="easyMaps" class="active"><a href="/" id="homeLink" title="Create a basic map">Easy Maps</a></li>
+                <li id="advancedMaps"><a href="/advanced" id="advancedLink">Advanced Maps</a></li>
+                <li id="features"><a href="/features" id="featureLink">Features</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+            <li><a href="/contact" id="contactLink"  title="Contact us for any support issues">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+
+
+    <div id="mainBody">
+        <div  id="mainMapDiv" class="row-fluid">
+            <div class="span1" id="leftNav">
+
+            </div>
+            <!-- end div id="leftNav" -->
+
+            <div class="span10" id="mapCreateDiv">
+<div id="processForm" name="processForm" >
+
+                    <div id="spacing">
+
+                    </div>
+
+<!--  
+    <div class="outer-div-center" >
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3106532256460106"
+             data-ad-slot="4609867556"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+-->
+
+<div id="instructions" class="row" style="padding: 0;">
+    <div class="span2">
+        <div style="margin-top: 30px; text-align: right;">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="2NWFJ9V2XVSU4">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        </div>
+    </div>
+    <div  class="span10">
+        <div style="width: 80%;"><h5> Make an Easy Map in 3 simple steps: </h5>
+                            <ol>
+         <li>Copy and Paste your spreadsheet data into the table, or drag your excel file into the table (or use one of our samples).</li>
+                                <li>(Optional) Set Options</li>
+                                <li>Click &quot;Make Map&quot;.</li>
+                            </ol>
+                            <a id="demoVideoId" style="display: none;">Watch a sample video to see how easy mapping is.</a>
+        </div>
+                            <div class="flex-video widescreen" style="display:none;"  id="demoVideoDisplaySimple">
+                                <div class="youtube-player" data-id="fCTmHobORgk"></div>
+                            </div>
+
+                            <div class="flex-video widescreen" style="display:none;"  id="demoVideoDisplayAdvanced">
+                                <div class="youtube-player" data-id="fFE4rasTBsA"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="GeneratedData"></div>
+
+                    <div id="toggleDiv">
+
+                        <div id="prettyTable">
+                            <div id="outerDisplayTable">
+                                <table style="width: 100%" class="table table-bordered table-condensed" id="displayTable">
+
+                                </table>
+
+                            </div>
+
+
+
+
+
+                        </div> <!-- end pretty table div -->
+                        <div id="tableText"  style="display: none">
+
+                            <textarea title="" id="sourceData" ></textarea>
+
+
+
+                        </div>
+
+                        <div id="outerOverTable">
+                            <div id="overTableMessage">
+
+
+                            </div>
+                        </div>
+
+
+                    </div> <!-- end toggle div -->
+
+                    <div id="sample" style="text-align: center; width: 100%; background-color: rgba(64, 64, 64, 0.2);">
+                        <div id="innerSample" style="display: inline-block; "> Try using our sample data:
+                            <!-- <a id="useSample1">use sample 1</a>
+                             <a id="useSample2">use sample 2</a> -->
+                            <a id="useSample1" href="/samples/emm_sample_1.xls" target="_blank" title="use & download sample 1" rel="nofollow"> download sample 1</a>
+                            <a id="useSample2" target="_blank" href="/samples/emm_sample_2.xls" title="use & download sample 2" rel="nofollow">download sample 2</a>  </div>
+                        <div id="sample1_data" style="display: none" >
+                        </div>
+
+                        <div id="sample2_data" style="display: none" >
+                        </div>
+                    </div>
+
+
+                    <div id="statusStuff" >
+
+                        <div id="processingLine"><p></p>
+                            <div id="lineCount"> </div>
+                            <div id="lineVal"> </div> <p></p>
+                            <div id="timeRemaining"> </div>
+                        </div>
+
+                        <div id="outerProgressDiv" style="display: none; " class="progress progress-striped">
+                            <div style="width: 0%;" class="bar" id="progressDisplayDiv"></div>
+                        </div>
+
+                        <div id="buttons" >
+                            <p id="headerInst">Make sure the data includes headers and location information. </p>
+                            <p>  <button id="optionButton" class="btn btn-large btn-primary" style="width: 135px; white-space: nowrap;" type="button" autocomplete="off">Set Options</button>
+            <button id="makeMapButton" class="btn btn-large btn-caution" style="white-space: nowrap;" type="button" autocomplete="off">Make Map</button></p> </div>
+                    </div> <!-- end statusStuff div -->
+
+
+                    <div id="errorStuff" class="outer-div-center" style="display: none;">
+                        <div id="errorMessageDiv" class="alert" style="display: inline-block; margin-bottom: 5px; width: 75%;">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            Click the <strong>Show Errors</strong> button to view errors from geo-coding.
+
+                        </div>
+
+                        <div id="showHideError" style="padding-bottom: 5px;"><button id="errorButton" class="btn btn-mini btn-primary" style=" white-space: nowrap;" type="button">Show Errors</button></div>
+                        <div id="prettyErrorTable" class="outer-div-center" style="display: none; width: 75%;">
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="data2"></div>
+
+                <div  id="mapOptions" style="display: none">
+                    <div class="outer-div-center">
+                        <div id="optionDescriptionLabel" class="inner-div-center">Options have been automatically set, but they should be changed if anything is wrong.  Changing options can change the marker description sample.</div>
+                    </div>
+
+                    <div class="container">
+
+
+                        <div class="row">
+
+
+                            <div class="span6">
+                                <div id="outerSelectorData">
+                                    <div id="selectorData">
+                                        <label id="region_sel_label" for="region_sel">Region</label>
+                                        <select id="region_sel"  autocomplete="off">
+                                            <option value="">Auto-Detect</option>
+                                            <option value="ar">Argentina</option>
+                                            <option value="at">Austria</option>
+                                            <option value="au">Australia</option>
+                                            <option value="be">Belgium</option>
+                                            <option value="br">Brazil</option>
+                                            <option value="ca">Canada</option>
+                                            <option value="cn">China</option>
+                                            <option value="co">Colombia</option>
+                                            <option value="cz">Czech Republic</option>
+                                            <option value="dk">Denmark</option>
+                                            <option value="fi">Finland</option>
+                                            <option value="fr">France</option>
+                                            <option value="de">Germany</option>
+                                            <option value="gr">Greece</option>
+                                            <option value="in">India</option>
+                                            <option value="id">Indonesia</option>
+                                            <option value="ie">Ireland</option>
+                                            <option value="it">Italy</option>
+                                            <option value="jp">Japan</option>
+                                            <option value="my">Malaysia</option>
+                                            <option value="mx">Mexico</option>
+                                            <option value="nl">Netherlands</option>
+                                            <option value="nz">New Zealand</option>
+                                            <option value="no">Norway</option>
+                                            <option value="pl">Poland</option>
+                                            <option value="pt">Portugal</option>
+                                            <option value="ph">Philippines</option>
+                                            <option value="ro">Romania</option>
+                                            <option value="ru">Russia</option>
+                                            <option value="sa">Saudi Arabia</option>
+                                            <option value="sg">Singapore</option>
+                                            <option value="za">South Africa</option>
+                                            <option value="kr">South Korea</option>
+                                            <option value="es">Spain</option>
+                                            <option value="se">Sweden</option>
+                                            <option value="ch">Switzerland</option>
+                                            <option value="tw">Taiwan</option>
+                                            <option value="tr">Turkey</option>
+                                            <option value="ua">Ukraine</option>
+                                            <option value="uk">United Kingdom</option>
+                                            <option value="us">United States</option>
+                                        </select>
+
+
+
+
+
+                                    </div>
+                                    <div id="hideSelector" style="display: none;">
+                                        <label id="zoom_in_sel_label" for="zoom_in_sel">Zoom In
+                                            <a title="" data-toggle="tooltip" id="zoomInToolTip" data-original-title="Set the maximum zoom-in (details) for the map"><i class="icon-question-sign"></i></a> </label>
+                                        <select id="zoom_in_sel">
+                                            <option value="20" selected>building</option>
+                                            <option value="19">street detailed</option>
+                                            <option value="18">street</option>
+                                            <option value="17">neighborhood detailed</option>
+                                            <option value="16">neighborhood</option>
+                                            <option value="15">neighborhood overview</option>
+                                            <option value="14">town detailed</option>
+                                            <option value="13">town</option>
+                                            <option value="12">city detailed</option>
+                                            <option value="11">city </option>
+                                            <option value="10">metro area detailed</option>
+                                            <option value="9">metro area wide</option>
+                                            <option value="8">state section</option>
+                                            <option value="7">state</option>
+                                        </select>
+                                    </div>
+
+
+
+                                    <div id="hideLangSelector" style="display: none;">
+                                        <label id="map_lang_sel_label" for="map_lang_sel">Map Language
+                                            <a title="" data-toggle="tooltip" id="mapLangToolTip" data-original-title="Set the language for the map">
+                                                <i class="icon-question-sign"></i></a> </label>
+                                        <select id="map_lang_sel">
+                                            <option value="" selected>Google default</option>
+                                            <option value="ar">Arabic</option>
+                                            <option value="bg">Bulgarian</option>
+                                            <option value="bn">Bengali</option>
+                                            <option value="ca">Catalan</option>
+                                            <option value="cs">Czech</option>
+                                            <option value="da">Danish</option>
+                                            <option value="de">German</option>
+                                            <option value="el">Greek</option>
+                                            <option value="en">English</option>
+                                            <option value="en-AU">English (Australian)</option>
+                                            <option value="en-GB">English (Great Britain)</option>
+                                            <option value="es">Spanish</option>
+                                            <option value="eu">Basque</option>
+                                            <option value="fa">Farsi</option>
+                                            <option value="fi">Finnish</option>
+                                            <option value="fil">Filipino</option>
+                                            <option value="fr">French</option>
+                                            <option value="gl">Galician</option>
+                                            <option value="gu">Gujarati</option>
+                                            <option value="hi">Hindi</option>
+                                            <option value="hr">Croatian</option>
+                                            <option value="hu">Hungarian</option>
+                                            <option value="id">Indonesian</option>
+                                            <option value="it">Italian</option>
+                                            <option value="iw">Hebrew</option>
+                                            <option value="ja">Japanese</option>
+                                            <option value="kn">Kannada</option>
+                                            <option value="ko">Korean</option>
+                                            <option value="lt">Lithuanian</option>
+                                            <option value="lv">Latvian</option>
+                                            <option value="ml">Malayalam</option>
+                                            <option value="mr">Marathi</option>
+                                            <option value="nl">Dutch</option>
+                                            <option value="no">Norwegian</option>
+                                            <option value="pl">Polish</option>
+                                            <option value="pt">Portuguese</option>
+                                            <option value="pt-BR">Portuguese (Brazil)</option>
+                                            <option value="pt-PT">Portuguese (Portugal)</option>
+                                            <option value="ro">Romanian</option>
+                                            <option value="ru">Russian</option>
+                                            <option value="sk">Slovak</option>
+                                            <option value="sl">Slovenian</option>
+                                            <option value="sr">Serbian</option>
+                                            <option value="sv">Swedish</option>
+                                            <option value="ta">Tamil</option>
+                                            <option value="te">Telugu</option>
+                                            <option value="th">Thai</option>
+                                            <option value="tl">Tagalog</option>
+                                            <option value="tr">Turkish</option>
+                                            <option value="uk">Ukrainian</option>
+                                            <option value="vi">Vietnamese</option>
+                                            <option value="zh-CN">Chinese (Simplified)</option>
+                                            <option value="zh-TW">Chinese (Traditional)</option>
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="span4">
+
+                                <div id="outerMarkerDesc">
+
+                                    <div id="markerDescriptionLabel" ><h5>Sample marker description</h5></div>
+
+                                    <div id="markerDescriptionDiv">
+
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- end span4 -->
+
+
+                        </div>  <!-- ends row -->
+                    </div> <!-- end container -->
+
+                </div>
+
+                <div id="outerCustoms" class="outer-div-center" style="display: none;">
+                    <div id="innerCustoms" class="inner-div-center">
+    <h4>Custom Images <a id="toggleCustomizations" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
+                        <div id="customizationsDiv" style="display: none;">
+                            <div style="text-align: left;"><label for="logoToUpload" style="width: 200px; margin-right: 10px; display: inline;">Custom logo:<a title="" data-toggle="tooltip" id="customLogoToolTip" data-original-title="Upload 1 logo no larger than 10KB.  Ideal dimensions are 45x45."><i class="icon-question-sign"></i></a></label>
+        <span id="logoSpan" style="margin-right: 5px;"></span><input id="logoToUpload" type="file" size="45" name="logoToUpload" class="input" accept="image/*">        <button class="button" id="logoUpload" onclick="return ajaxFileUpload('logoToUpload');">Upload</button></p>
+                            </div>
+
+                            <div style="margin-top: 10px;" id="customImageId">
+
+                                <h5 style="text-align: left;">Markers (pins) <a title="" data-toggle="tooltip" id="customMarkersToolTip" data-original-title="Upload up to 50 markers, no larger than 10KB each.">
+                                    <i class="icon-question-sign"></i></a> </h5>
+                                <p style="margin-bottom: 1px;">Use multiple markers if using grouping/categorization</p>
+                                <p><input id="fileToUpload" type="file" size="45" name="fileToUpload[]" class="input" multiple accept="image/*">
+                                    <button class="button" id="buttonUpload" onclick="return ajaxFileUpload('fileToUpload');" autocomplete="off">Upload</button></p>
+                                <input type="hidden" id="imgKey" value="" autocomplete="off">
+                                <div id="imageTable" style="display: none; background-color: white;">
+
+                                </div>
+
+                                <p>Change the default cluster color for your custom markers: <select id="markerColor" name="colors">
+
+                                    <option style="background-color: #00FFFF;"  value= "00FFFF">Blue green</option>
+                                    <option style="background-color: #6B98FF;"  value= "6B98FF">Blue</option>
+                                    <option style="background-color: #A52A2A;"  value= "A52A2A">Brown 2</option>
+                                    <option style="background-color: #CB9D7C;"  value= "CB9D7C">Brown</option>
+                                    <option style="background-color: #DC143C;"  value= "DC143C">Crimson</option>
+                                    <option style="background-color: #A9A9A9;"  value= "A9A9A9">Dark gray</option>
+                                    <option style="background-color: #01BF00;"  value= "01BF00">Dark green</option>
+                                    <option style="background-color: #E14F9E;"  value= "E14F9E">Dark pink</option>
+                                    <option style="background-color: #CCCC00;"  value= "CCCC00">Gold</option>
+                                    <option style="background-color: #97EC7D;"  value= "97EC7D">Green</option>
+                                    <option style="background-color: #D3D3D3;"  value= "D3D3D3">Light gray</option>
+                                    <option style="background-color: #00FF00;"  value= "00FF00">Lime green</option>
+                                    <option style="background-color: #FFE4B5;"  value= "FFE4B5">Mocassin</option>
+                                    <option style="background-color: #FD8D08;"  value= "FD8D08">Orange</option>
+                                    <option style="background-color: #BCE3FF;"  value= "BCE3FF">Pale blue</option>
+                                    <option style="background-color: #CC0099;"  value= "CC0099">Pink purple</option>
+                                    <option style="background-color: #FDABFF;"  value= "FDABFF">Pink</option>
+                                    <option style="background-color: #C89BFF;"  value= "C89BFF">purple</option>
+                                    <option style="background-color: #FF776B;"  value= "FF776B" selected>Red</option>
+                                    <option style="background-color: #4169E1;"  value= "4169E1">Royal Blue</option>
+                                    <option style="background-color: #FFED5C;" value= "FFED5C">Yellow</option>
+                                </select>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="outerMarkerDisplaySelects" class="outer-div-center" style="display: none;">
+                    <div id="innerMarkerDisplaySelects" class="inner-div-center">
+        <h5 class="headerMargin">Choose items to show in marker description   <a style="font-size: 11px; cursor: pointer; " id="toggleMarkerDisplay">(show)</a></h5>
+                        <div id="markerDisplaySelects">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td><label id="desc_from_label" for="noDisplay">Hide from Description</label></td>
+                                    <td></td>
+                                    <td><label id="desc_to_label" for="toDisplay">Show in Description</label></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select id="noDisplay" name="hide markers" multiple="" ></select>
+                                    </td>
+                                    <td><input type="button" id="moveToDisplay" value="&gt;"> <br>
+                                        <input type="button" id="removeFromDisplay" value="&lt;"> <br>
+                                        <input type="button" id="moveAllToDisplay" value="&gt;&gt;"> <br>
+                                        <input type="button" id="removeAllFromDisplay" value="&lt;&lt;"> <br>
+
+                                    </td>
+                                    <td>
+                                        <select id="toDisplay" name="display markers" multiple="" ></select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="outerFilterSelects" class="outer-div-center" style="display: none;">
+                    <div id="innerFilterSelects" class="inner-div-center">
+        <h5 class="headerMargin">Select up to 12 items to filter on
+            <a style="font-size: 11px; cursor: pointer; " id="toggleFilters">(show)</a></h5>
+                        <div id="filterSelects" >
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td><label id="filter_from_label" for="noFilter">Available Filters</label></td>
+                                    <td></td>
+                                    <td><label id="filter_to_label" for="toFilter">Selected Filters</label></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select id="noFilter" name="no filter" multiple="multiple" ></select>
+                                    </td>
+                                    <td><p><input type="button" id="moveToFilter" value="&gt;"></p>
+
+                                        <p><input type="button" id="removeFromFilter" value="&lt;"></p>
+
+                                        <p><input type="button" id="removeAllFromFilter" value="&lt;&lt;"></p>
+
+                                    </td>
+                                    <td>
+                                        <select id="toFilter" name="filters" multiple=""  ></select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                <label for="dynamicFiltersCB" id="dynamicFiltersCB_label">Disable dynamic filters <a title="" data-toggle="tooltip" id="dynamicFiltersToolTip" data-original-title="Dynamic filters cause available filter data to change, similar to filters in excel">
+                                    <i class="icon-question-sign"></i></a> </label>
+                                <input type="checkbox" value="false" name="dynamicfilters" id="dynamicFiltersCB" autocomplete="off">
+                            </p>
+                            <p>
+                                <label for="filterCountsCB" id="filterCountsCB_label">Display filter count <a title="" data-toggle="tooltip" id="filterCountsToolTip" data-original-title="Display the number of items next to each filter">
+                                    <i class="icon-question-sign"></i></a> </label>
+                                <input type="checkbox" value="false" name="filterCounts" id="filterCountsCB" autocomplete="off">
+                            </p>
+
+                            <p>
+                                <label for="multiSelectFiltersCB" id="multiSelectFiltersCB_label">Mulit-Select Filters <a title="" data-toggle="tooltip" id="multiSelectFiltersToolTip" data-original-title="Select multiple items from a filter.  Cannot be combined with dynamic filters.">
+                                    <i class="icon-question-sign"></i></a> </label>
+                                <input type="checkbox" value="false" name="multiSelectFilters" id="multiSelectFiltersCB" autocomplete="off">
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+    <!-- start new search stuff -->
+    <div id="outerSearchDisplay" class="outer-div-center" style="display: none;">
+        <div id="innerSearchSelects" class="inner-div-center">
+
+
+            <h5 class="headerMargin">Search Box Customizations
+                <a style="font-size: 11px; cursor: pointer; " id="toggleSearchOptions">(show)</a></h5>
+            <div id="searchSelects" class="customizations_layout" >
+                <p>
+                    <label for="disableSearchCB" id="disableSearchCB_label">Remove Search Box <a title="" data-toggle="tooltip" id="disableSearchTip" data-original-title="The search box will be removed.">
+                        <i class="icon-question-sign"></i></a> </label>
+                    <input type="checkbox" value="false" name="searchBoxDisable" id="disableSearchCB" autocomplete="off">
+                </p>
+
+                <div id="showEnabledSearchDiv">
+                <p>
+                    <label for="mobileSearchCB" id="mobileSearchCB_label">Enable Mobile Search <a title="" data-toggle="tooltip" id="mobileSerchToolTip" data-original-title="Have the search box appear on mobile devices.  Due to size issues it is does not appear by default.">
+                        <i class="icon-question-sign"></i></a> </label>
+                    <input type="checkbox" value="false" name="filterCounts" id="mobileSearchCB" autocomplete="off">
+                </p>
+                <div style="text-align: left;"><label for="searchText" style="width: 200px; margin-right: 10px; display: inline;">Custom Search Text:</label><input id="searchText"  type="text" placeholder="Search" MAXLENGTH=50 style="width: 156px;"></div>
+
+
+                <p>
+                <h5 style="margin: 0;  text-align: left;">Location based search: </h5>
+                <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="nearestSearch" value="nearestSearch" name="searchType" checked>Find marker at nearest location</label>
+                <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="centerMapSearch" value="centerSearch" name="searchType"> Center map on location</label>
+                </p>
+                <h5 style="margin: 0; ">Select Searchable items </h5>
+
+                <table>
+                    <tbody>
+                    <tr>
+                        <td><label id="search_from_label" for="noFilter">Do not search (filter) on items</label></td>
+                        <td></td>
+                        <td><label id="search_to_label" for="toFilter">Searchable (filter) Items</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="noSearch" name="no search" multiple="multiple" ></select>
+                        </td>
+                        <td><p><input type="button" id="moveToSearch" value="&gt;"></p>
+
+                            <p><input type="button" id="removeFromSearch" value="&lt;"></p>
+
+                            <p><input type="button" id="moveAllToSearch" value="&gt;&gt;"></p>
+
+                        </td>
+                        <td>
+                            <select id="toSearch" name="search" multiple=""  ></select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end new search stuff -->
+
+
+    <!-- start custom radius stuff -->
+    <div id="outerMisc" class="outer-div-center" style="display: none;">
+        <div id="innerMisc" class="inner-div-center">
+            <h4>Radius Around point <a id="togglePinRadius" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
+
+            <div id="searchRadiusId" class="customizations_layout">
+
+
+                <p>
+                    <label for="enableMarkerRadiusCB" id="enableMarkerRadiusCB_label">Enable Radius around Pins <a title="" data-toggle="tooltip" id="enableRadiusTip" data-original-title="The markers on the page can have a circle with a given radius around them.">
+                        <i class="icon-question-sign"></i></a> </label>
+                    <input type="checkbox" value="false" name="markerRadiusEnable" id="enableMarkerRadiusCB" autocomplete="off">
+                </p>
+
+
+                <div id="showSearchRadiusDiv" style="display: none;">
+
+
+
+                    <p>
+                    <h5 style="margin: 0;  text-align: left;">Radius Units: </h5>
+                    <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusMiles" value="miles" name="radiusUnits" checked>miles</label>
+                    <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusKM" value="km" name="radiusUnits"> kilometers</label>
+                    </p>
+
+                    <label id="selectableRadius" for="predefinedRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
+    text-align: right;     width: 160px;">Radius distance:</label>
+                    <select id="predefinedRadiusSelect" style="  margin-bottom: 3px;   width: 200px;" autocomplete="off">
+                        <option  value= "-1">Use Custom Value</option>
+
+                        <option  value= "1">1</option>
+                        <option  value= "2">2</option>
+                        <option  value= "5">5</option>
+                        <option  value= "10" selected>10</option>
+                        <option  value= "25">25</option>
+                        <option  value= "50">50</option>
+                        <option  value= "100">100</option>
+                        <option  value= "200">200</option>
+                    </select>
+
+                    <div id="dataRadiusSelectDiv" style="display: none;">
+                        <label id="dataRadiusSelectLabel" for="dataRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
+    text-align: right;     width: 160px;">Select column:</label>
+
+                        <select id="dataRadiusSelect" style="  margin-bottom: 3px;
+    width: 200px; ">
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- end custom radius stuff -->
+
+
+                <!-- This is the element in which the map will be displayed. -->
+                <div id="outerMap" class="outer-div-center" style="display: none;">
+    <div id="mapMessage" class="inner-div-center" style="padding-bottom: 10px; max-width: 800px;">Verify markers are correctly located.  Move incorrectly located markers or remove unneeded markers. After changing options or data, click  &quot; Update Map &quot;. Save the map when it looks correct.</div>
+                    <div id="sameLocationMarkers" class="inner-div-center row-fluid" style="padding-bottom: 10px; display: none;">Multiple markers are in the same location. I want to move <select id="moveAllMarkers"><option value="all">ALL</option><option value="one">ONE</option></select> at one time.</div>
+
+        <div id="updateMap" class="outer-div-center" >
+            <button id="mapUpdateButton" class="btn  btn-success" style="white-space: nowrap;" type="button">Update Map</button>
+        </div>
+                    <div>
+
+    <div id="mapWrapper" >
+        <div id="mapHeader" style="left:0;right:0; z-index:100; top:0px; min-height: 45px; border: 2px solid black"
+             class="mapDefaultFont">
+            <div id="searchDiv" class="search-query">
+                <input id="searchBox" style="max-width: 125px; margin-bottom: 0px; margin-top: 3px;" class="search-query" type="text" placeholder="Search"
+                       onkeypress="return handleSearchSubmit(event)" value=""><img id="searchImg" class="search-query"
+                                                                                   src="https://cdn.easymapmaker.com/img/search.png"
+                                                                                   onclick="runSearch();" Title="Search, Filter, or Find nearest location"
+                                                                                   alt="search map">
+                <a href="http://www.easymapmaker.com" target="_blank"><img id="searchImgLogo" class="search-query"
+                                                                           src="/img/small_logo2.png"
+                                                                           Title="Map made with EasyMapMaker.com"></a>
+
+            </div>
+
+            <div id="filtersDiv" class="mapFilterFont"></div>
+
+                            </div>
+                            <div id="mapContainer">
+                                <div id="map" class="column left">
+                                </div>
+                                <div id="left" class="column leftDisplay" style="background-color: white; display: none;" >
+                                    <div id="left_header" class="dirHeader">
+                                        <a id="dirTabDisplay" style="margin-left: 5px;" class="activeDirHeader">Directions</a>
+                                        <a id="nearbyTabDisplay">Nearby</a>
+                <img id="hideOptions" src="https://cdn.easymapmaker.com/img/hide_options.png" style="float: right; margin-right: 10px;  cursor: pointer;" alt="hide more options display">
+                                    </div>
+                                    <div id="leftDirDisplay" class="leftDiv" style="background-color: white;">
+                                        <p> <label id="dirAddress1_label" for="dirAddress1" class="optionLabel">Start: </label><input id="dirAddress1"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                                        <p> <label id="dirAddress2_label" for="dirAddress2" class="optionLabel">End: </label> <input id="dirAddress2"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                                        <!--  <p><a href="#">add location</a></p> -->
+
+                                        <p style="text-align: right; margin-right: 50px;"><INPUT id="directionSubmit" value="Get Directions" TYPE="SUBMIT" />
+                                            <INPUT id="clearDirSubmit" value="Clear" TYPE="SUBMIT" /> </p>
+                                        <div id="dirError" style="display: none; "></div>
+                                        <div id="dirTextDiv" style="padding: 10px; height: 275px; overflow: auto;"></div>
+
+                                    </div>
+                                    <div id="leftNearbyDisplay" class="leftDiv" style="display: none;">
+                                        <p><label id="nearAddress_label" for="nearAddress" class="optionLabel">Location: </label><input id="nearAddress"  type="text"  SIZE=20 MAXLENGTH=200 style="width: 120px;"></p>
+                                        <p> <label id="nearRadius_label" for="nearRadius" class="optionLabel">Radius: </label><input id="nearRadius"  type="text"  SIZE=3 MAXLENGTH=3 style="text-align: right; width: 40px;" autocomplete="off">
+                                            <label class="radio" style=" text-align: left; padding-left: 2px; display: inline;"><input type="radio" name="distType" value="mi" id='distMi' checked  style="float: none; margin-left: 0px;"> miles </label>
+                                            <label class="radio" style=" text-align: left;  padding-left: 2px; display: inline;"><input type="radio" name="distType" value="km"  id='distKM' style="float: none; margin-left: 0px;" > km </label></p>
+                                        <p><label class="checkboxText"><input type="checkbox" name="showCircle" value="false"  id='showCircle'   class="checkLabel" style="    margin-left: 80px;    margin-right: 10px;">show circle</label></p>
+                                        <p id="displayDistance"><label  class="checkboxText" ><input type="checkbox" name="showDistance" value="false"  id='showDistance'  class="checkLabel"><span class="checkboxText">show distance</span></label></p>
+
+                                        <p style="text-align: right; margin-right: 50px;"><INPUT id="nearbySubmit" value="Find Nearby" TYPE="SUBMIT" />
+                                            <INPUT id="clearNearbySubmit" value="Clear" TYPE="SUBMIT" /> </p>
+                                        <div id="nearbyError" style="display: none; "></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="groupChecksDiv">
+                            </div>
+                        </div>
+
+                        <div id="mapSaveStatus"  class="mapInfoStatus alert" style="display: none; ">
+
+                        </div><p style="height: 1px;">&nbsp;</p>
+
+                        <div id="mapUrl" class="mapInfoStatus" style="display: none;">
+                        </div><p style="height: 1px;">&nbsp;</p>
+
+                        <div id="bulkGeoUrl" class="mapInfoStatus" style="display: none;">
+                        </div><p style="height: 1px;">&nbsp;</p>
+
+                        <div id="emailDisplay" class="alert mapInfoStatus" style="width: 555px; display: none;">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <p style="margin-bottom: 0px;"><h6>Email has been sent but may show up in a spam or junk folder. </h6></p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="saveMapDiv" style="display: none; ">
+
+
+                    <div id="mapModal" class="modal hide fade in" style="display: none; ">
+                        <div class="modal-header">
+                            <a id="closeSaveModal" class="close" data-dismiss="modal">x</a>
+                            <h3>Enter details then Save Map</h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <form id="saveMapForm" autocomplete="off">
+                                <p><label for="titleInput" class="modalLabel">Title</label><input id="titleInput"  type="text" placeholder="(Optional) Map Title" MAXLENGTH=250 ></p>
+                                <p><label for="descriptionInput" class="modalLabel">Description</label> <textarea id="descriptionInput"  placeholder="(Optional) Map Description" MAXLENGTH=500 rows="2"  ></textarea></p>
+                                <p><label for="emailInput" class="modalLabel">Email </label><input id="emailInput"  type="text" placeholder="(Optional) E-mail address" MAXLENGTH=100  ></p>
+                                <p><small>Enter an email address if you want to edit your map or receive notifications for your map.</small></p>
+
+                                <p style="margin-top: 5px; margin-bottom: 8px;">
+                                    <label class="checkbox" style="text-align: left; ">
+                                        <input id="genKmlCB" type="checkbox">
+                                        Generate KML for use with Google Earth.
+                                    </label> &nbsp;
+                                </p>
+<div id="mapProtection">
+                                <h4 style="margin-top: 10px;">Map Protection level: </h4>
+                                <label class="radio" style=" text-align: left;">
+                                    <input type="radio" name="protectionLevel" value="private" id="protectionLevel_private" checked> Private - The map will not be shared except by you.
+                                </label>
+                                <label class="radio" style="text-align: left;">
+                                    <input type="radio" name="protectionLevel" value="public" id="protectionLevel_public" > Public - Map may be shared and found using google.
+                                </label>
+</div>
+                <div id="mapPasswordProtection" style="display: none;">
+                    <h4 style="margin-top: 10px;">Map Password </h4>
+                    <p><small>Enter a password for extra protection for your map.</small></p>
+
+                    <p><label for="pwInput" class="modalLabel">Password </label><input id="pwInput"  type="password" placeholder="(Optional) password" MAXLENGTH="50"  ></p>
+
+               </div>
+   				<span style=" text-align: left;     clear: left; float: left;font-size: 1.1em; margin-right: 10px;">
+                    By using this service, you agree to the <a href="https://developers.google.com/maps/terms" target="_blank">google terms of service</a>.
+
+                </span>
+                            </form>
+
+
+                        </div>
+                        <div class="modal-footer" style="text-align: center;">
+                            <a id="mapSaveButton" class="btn btn-success">Save Map</a>
+                            <a id="closeSaveButton" class="btn" data-dismiss="modal">Close</a>
+                        </div>
+                    </div>
+
+                    <div class="outer-div-center"><button id="mapModalButton" class="btn btn-large btn-primary" type="button" data-loading-text="Saving..."  autocomplete="off" style="margin-top: 5px;">Launch Map Save</button></div>
+                </div>
+
+
+
+                <!-- This is the element in which the group checkboxes will be displayed -->
+
+                <div class="span10"> <!-- end  	id="mapCreateDiv" -->
+
+
+
+                </div>
+                <!-- end right nav -->
+
+            </div>
+            <!-- end row fluid -->
+
+            <div class="span1" id="rightNav">
+                <!--  right nav -->
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- end main body -->
+
+    <!-- end container-->
+
+    <div id="bottomInst">
+        <div class="container">
+        <div class="row">
+            <h4 style="margin-left: 20px;">Create a Custom Map:</h4>
+        </div>
+        <div class="row">
+
+            <div class="span4"><h3 style="margin-left: 20px;">1. Copy &amp; Paste Data</h3>
+
+                <p><img src="https://cdn.easymapmaker.com/img/home/small_excel.png"
+                        alt="copy and paste excel spreadsheet data"/></p>
+
+                <p>Use EasyMapMaker to map excel or other spreadsheet data onto a google map. EasyMapMaker takes the
+                    work out of manually plotting multiple locations on a map. The first step is to copy your
+                    spreadsheet data including the column headers into the table by clicking on the table to reveal a
+                    text box.</p></div>
+            <div class="span4"><h3 style="margin-left: 20px;">2. Set Options</h3>
+
+                <p><img src="https://cdn.easymapmaker.com/img/home/options_small.png" alt="set options for your map"/></p>
+
+                <p>Set the options for your map. Be sure to set location information. Location information can consist
+                    of many combinations of the address (street, city, state, zip) as well as the latitude and longitude
+                    (set explicitly in separate columns). The whole location can be in one column and be set as the
+                    address, or it can be in multiple columns. Set other options if the data contains them. Use Advanced
+                    Maps to add filters, add a left direction panel with a radius filter, hide certain data, upload a
+                    custom logo, or use custom markers (pins).</p></div>
+            <div class="span4"><h3 style="margin-left: 20px;">3. Make Map</h3>
+
+                <p><img src="https://cdn.easymapmaker.com/img/home/map_small.png" alt="click the button to generate map"/></p>
+
+                <p>Click on Make Map and wait for address location data to be translated into latitude and longitude so
+                    it can be placed on the map.
+                    Once the data is on the map, the pins can be moved or removed. Once the map looks good, save it. An
+                    email will be sent for your records to access the map in the future.
+                    After the map is saved, the map url will be provided. This url can be changed to something easier to
+                    remember. </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="outer-div-center">
+                <div class="inner-div-center">
+                    <h3>EasyMapMaker Features for Basic Maps</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/labeled_marker.png"><h4>Customize Markers and add Labels</h4>
+
+
+
+                    <p>EasyMapMaker makes labeling your markers and pins as simple as selecting an option from a drop down menu.
+                        Choose something that summarizes what the location is about to find things unique to your organizations needs.
+
+
+                    </p></div>
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/numbered_pins.png"><h4 style="margin-left: 20px;">Number Your Pins</h4>
+
+
+
+                    <p>Number pins on your custom map to reference them with other data.  Pins can be numbered 1-99 when there are less than
+                        100 locations on the map.
+
+
+                    </p></div>
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/select_colors.png"><h4>Map Pin Colors and Grouping</h4>
+                    <p>
+                        Categorize and group your markers and change the color of the pins to more accurately to reflect the data.
+                        Choose a column from your data to quickly group or categorize the markers.
+                        A legend will appear below the map for group markers that can also be used to filter the pins.
+
+                </p></div>
+            </div>
+
+            <div class="row">
+                <div class="span4  features"><img src="https://cdn.easymapmaker.com/img/ios-glasses.png"><h4> Hide Map Details</h4>
+
+
+
+                    <p>Limit the details available on the map by only allowing it to be zoomed into a certain region, or allow it to be zoomed in
+                        so different addresses are more distinguishable.
+
+
+                </p></div>
+
+                <div class="span4 features"><img src="cdn.easymapmaker.com/img/android-globe.png"  ><div>
+                    <h4> Automatic Address processing (Geo-coding)</h4>
+
+
+</div>
+                    <div>
+                        <p></p>
+
+                    <p>EasyMapMaker uses the Google geocoder to process addresses and attempt to find the correct latitude and longitude to
+                        place them on a map.  Map thousands of addresses with minimal effort.
+                    </p>
+                    </div>
+
+                    </div>
+
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/mobile_map.png"><h4> Mobile Compatible Maps</h4>
+
+
+
+                    <p>Maps created with EasyMapMaker automatically work on your mobile device.  You can find directions to the nearest marker location
+                        or find your location on the map.
+
+                    </p></div>
+
+            </div>
+
+            <div class="row">
+                <div class="span4 features"><div>
+                    <img src="https://cdn.easymapmaker.com/img/kml_img.png" >
+                    <h4>KML Generator For Google Earth
+                    </h4>
+            </div>
+                    <div>
+<p></p>
+                        <p>
+                    Turn your map into KML to use on Google Earth or Google Maps (limited to 2,000 locations).
+            EasyMapMaker automatically generates a KML file for you when you choose to save your map and have it save KML (Keyhold Markup Language).
+                   You can use the KML on Google Earth, Google Maps (limited to 2,000 locations), or any other program that accepts KML.
+                        </p>
+
+                        </div>
+
+                </div>
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/android-lock.png"><h4>Password Protected Maps
+                </h4>
+<p>
+                    Prevent anyone or everyone from viewing your map by adding a password.  Share your password only with those who
+                    you want to view the map.  If you only want someone to have temporary access to the map, you can give them a password
+                    then change it when you don't want them to see it again.  Be sure to use our secure site starting with https to enable passwords.
+</p>
+
+                </div>
+                <div class="span4 features"><img src="https://cdn.easymapmaker.com/img/android-cloud-outline.png"><h4>Cloud Based Maps
+                </h4>
+                    <p>
+
+                    Access your maps anywhere and anytime you have online access.  This means there is nothing to run and download, everything
+                    can work on your computer, mobile device, or tablet.  This also allows bug fixes and features to be rolled out without anything
+                    for you to download.
+</p>
+                </div>
+
+            </div>
+    </div>
+    <!-- end instruction container -->
+
+
+    </div>
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+    <div class="row">
+        <div class="span1 sp1"></div>
+        <div class="span2 sp2">
+
+            <ul class="footerList">
+                <li class="footerItem">Support</li>
+                <li class="footerItem"><a href="/faq/">FAQ</a></li>
+
+                <li class="footerItem"><a href="/contact">Contact Us</a></li>
+                <li class="footerItem"><a href="/support/privacy-policy.html">Privacy Policy</a></li>
+                <li class="footerItem"><a href="/features/sample-maps">Sample Maps</a></li>
+
+            </ul>
+        </div>
+        <div class="span2 sp2">
+            <ul class="footerList">
+                <li class="footerItem"><a href="/features/">Features</a></li>
+
+                <li class="footerItem"><a href="/features/advanced/#custImages">Custom Images</a>
+                <li class="footerItem"><a href="/features/embedded/">Embed Maps</a>
+                <li class="footerItem"><a href="/features/mobile-maps/">Mobile Maps</a>
+                <li class="footerItem"><a href="/features/large-data-sets/">Large Data sets</a>
+
+
+
+            </ul>
+        </div>
+        <div class="span2 sp2">
+            <ul class="footerList">
+
+                <li class="footerItem">Languages</li>
+                <li class="footerItem"><a href="/">English</a></li>
+                <li class="footerItem"><a href="/fi">Finnish</a></li>
+
+                <li class="footerItem"><a href="/fr">French</a></li>
+                <li class="footerItem"><a href="/de">German</a></li>
+
+                <li class="footerItem"><a href="/it">Italian</a></li>
+                <li class="footerItem"><a href="/ja">Japanese</a></li>
+
+                <li class="footerItem"><a href="/pt">Portuguese </a></li>
+
+                <li class="footerItem"><a href="/ru">Russian </a></li>
+
+                <li class="footerItem"><a href="/es">Spanish</a></li>
+
+            </ul>
+
+        </div>
+        <div class="span1 sp1">
+        </div>
+        <div class="span3 sp3">
+            <ul class="footerList">
+
+                <li class="footerItem">Social</li>
+                <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+                <li class="footerItem"><a target="_blank"  href="https://www.youtube.com/user/easymapmaker">Videos</a></li>
+
+
+
+                <li class="footerItem">
+                    <div class="index-social" style="margin-top:14px; ">
+                        <a  target="_blank" href="https://www.youtube.com/user/easymapmaker"><div class="footer-sprite sprite-youtube" rel="tooltip" data-original-title="Youtube videos"></div></a>
+                        <a target="_blank" href="https://plus.google.com/108989277805007525733" rel="publisher"><div class="footer-sprite sprite-gplus-32" rel="tooltip" data-original-title="Google Plus"></div></a>
+                        <a target="_blank" href="http://www.facebook.com/easymapmaker"><div class="footer-sprite sprite-fb-icon" rel="tooltip" data-original-title="Join us on Facebook."></div></a>
+                        <a  target="_blank" href="https://twitter.com/easymapmaker"><div class="footer-sprite sprite-tw-icon" rel="tooltip" data-original-title="Follow Us on Twitter"></div></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</body>
+</html>

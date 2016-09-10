@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.css">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        #outerMarkerDesc {
+            text-align: center;
+            width: 100%;
+            line-height: 18px;
+            margin-top: 100px;
+        }
+
+        #markerDescriptionDiv {
+
+            background-clip: padding-box;
+            background-color: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 6px 6px 6px 6px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+            outline: medium none;
+            padding-top: 5px;
+            overflow: auto;
+            width: 300px;
+            text-align: left;
+            display: inline-block;
+            /*    margin-left:  200px;     */
+        }
+
+        #innerMarkerDescDiv {
+            padding: 8px;
+        }
+
+        #container {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -60px;
+            background-color: #f7f7f7;
+        }
+
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="row-fluid">
+
+            <div id="outerMarkerDesc" >
+
+                <div id="markerDescriptionDiv" >
+                    <div id="innerMarkerDescDiv">
+            Enter Map Password to view the map
+
+                    <form action="3c9ccc67b29bca6e64010e6544ca6c7a.html" method="post">
+                        <input style="display:none" type="password" name="foilautofill"/>
+
+                        <input id="pwInput"  type="password" placeholder="password" MAXLENGTH="50"  style="margin-top:20px;" name="mapVerify">
+                        <input type="submit" id="mapPwButton" class="btn btn-large btn-primary" autocomplete="off" style="margin-left: 90px;" value="Go" name="Go">
+
+                        </form>
+                        <input id="mapnameId" type="hidden" name="mapname" value="3c9ccc67b29bca6e64010e6544ca6c7a" >
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        var mapId = $('#mapnameId').val();
+
+
+        $('#resetLink').click(function () {
+
+            $.ajax({
+                type: 'POST',
+                url: '/util/sendChangePwEmail.php',
+                data: ({mapId: mapId}),
+                cache: false,
+                dataType: 'json',
+                success: function (data, status, result) {
+
+                    if (data.errorMessage == "") {
+
+                        // showSuccess("Your password has been changed. ");
+
+                        // showMap(data.alias, data.mapId);
+                        //console.debug(data.status);
+
+                        $('#emailGood').show();
+
+                    }
+                    else {
+                       // console.debug(data.errorMessage);
+                        $('#emailProblem').show();
+
+                        $('#emailProblem').html(data.errorMessage);
+                        $('#emailGood').hide();
+
+                    }
+
+                },
+                error: function (data, status, result) {
+
+                   // showError("problem updating password");
+
+                    $('#emailProblem').show();
+
+                    $('#emailProblem').html("unexpected error sending email");
+                }
+
+            });
+
+        });
+
+        if (mapCreator(mapId)) {
+  //          console.debug("cookies: " + document.cookie);
+
+            setCookie(mapId + "_creator", "yes", 10);
+            setCookie("current_map", mapId, .01);
+//
+        //    console.debug("map creator of " + mapId);
+        }else{
+            setCookie("current_map", mapId, .01);
+
+        }
+    });
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";path=/;" + expires;
+
+    }
+
+    function mapCreator(mapId) {
+
+        var storage = getLocalStorage();
+
+        if(storage != null){
+
+            var mapArray = [];
+
+            var mapList = storage.getItem("emmMaps");
+
+            if(mapList != null && mapList.length > 0){
+                mapArray = JSON.parse(mapList) ;
+            }
+
+            return (mapArray.indexOf(mapId) >= 0)
+        }
+
+        return false;
+    }
+
+
+    function getLocalStorage() {
+
+        if(typeof localStorage == "object"){
+            return localStorage;
+        }
+        else if(typeof globalStorage == "object")
+        {
+            return globalStorage[location.host];
+        }
+
+        return null;
+    }
+
+</script>
+</body>
+</html>

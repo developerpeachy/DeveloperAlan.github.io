@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
+<head>
+    <title>Muuntaa Image PDF-tiedosto </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <meta name="description" content="Muuntaa kuva otettu muokatun kartan pdf. Valitse kuva ja se tulee automaattisesti muunnetaan PDF omaan käyttöön.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/fi/" id="homeLink">Helppo Kartat</a></li>
+                <li id="advancedMaps"><a href="/fi/advanced" id="advancedLink">Tarkennettu Kartat</a></li>
+                <li id="support" class="active"><a href="/fi/support/" id="featuresLink">Tuki</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blogi</a></li>
+                <li><a href="/fi/contact" id="contactLink">Ota meihin yhteyttä</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="/fi/contact" title="Ota meihin yhteyttä"><i class="icon-chevron-right"></i>Ota meihin yhteyttä</a></li>
+
+
+                            <li class=""><a href="/fi/faq/" title="Usein Kysytyt Kysymykset"><i class="icon-chevron-right"></i>UKK</a></li>
+                            <li class=""><a href="/fi/findMyMaps" title="Etsi kaikki kartat sähköpostiosoitteen"><i class="icon-chevron-right"></i> Etsi kartat</a></li>
+                            <li class="active"><a href="/fi/tools/pdf/" title="Muuntaa kuvan pdf"><i class="icon-chevron-right"></i> Image PDF</a></li>
+
+                            <li class=""><a href="/fi/support/privacy-policy.html" title="Tietosuojakäytäntö"><i class="icon-chevron-right"></i> Tietosuojakäytäntö</a></li>
+                            <li class=""><a href="/fi/tools/url-encoder.html" title="Koodata URL"><i class="icon-chevron-right"></i>url Encoder</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="overview">
+                        <div class="page-header">
+                            <h2>Muuntaa kuvan PDF-tiedostoksi</h2>
+                        </div>
+
+
+
+                        <p>Valitse kuvatiedosto tietokoneesta muuntaa pdf-tiedostona.</p>
+
+
+
+
+                        <form id="uploadform" method="post"
+                              enctype="multipart/form-data"
+                              action="pdfDownload.php" autocomplete="off">
+							<input name="lang" value="fi" type="hidden" /> 
+
+                            <input name="file" id="file" size="27" type="file" accept="image/*"/> <span style="margin-left: 100px;">
+
+                            <input type="submit" name="action" value="Muuntaa PDF" /></span>
+                            <span id="status" style="display:none">lataaminen ...</span>
+                            <iframe id="target_iframe" name="target_iframe" src="" style="width:0;height:0;border:0px"></iframe>
+
+                        </form>
+
+                    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="/fi/">Kotiin</a></li>
+        <li class="footerItem"><a href="/fi/features/">ominaisuudet</a></li>
+        <li class="footerItem"><a href="/fi/faq/">UKK</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blogi</a></li>
+        <li class="footerItem"><a href="/fi/contact">Ota meihin yhteyttä</a></li>
+        <li class="footerItem"><a href="/fi/support/privacy-policy.html">Tietosuojakäytäntö</a></li>
+    </ul>
+
+</div>
+
+
+<script type="text/javascript">
+                            function initUpload() {
+
+                                /*set the target of the form to the iframe and display the status
+                                 message on form submit.
+                                 */
+                                document.getElementById('uploadform').onsubmit=function() {
+                                    document.getElementById('uploadform').target = 'target_iframe';
+                                    document.getElementById('status').style.display="block";
+
+                                }
+                            }
+
+                            //This function will be called when the upload completes.
+                            function uploadComplete(status){
+                                //set the status message to that returned by the server
+                                document.getElementById('status').innerHTML=status;
+                            }
+
+                            window.onload=initUpload;
+                        </script>
+
+</body>
+
+</html>

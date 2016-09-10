@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <title>EasyMapMaker.com - Advanced Maps with filters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Advanced maps with filters, directions, radius search as simple as pasting your excel data.">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+         <link rel="stylesheet" href="../../css/feature_page.css.min.css">
+    <link rel="stylesheet" href="https://www.easymapmaker.com/css/responsive-video.css">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+
+    <style>
+
+
+        #outMapDiv {
+            width: 600px;
+        }
+
+        @media (max-width: 767px) {
+            #outMapDiv {
+                width: 500px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            #outMapDiv {
+                width: 300px;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="../../index.html"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../index.html" id="homeLink">Easy Maps</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Advanced Maps</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Features</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Features</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Translate address information into mappable coordinates"><i class="icon-chevron-right"></i> Address Geocoding</a></li>
+                            <li class="active"><a href="index.html" title="Add map filters and custom map labels"><i class="icon-chevron-right"></i> Advanced Maps</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Make Custom Google Maps without any coding"><i class="icon-chevron-right"></i> Custom Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Find geographical trends and do more with your data"><i class="icon-chevron-right"></i> Data Analysis</a></li>
+                            <li class=""><a href="../directions/index.html" title="Get directions on all your maps"><i class="icon-chevron-right"></i> Directions</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Edit your settings and map using our edit page" ><i class="icon-chevron-right"></i> Edit Maps</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Add maps to your site effortlessly"><i class="icon-chevron-right"></i> Embedded Maps</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Map your excel data with a paste and a button click"><i class="icon-chevron-right"></i> Excel Data Maps</a></li>
+                            <!-- <li class=""><a href="/features/ip_address_geocoding/" title="Use our in house ip geolocation service to map ip addresses"><i class="icon-chevron-right"></i> IP Address Geocoding</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Generate a KML document from your excel data"><i class="icon-chevron-right"></i> KML for Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Add large amounts of data to your maps."><i class="icon-chevron-right"></i> Large Data Sets</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="Map support for iPhone, iPad, Android and other popular devices"><i class="icon-chevron-right"></i>Mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="Great tools for real estate agents"><i class="icon-chevron-right"></i>Real Estate Tools</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Make maps for custom reports"><i class="icon-chevron-right"></i> Reporting</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Search and Filter Mapped data"><i class="icon-chevron-right"></i> Searching and Filtering</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="SSL support, secure map data, and password protected maps"><i class="icon-chevron-right"></i> Secure Maps</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="EmbedMaps">
+                        <div class="page-header">
+                            <h2>Advanced Maps</h2>
+                        </div>
+
+                        <p> Have you ever wanted to bring the ability to filter data in Excel to you Maps?
+                            Our &quot;Advanced Maps&quot; allow you to do just  that.  The Advanced Map
+                            tab allows for the same functionality as &quot;Easy Maps&quot; plus more.  Customize your map
+                            by adding your own images and logo.  If you want to see data that is contained in a region of the map,
+                            the export data feature provides this.
+
+
+                        </p>
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <p> Check out the video for making a map with filters, custom pins, a logo, data exporting,
+                                    driving directions, and a location filter.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-video widescreen">
+                            <iframe src="https://www.youtube.com/embed/fFE4rasTBsA" frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+
+                        <h3>Advanced Maps allow for more customization:</h3>
+                        <ol>
+                            <li><a href="index.html#custImages">Add custom images</a></li>
+                            <li><a href="index.html#add_filters">Add filters</a> (multiselect, single select, item count)</li>
+                            <li><a href="index.html#hide_data">Hide data</a></li>
+                           <!-- <li>Distance Filtering</li>
+                            <li>Data Export</li> -->
+                        </ol>
+
+
+
+                        <div class="outer-div-center"  id="custImages">
+                            <div class="inner-div-center">
+                                <h4> Add Custom Images (View <a href="../../map/custom-images-and-multiselect-sample.html" target="_blank">sample map </a>)</h4>
+                                <img src="../../img/features/customizations.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add images">
+
+                            </div>
+                        </div>
+
+
+                        <p>Add a custom image or logo your map by uploading them.  You can upload up to 50 images at 1 time with a size up to 10KB each.
+                        In order to use multiple images, the group needs to be set.  The images can be mapped to the different groups (or categories).
+                        The image below is an example of setting a group (to be used with the images in the above photo).
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                            <img src="../../img/features/custom_group.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add group images">
+                            </div>
+                    </div>
+
+                        </p>
+
+
+
+                        <div class="outer-div-center"  id="add_filters">
+                            <div class="inner-div-center">
+                                <h4>Add filters with a simple click.</h4>
+                                <img src="../../img/features/filters_sample.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add filters">
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="hide_data" class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Hide items you don't want users to see</h4>
+                                <img src="../../img/features/description_sample.png" style="margin-right: 20px; margin-bottom: 20px;" alt="show certain items">
+
+                            </div>
+                        </div>
+                        <p>Our <a href="../../advanced.html">Advanced Maps</a> allow you to have data searchable and filterable on the map but not displayed
+                        to the viewers of the map.  Address details can now be easily hidden, or items that are filtered or grouped on are
+                        can only be visible with the source data and hidden from users.  This is as easy as selecting the items to hide.
+                            By default all items are visible.</p>
+
+
+                        <p>
+                        <div class="outer-div-center"><div id="outMapDiv" class="inner-div-center" width="100%" style="max-width: 610px;"><iframe  style="display: block;" height="500" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                                                                                                                    src="http://www.easymapmaker.com/map/dallas_real_estate_sample"/>
+                            </iframe></div></div>
+                        </p>
+
+                        <p> The map above is a sample using groups and filters  </p>
+
+
+                        <p> Advanced Maps also include the option to hide all the label headers for the marker description by de-selecting
+                            the &quot;show label&quot; check box.  This option should be used with caution unless the data is obvious to the user.</p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../index.html">Home</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Features</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contact Us</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">Privacy Policy</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

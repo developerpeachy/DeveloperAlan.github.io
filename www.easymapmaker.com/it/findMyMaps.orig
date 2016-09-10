@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+    <title>Trova le mappe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <meta name="description" content="Trova tutte le mappe che avete fatto con EasyMapMaker. Un indirizzo e-mail a un URL verrà inviato con un elenco delle mappe.">
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <style>
+
+        html,
+        body {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+        }
+
+
+        /* header stuff */
+
+        #background {
+            background: url("/img/emm_home_img.png") no-repeat scroll 0 100% transparent;
+
+            float: left;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        #banner {
+            /* background: url("header_bg.png") repeat-x scroll 0 100% #E5E5E5;    */
+            /*  background: url("header_bg.png") repeat-x scroll 0 100% blue;      */
+            background-color: #E7E7E7;
+            float: left;
+            width: 100%;
+            min-height: 70px;
+        }
+
+        #navHeader {
+            float: right;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+
+        #navHeader ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navHeader li {
+            display: inline;
+            margin-left: 1px;
+        }
+
+        #background h1 {
+            float: left;
+            height: 50px;
+            margin: 0;
+            width: 300px;
+        }
+
+
+        #spacing {
+            height: 80px;
+        }
+
+
+        #header2 h1 span {
+            left: -500em;
+            position: absolute;
+        }
+
+
+        #footer {
+            min-height: 60px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+
+        }
+
+        li.footerItem {
+            display: inline;
+            white-space:nowrap;
+            padding-right: 5px;
+        }
+
+        ul.footerList {
+            display: inline-block;
+            margin: 20px 0 10px 25px;
+            padding: 0       ;
+        }
+
+        textarea, input[type="text"] {
+            width: 300px;
+        }
+
+
+        @media (max-width: 979px) {
+            #spacing {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #banner {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #spacing {
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            textarea, input[type="text"] {
+                width: 206px;
+            }
+        }
+
+
+
+
+        /* Wrapper for page content to push down footer */
+        #container {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -60px;
+        }
+        .container .credit {
+            margin: 20px ;
+        }
+
+        #sendMessageForm > p > label {
+            margin-bottom: 0px;
+        }
+        #sendMessageForm > p {
+            margin: 0;
+        }
+
+        #sendMessageForm > p > span {
+            margin-left: 5px;
+            background-color: red;
+            color: white;
+        }
+
+
+        #push {
+            height: 60px;
+        }
+
+        .clickDiv {
+            color: #0088CC;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/it/" id="homeLink">Mappe Facile</a></li>
+                <li id="advancedMaps"><a href="/it/advanced" id="advancedLink">Mappe avanzate</a></li>
+                <li id="support" class="active"><a href="/it/support/" id="featuresLink">Supporto</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="/it/contact" id="contactLink">Contattaci</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+
+
+    <div id="mainContent">
+        <div class="row-fluid">
+            <div  class="span1" >   <!--left nav        -->
+            </div>
+            <div class="span10">
+
+                <div class="row-fluid" >
+                    <div class="span3" >
+                        <div>
+                            <ul class="nav nav-list bs-docs-sidenav affix">
+
+
+
+                                <li class=""><a href="/it/contact" title="Contattaci"><i class="icon-chevron-right"></i>Contattaci</a></li>
+
+
+                                <li class=""><a href="/it/faq/" title="Domande frequenti"><i class="icon-chevron-right"></i>FAQ</a></li>
+                                <li class="active"><a href="/it/findMyMaps" title="Trova tutte le mappe di indirizzo e-mail"><i class="icon-chevron-right"></i> Trova le mappe</a></li>
+                                <li class=""><a href="/it/tools/pdf/" title="Convertire un&#39;immagine in un file pdf"><i class="icon-chevron-right"></i> Image to PDF</a></li>
+
+                                <li class=""><a href="/it/support/privacy-policy.html" title="politica sulla riservatezza"><i class="icon-chevron-right"></i> politica sulla riservatezza</a></li>
+                                <li class=""><a href="/it/tools/url-encoder.html" title="Codificare gli URL"><i class="icon-chevron-right"></i>Encoder uRL</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="span9">
+
+
+                        <h4>Trova le mappe che sono state salvate con il tuo indirizzo e-mail</h4>
+                        <form id="getMapsForm">
+                            <p><label></label><input id="emailInput"  type="text" placeholder="E-mail address" MAXLENGTH=100  style="margin-bottom: 0;"><span id="emailError" style="display: none;">indirizzo email non valido</span>
+
+                                <a id="getMapBtn" class="btn">ottenere mappe</a>        </p>
+                        </form>
+
+                        <div id="messageStatus" style="display: none;"  class="alert alert-success">
+
+                        </div>
+
+                    </div>
+
+                    <div  class="span1" >   <!--right nav        -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="push"></div>
+
+</div>    <!-- end container-->
+
+
+<script type="text/javascript">
+
+    // for IE-8
+    if (!window.console) console = {debug: function(str) {}};
+
+    // TODO: comment out the below for non-IE testing (and prod)
+    var console=console||{"debug":function(){}};
+
+
+    var currentTableData = null;
+
+    function validateEmail(a) {
+        return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(a) ;
+    }
+
+    $('#getMapBtn').click(function() {
+
+        var errorFound = false;
+        var dataToSend = {};
+        var email = $('#emailInput').val();
+
+
+        if(email.length > 0 && !validateEmail(email))
+        {
+            errorFound = true;
+            $('#emailError').show();
+        }
+        else {
+            $('#emailError').hide();
+        }
+
+        if(!errorFound) {
+            sendUserEmail(email);
+        }
+
+    })  ;
+
+
+    function sendUserEmail(email) {
+
+        // var getMaps = JSON.stringify(dataToSend)     ;
+
+        $.ajax({
+            type: 'POST',
+            url: '/it/support/sendUserEmail.php',
+            data: ({  email: email}),
+            cache: false,
+            dataType: 'json',
+            success:function(data, status, result){
+
+                //     $("#resultDiv").html(result);
+                // console.debug("happy days: " + data.uid);
+
+
+                if(data.errorMessage == "") {
+
+                    showMessageStatus("success");
+                }
+                else {
+                    var messageStatus = $('#messageStatus');
+                    messageStatus.addClass("alert-error");
+                    messageStatus.removeClass("alert-success");
+
+                    messageStatus.html(data.errorMessage);
+                    messageStatus.show();
+                }
+
+
+            },
+            error:function(data, status, result){
+
+                /*  if(data.errorMessage) {
+                 alert(data.errorMessage);
+                 }
+                 */
+
+                showMessageStatus("error");
+
+                //     $("#resultDiv").html(result);
+                // console.debug("sad days: " + result);
+            }
+
+        });
+    }
+
+
+    function showMessageStatus(resultStatus) {
+
+        var status = $('#messageStatus');
+
+        if(resultStatus == "error") {
+
+            status.addClass("alert-error");
+            status.removeClass("alert-success");
+
+            status.html("C&#39;è stato un problema trovare le mappe.");
+            status.show();
+        }
+        else {
+            status.html("E-mail per le mappe è stato inviato con successo.");
+            status.show();
+            //    status.hide();
+            //    status.html("Message successfully sent.");
+        }
+
+
+        // status.show();
+
+    }
+
+
+    $('#banner').click( function() {
+        window.location.href= location.protocol +  "//www.easymapmaker.com/it/";
+    })  ;
+
+</script>
+
+
+   <div id="footer">
+       <div>
+		
+			<ul class="footerList">
+			  <li class="footerItem"><a href="/it/">Casa</a></li>
+			  <li class="footerItem"><a href="/it/features/">Caratteristiche</a></li>
+			  <li class="footerItem"><a href="/it/faq/">FAQ</a></li>
+			  <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+			  <li class="footerItem"><a href="/it/contact">Contattaci</a></li>
+              <li class="footerItem"><a href="/it/support/privacy-policy.html">politica sulla riservatezza</a></li>
+			</ul>
+		   
+		   
+       </div>
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <title>Convertir l&#39;image en fichier PDF </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <meta name="description" content="Convertir une image prise de votre carte personnalisée dans un fichier pdf. Sélectionnez l&#39;image et il sera automatiquement transformé en un pdf pour votre usage.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/fr/" id="homeLink">Plans faciles</a></li>
+                <li id="advancedMaps"><a href="/fr/advanced" id="advancedLink">Maps Recherche avancée</a></li>
+                <li id="support" class="active"><a href="/fr/support/" id="featuresLink">Soutien</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="/fr/contact" id="contactLink">Contactez nous</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="/fr/contact" title="Contactez nous"><i class="icon-chevron-right"></i>Contactez nous</a></li>
+
+
+                            <li class=""><a href="/fr/faq/" title="Questions fréquemment posées"><i class="icon-chevron-right"></i>FAQ</a></li>
+                            <li class=""><a href="/fr/findMyMaps" title="Trouvez toutes vos cartes par adresse e-mail"><i class="icon-chevron-right"></i> Trouvez vos cartes</a></li>
+                            <li class="active"><a href="/fr/tools/pdf/" title="Convertir une image en un fichier pdf"><i class="icon-chevron-right"></i> Image to PDF</a></li>
+
+                            <li class=""><a href="/fr/support/privacy-policy.html" title="politique de confidentialité"><i class="icon-chevron-right"></i> politique de confidentialité</a></li>
+                            <li class=""><a href="/fr/tools/url-encoder.html" title="Encoder vos urls"><i class="icon-chevron-right"></i>Encoder Url</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="overview">
+                        <div class="page-header">
+                            <h2>Convertir une image en un fichier PDF</h2>
+                        </div>
+
+
+
+                        <p>Sélectionnez un fichier image sur votre ordinateur pour convertir un fichier pdf.</p>
+
+
+
+
+                        <form id="uploadform" method="post"
+                              enctype="multipart/form-data"
+                              action="pdfDownload.php" autocomplete="off">
+							<input name="lang" value="fr" type="hidden" /> 
+
+                            <input name="file" id="file" size="27" type="file" accept="image/*"/> <span style="margin-left: 100px;">
+
+                            <input type="submit" name="action" value="Convertir en PDF" /></span>
+                            <span id="status" style="display:none">L&#39;ajout ...</span>
+                            <iframe id="target_iframe" name="target_iframe" src="" style="width:0;height:0;border:0px"></iframe>
+
+                        </form>
+
+                    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="/fr/">Accueil</a></li>
+        <li class="footerItem"><a href="/fr/features/">Caractéristiques</a></li>
+        <li class="footerItem"><a href="/fr/faq/">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="/fr/contact">Contactez nous</a></li>
+        <li class="footerItem"><a href="/fr/support/privacy-policy.html">politique de confidentialité</a></li>
+    </ul>
+
+</div>
+
+
+<script type="text/javascript">
+                            function initUpload() {
+
+                                /*set the target of the form to the iframe and display the status
+                                 message on form submit.
+                                 */
+                                document.getElementById('uploadform').onsubmit=function() {
+                                    document.getElementById('uploadform').target = 'target_iframe';
+                                    document.getElementById('status').style.display="block";
+
+                                }
+                            }
+
+                            //This function will be called when the upload completes.
+                            function uploadComplete(status){
+                                //set the status message to that returned by the server
+                                document.getElementById('status').innerHTML=status;
+                            }
+
+                            window.onload=initUpload;
+                        </script>
+
+</body>
+
+</html>

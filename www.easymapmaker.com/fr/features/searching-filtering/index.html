@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="fr" lang="fr">
+<head>
+    <title>EasyMapMaker - Rechercher Carte de données </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Filtre, recherche (mot-clé et la distance), et le groupe feuille de calcul Excel (adresse, code postal, code postal, ville) les données de localisation sur une carte.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../fr.1.html" id="homeLink">Plans faciles</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Maps Recherche avancée</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Caractéristiques</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contactez nous</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Caractéristiques</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Traduire les informations d&#39;adresse en coordonnées cartographiables"><i class="icon-chevron-right"></i> géocodage d&#39;adresses</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Ajouter des filtres de carte et carte personnalisée étiquettes"><i class="icon-chevron-right"></i> Maps Recherche avancée</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Faites des Google Maps sans codage"><i class="icon-chevron-right"></i> Personnalisés Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Trouver les tendances géographiques et faire plus avec vos données"><i class="icon-chevron-right"></i> L&#39;analyse des données</a></li>
+                            <li class=""><a href="../directions/index.html" title="Obtenir les directions sur toutes vos cartes"><i class="icon-chevron-right"></i> Directions</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Modifier les paramètres et la carte à l&#39;aide de notre page d&#39;édition" ><i class="icon-chevron-right"></i> Modifier Plans</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Ajouter des cartes à votre site sans effort"><i class="icon-chevron-right"></i> Plans intégrés</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Carte vos données Excel avec une pâte et un clic de bouton"><i class="icon-chevron-right"></i> Cartes de données Excel</a></li>
+                            <!-- <li class=""><a href="/fr/features/ip_address_geocoding/" title="Utilisez notre maison services IP de géolocalisation pour mapper les adresses IP"><i class="icon-chevron-right"></i> Adresse IP géocodage</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Générer un document KML de vos données excel"><i class="icon-chevron-right"></i> KML pour Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Ajouter de grandes quantités de données sur votre carte."><i class="icon-chevron-right"></i> Grands ensembles de données</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="support de la carte pour iPhone, iPad, Android et autres appareils populaires"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="D&#39;excellents outils pour les agents immobiliers"><i class="icon-chevron-right"></i>Outils immobiliers</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Faire des cartes pour des rapports personnalisés"><i class="icon-chevron-right"></i> Compte-rendu</a></li>
+                            <li class="active"><a href="index.html" title="Recherche et de filtrage mappés données"><i class="icon-chevron-right"></i> Recherche et filtrage</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="le support de SSL et les données de carte sécurisé"><i class="icon-chevron-right"></i> Plans sécurisés</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="overview">
+                        <div class="page-header">
+                            <h2>Recherche et de filtre de votre Carte</h2>
+                        </div>
+
+                        <p>Vous cherchez l&#39;endroit le plus proche à une certaine adresse ou un autre emplacement? Il est facile de trouver l&#39;emplacement le plus proche de tout autre endroit en utilisant le moteur de recherche. Tapez un emplacement et appuyez sur Return ou cliquez sur l&#39;icône de recherche et notre service sera naviguer automatiquement la carte à l&#39;endroit le plus proche. </p>
+
+                        <!-- <p> TODO: add a sample image here</p> -->
+
+                        <h3>Filtrer les données ainsi</h3>
+                        <p>
+                            La boîte de recherche fonctionne également comme une boîte de filtre. Si vous cherchez quelque chose et ne vous souvenez pas tout à fait ce qu&#39;elle est, il suffit de taper dans la boîte de recherche et après quelques caractères d&#39;une liste des éléments pour afficher. Si vous sélectionnez un élément, comme un nom de ville, avec de multiples endroits cartographiés, la carte effectue un zoom avant pour afficher uniquement les articles. La plupart des données de la feuille de calcul est automatiquement entrée dans la gamme des recherches, ce qui pour faciliter le filtrage des données similaires. Cela ne devrait pas être confondu avec les filtres prédéfinis qui sont créés dans les cartes avancées qui peuvent permettre à différentes colonnes de données à filtrer. Cependant, dans certaines situations, ils peuvent fonctionner de la même manière, comme si une ville est filtré dans la zone de recherche et les filtres sont configurés pour la ville.
+                        </p>
+
+
+                       <!-- <p> TODO: add a sample image here</p> -->
+
+                        <h3>Filtrer par groupes (thèmes ou catégories)</h3>
+                            <p>
+                                Regroupez vos données jusqu&#39;à 10 icônes de repérage différents. Lorsque le regroupement est activé avec le regroupement, graphiques montrent la densité des groupes sélectionnés.
+                            </p>
+
+
+                    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../fr.1.html">Accueil</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Caractéristiques</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contactez nous</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">politique de confidentialité</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

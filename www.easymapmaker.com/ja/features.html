@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <title>EasyMapMaker.comで地図を作ります</title>
+    <meta name="description" content="カスタムGoogleの地図上にデータを表示するには、エクセル（xlsファイル）とスプレッドシートデータの地図">
+	<meta charset="UTF-8">
+
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/features.css">
+    <link rel="stylesheet" href="/css/responsive-video.css">
+
+    <style>
+
+
+        .grayTd {
+            border:1px solid #dddddd;    background-color: #dddddd;
+        }
+
+        .lightBlue {
+            background-color: #d9edf7;
+        }
+        .lightYellow {
+            background-color: #fcf8e3;
+        }
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+<div id="banner" class="navbar-fixed-top">
+    <div id="background">
+        <h1>
+            <a href="/"></a>
+        </h1>
+
+
+    </div>
+    <div id="navHeader">
+        <ul class="nav nav-pills">
+            <li id="easyMaps" ><a href="/ja/" id="homeLink">簡単な地図</a></li>
+            <li id="advancedMaps"><a href="/ja/advanced" id="advancedLink">高度なマップ</a></li>
+            <li id="features" class="active"><a href="/ja/features" id="featureLink">特徴</a></li>
+            <li><a href="http://blog.easymapmaker.com" id="blogLink">ブログ</a></li>
+            <li><a href="/ja/contact" id="contactLink">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <!-- end nav -->
+    <!-- end background -->
+</div>
+<!-- end banner -->
+
+<div id="spacing">
+
+</div>
+
+
+<div class="row-fluid">
+<div  class="span1" >
+</div>
+<div class="span10">
+
+<div class="row-fluid" >
+<div class="span3" >
+    <div>
+        <ul class="nav nav-list bs-docs-sidenav affix">
+            <li class="active"><a href="/ja/features/"><i class="icon-chevron-right"></i> 特徴</a></li>
+            <li class=""><a href="/ja/features/geocoding/" title="アドレス情報は、マッピング可能な座標に変換します"><i class="icon-chevron-right"></i> アドレスジオコーディング</a></li>
+            <li class=""><a href="/ja/features/advanced/" title="マップフィルタとカスタムマップのラベルを追加します。"><i class="icon-chevron-right"></i> 高度なマップ</a></li>
+            <li class=""><a href="/ja/features/custom-google-maps/" title="コー​​ディングなしカスタムGoogleマップを作ります"><i class="icon-chevron-right"></i> カスタムGoogleマップ</a></li>
+            <li class=""><a href="/ja/features/data-analysis/" title="地理的な傾向を見つけて、あなたのデータをさらに活用"><i class="icon-chevron-right"></i> データ分析</a></li>
+            <li class=""><a href="/ja/features/directions/" title="すべての地図上にルートを検索します"><i class="icon-chevron-right"></i> 行き方</a></li>
+            <li class=""><a href="/ja/features/map-edit/" title="私たちの編集ページを使用して、設定やマップを編集" ><i class="icon-chevron-right"></i> 編集の地図</a></li>
+            <li class=""><a href="/ja/features/embedded/" title="楽々あなたのサイトにマップを追加します。"><i class="icon-chevron-right"></i> 埋め込み地図</a></li>
+            <li class=""><a href="/ja/features/map-excel-data/" title="ペーストボタンクリックでExcelデータの地図"><i class="icon-chevron-right"></i> Excelデータマップ</a></li>
+            <!-- <li class=""><a href="/ja/features/ip_address_geocoding/" title="IPアドレスをマッピングするために私たちの家でipジオロケーションサービスを使用します"><i class="icon-chevron-right"></i> IPアドレスのジオコーディング</a></li> -->
+            <li class=""><a href="/ja/features/kml/" title="ExcelデータからKMLドキュメントを生成"><i class="icon-chevron-right"></i> Google EarthのKML</a></li>
+            <li class=""><a href="/ja/features/large-data-sets/" title="あなたのマップに大量のデータを追加します。"><i class="icon-chevron-right"></i> 大規模なデータセット</a></li>
+            <li class=""><a href="/ja/features/mobile-maps/" title="iPhone、アプリ、Androidや他の一般的なデバイスのための地図のサポート"><i class="icon-chevron-right"></i>モバイルマップ</a></li>
+            <li class=""><a href="/ja/features/real-estate/" title="不動産業者のための優れたツール"><i class="icon-chevron-right"></i>不動産ツール</a></li>
+            <li class=""><a href="/ja/features/reporting/" title="カスタムレポートのマップを作ります"><i class="icon-chevron-right"></i> 報告</a></li>
+            <li class=""><a href="/ja/features/searching-filtering/" title="検索とフィルタマッピングされたデータ"><i class="icon-chevron-right"></i> 検索とフィルタリング</a></li>
+            <li class=""><a href="/ja/features/map-data-security/" title="SSLサポートとセキュアな地図データ"><i class="icon-chevron-right"></i> セキュア地図</a></li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="span9">
+
+
+
+
+    <!-- start sample content-->
+
+
+
+
+
+    <!-- Overview
+    ================================================== -->
+    <section id="overview">
+        <div class="page-header">
+            <h2>マップは、生活の不可欠な一部であることができますどのように簡単にマッピングを参照してください。</h2>
+        </div>
+
+        <p>私たちのほとんどは、マップの日常を使用しています。  <a href="http://www.easymapmaker.com/ja/">EasyMapMaker</a> あなたのデータから簡単にGoogleマップを作るために設計されました。それはあなたがアドレス、郵便番号、都市、州、および緯度と経度の座標を含め、Googleからの期待と同じ位置情報を受け付けます。  </p>
+
+        <!-- <p> TODO: add a sample map here</p> -->
+
+        <h3>それは本当に、これは簡単です</h3>
+        <ol>
+            <li>スプレッドシートからデータをコピー・アンド・ペーストするに 
+			<a href="http://www.easymapmaker.com">私たちのフォーム
+			</a></li>
+            <li>（オプション）適切なオプションを設定します</li>
+            <li>（高度なマップ用オプション）（理想的に45x45）カスタムロゴをアップロードおよび/または独自のマーカー/ピンをアップロード</li>
+            <li>（高度なマップ用オプション）表示する項目とフィルタを設定します</li>
+            <li>「マップを作成する」をクリックします（すべてやりました！）</li>
+        </ol>
+
+        <!-- <p> TODO: add a sample video here</p> -->
+        <div class="outer-div-center">
+            <div class="inner-div-center">
+                <p> 基本的なマップを作成する方法のためのサンプルビデオをチェックしてください。</p>
+            </div>
+
+        </div>
+        <div class="flex-video widescreen" temprop="video" itemscope itemtype="http://schema.org/VideoObject">
+            <span style="display: none;" itemprop="name">easymapmaker.comでマップを作るの概要</span>
+            <meta itemprop="duration" content="T02M57S" />
+            <meta itemprop="thumbnailURL" content="http://i.ytimg.com/vi/fCTmHobORgk/hqdefault.jpg" />
+            <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/obTs0HwnVKo" />
+            <iframe  src="https://www.youtube.com/embed/fCTmHobORgk" frameborder="0" allowfullscreen></iframe>
+            <span style="display: none;" itemprop="description">マッピングは、この簡単です。数回のクリックでhttp://www.EasyMapMaker.comとの基本的なマップを作成します。スプレッドシート内の位置情報とのデータがある場合は、すぐにGoogleのマップを作ることができます。</span>
+        </div>
+
+        <div>
+            <h4>それが十分でない場合は、より良い地図を作るための機能のこの偉大なリストをチェックしてください！</h4>
+            </div>
+
+
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">特徴</th>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">簡単（シンプル）地図</th>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">高度なマップ</th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="grayTd">無料の地図</td>
+                    <td colspan="2"  class="lightBlue">はい。すべてのマップは完全に無料です。</td>
+        </tr>
+        <tr>
+            <td class="grayTd">大規模なデータセット（一日あたりのジオコード万以上のアドレス）</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">（近くの場所のための）マーカーのクラスタリング</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">カテゴリフィルタリング（複数のマーカ色）</td>
+                    <td class="lightBlue">はい、最大10の異なるマーカ色</td>
+                    <td class="lightBlue">はい、最大20の異なるマーカ色</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">番号付きピン</td>
+                    <td class="lightBlue">はい（1-99）</td>
+                    <td class="lightBlue">はい（1-99）</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">マーカー（ピン）ラベル</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">検索（ナビゲーションボックス）</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">カスタムCSSスタイル</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">カスタムロゴ</td>
+                    <td class="lightBlue">はい。 urlパラメータとして利用可能（ロゴ=）</td>
+                    <td class="lightBlue">はい。 urlパラメータやロゴをアップロードを通じて利用できます。</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">ズーム・イン（詳細）限界</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">KML世代（Google Earthの）</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">モバイルおよびタブレットマップ（自動的に）</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">行き方</td>
+                    <td class="lightBlue">はい（何のテキストナビゲーションません）</td>
+                    <td class="lightBlue">はい（「より多くのオプション」でターンテキストナビゲーションによってターン）</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">位置情報サービス</td>
+                    <td class="lightBlue">はい（モバイルおよびタブレットデバイス）</td>
+                    <td class="lightBlue">はい（モバイルおよびタブレットデバイス）</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">マップを削除/編集が簡単</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">地図を埋め込みます</td>
+                    <td class="lightBlue">はい</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">セキュリティ</td>
+                    <td class="lightBlue">はい。 （使用<a href="https://www.easymapmaker.com">HTTPS</a> ）</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">サポート</td>
+                    <td colspan="2" class="lightBlue">はい。コンタクトページを使用します。</td>
+                </tr>
+
+
+                <tr>
+                    <td class="grayTd">地図データのエクスポート</td>
+                    <td  class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">距離フィルタ</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">動的フィルタの最大12リスト</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">フィルタリストで使用可能なアイテムの数</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">複数選択フィルタ</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">データ隠蔽</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">ズームアップのみの検索ボックス</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">カスタムマーカー/ピン</td>
+                    <td class="lightYellow">いいえ</td>
+                    <td class="lightBlue">はい。アップロードするために利用できます。</td>
+                </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <p>EasyMapMakerだけでなく、位置ベースのデータを視覚化するための素晴らしい方法です。それはまた、複雑なフィルタを介してデータ解析、マーカーの色、カスタマイズされたピン、検索、距離のフィルタリング、データのエクスポートおよびそんなに多くを可能にします。</p>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- end sample  content-->
+
+
+</div>
+
+</div>
+</div>
+<div id="rightNav" class="span1" >
+</div>
+</div>
+
+
+
+<div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="/ja/">ホーム</a></li>
+        <li class="footerItem"><a href="/ja/features/">特徴</a></li>
+        <li class="footerItem"><a href="/ja/faq/">よくある質問</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">ブログ</a></li>
+        <li class="footerItem"><a href="/ja/contact">お問い合わせ</a></li>
+        <li class="footerItem"><a href="/ja/support/privacy-policy.html">個人情報保護方針</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

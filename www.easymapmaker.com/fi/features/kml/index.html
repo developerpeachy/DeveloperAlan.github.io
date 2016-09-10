@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="fi" lang="fi">
+<head>
+    <title>Tee KML asiakirjat Google Earth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vapaa kml google maapallon Excel dataa. Turn tiedot kml kopioimalla ja liittämällä se.">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../fi.1.html" id="homeLink">Helppo Kartat</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Tarkennettu Kartat</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">ominaisuudet</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blogi</a></li>
+                <li><a href="../../contact.html" id="contactLink">Ota meihin yhteyttä</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> ominaisuudet</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Käännä osoitetieto siirrettävissä kartalle koordinaatit"><i class="icon-chevron-right"></i> osoite Geokoodaus</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Lisää kartta suodattimia ja mukautettuja karttakoodeja"><i class="icon-chevron-right"></i> Tarkennettu Kartat</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Tee Custom Google Maps ilman koodausta"><i class="icon-chevron-right"></i> Mukautettu Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Etsi maantieteellisiä suuntauksia ja tehdä enemmän tietoja"><i class="icon-chevron-right"></i> Tietojen analysointi</a></li>
+                            <li class=""><a href="../directions/index.html" title="Saat suuntiin kaikissa kartoissasi"><i class="icon-chevron-right"></i> Ohjeet</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Muokkaa asetuksia ja kartta käyttämällä muokkasivulta" ><i class="icon-chevron-right"></i> Edit Maps</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Lisää karttoja sivuston vaivattomasti"><i class="icon-chevron-right"></i> Embedded Maps</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Kartta Excel tietoja tahna ja napin painalluksella"><i class="icon-chevron-right"></i> Excel Data Maps</a></li>
+                            <!-- <li class=""><a href="/fi/features/ip_address_geocoding/" title="Käytä talon ip Geolocation palvelu kartoittaa IP-osoitteet"><i class="icon-chevron-right"></i> IP-osoite Geokoodaus</a></li> -->
+                            <li class="active"><a href="index.html" title="Luo KML asiakirjan Excel tiedot"><i class="icon-chevron-right"></i> KML Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Lisää suuria tietomääriä kartat."><i class="icon-chevron-right"></i> Suuria tietomääriä</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="Kartta tukea iPhone, iPad, Android ja muut suosittuja laitteita"><i class="icon-chevron-right"></i>Mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="Suuri työkalut kiinteistönvälittäjät"><i class="icon-chevron-right"></i>Real Estate Työkalut</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Tee kartat mukautettuja raportteja"><i class="icon-chevron-right"></i> Raportointi</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Etsi ja suodatin Yhdistettyjen tietojen"><i class="icon-chevron-right"></i> Etsiminen ja suodatus</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="SSL-tuki ja turvallisen karttatietoja"><i class="icon-chevron-right"></i> Secure Maps</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="KML">
+                        <div class="page-header">
+                            <h2>Luo KML Google Earth</h2>
+                        </div>
+
+                        <p>Kun youmap osoitteet ja tallentaa kartta sähköpostiosoitteeseen. Sähköposti lähetetään joka sisältää url ladata uusille KML-tiedosto. Kun muutetaan kartan, KML päivitetään yhdessä kartan.</p>
+
+                        <p>KML on XML alustettu käyttämän kielen Google Earth, Google Maps ja muut ohjelmat sallimaan geo-paikkatietojen sisältö tehtäisiin.     </p>
+
+                        <p>Luominen KML tiedoston tiedot seuraavasti:</p>
+
+                        <ol>
+                            <li>Mene <a href="http://www.easymapmaker.com">EasyMapMaker.com</a></li>
+                            <li>Kopioi ja liitä tietoja omasta laskentataulukon 
+							<a href="http://www.easymapmaker.com">lomakkeemme</a></li>
+                            <li>Määritä sopivat vaihtoehdot (valinnainen)</li>
+                            <li>Klikkaa &quot;Make Map&quot;</li>
+                            <li>Klikkaa &quot;Käynnistä max&quot;</li>
+                            <li>Muista tarkistaa &quot;Luo KML käytettäväksi Google Earth.&quot;</li>
+                            <li>Kirjoita sähköpostiosoite ja tallenna karttaa</li>
+                            <li>Avaa sähköpostisi ja löytää linkin KML-tiedosto</li>
+                        </ol>
+
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+    <div class="row">
+        <div class="span8 sp8">
+
+            <ul class="footerList">
+				        <li class="footerItem"><a href="../../../fi.1.html">Kotiin</a></li>
+        <li class="footerItem"><a href="../../features.1.html">ominaisuudet</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">UKK</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blogi</a></li>
+        <li class="footerItem"><a href="../../contact.html">Ota meihin yhteyttä</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">Tietosuojakäytäntö</a></li>
+            </ul>
+        </div>
+        <div class="index-social span3 sp3">
+            <div style="margin-top:14px; text-align: right;">
+                <a rel="nofollow" target="_blank" href="https://www.youtube.com/user/easymapmaker"><div class="footer-sprite sprite-youtube" rel="tooltip" data-original-title="Youtube videos"></div></a>
+                <a target="_blank" href="https://plus.google.com/108989277805007525733" rel="publisher"><div class="footer-sprite sprite-gplus-32" rel="tooltip" data-original-title="Google Plus"></div></a>
+                <a rel="nofollow" target="_blank" href="http://www.facebook.com/easymapmaker"><div class="footer-sprite sprite-fb-icon" rel="tooltip" data-original-title="Join us on Facebook."></div></a>
+                <a rel="nofollow" target="_blank" href="https://twitter.com/easymapmaker"><div class="footer-sprite sprite-tw-icon" rel="tooltip" data-original-title="Follow Us on Twitter"></div></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>

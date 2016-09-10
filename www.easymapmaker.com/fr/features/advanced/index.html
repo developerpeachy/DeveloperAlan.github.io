@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="fr" lang="fr">
+<head>
+    <title>EasyMapMaker.com - Plans avancés avec des filtres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="cartes avancées avec les filtres, les directions, recherche de rayon aussi simple que coller vos données Excel.">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+         <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+    <link rel="stylesheet" href="../../../css/responsive-video.css">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+
+    <style>
+
+
+        #outMapDiv {
+            width: 600px;
+        }
+
+        @media (max-width: 767px) {
+            #outMapDiv {
+                width: 500px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            #outMapDiv {
+                width: 300px;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../fr.1.html" id="homeLink">Plans faciles</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Maps Recherche avancée</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Caractéristiques</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contactez nous</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Caractéristiques</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Traduire les informations d&#39;adresse en coordonnées cartographiables"><i class="icon-chevron-right"></i> géocodage d&#39;adresses</a></li>
+                            <li class="active"><a href="index.html" title="Ajouter des filtres de carte et carte personnalisée étiquettes"><i class="icon-chevron-right"></i> Maps Recherche avancée</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="Faites des Google Maps sans codage"><i class="icon-chevron-right"></i> Personnalisés Google Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Trouver les tendances géographiques et faire plus avec vos données"><i class="icon-chevron-right"></i> L&#39;analyse des données</a></li>
+                            <li class=""><a href="../directions/index.html" title="Obtenir les directions sur toutes vos cartes"><i class="icon-chevron-right"></i> Directions</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Modifier les paramètres et la carte à l&#39;aide de notre page d&#39;édition" ><i class="icon-chevron-right"></i> Modifier Plans</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Ajouter des cartes à votre site sans effort"><i class="icon-chevron-right"></i> Plans intégrés</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Carte vos données Excel avec une pâte et un clic de bouton"><i class="icon-chevron-right"></i> Cartes de données Excel</a></li>
+                            <!-- <li class=""><a href="/fr/features/ip_address_geocoding/" title="Utilisez notre maison services IP de géolocalisation pour mapper les adresses IP"><i class="icon-chevron-right"></i> Adresse IP géocodage</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Générer un document KML de vos données excel"><i class="icon-chevron-right"></i> KML pour Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Ajouter de grandes quantités de données sur votre carte."><i class="icon-chevron-right"></i> Grands ensembles de données</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="support de la carte pour iPhone, iPad, Android et autres appareils populaires"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="D&#39;excellents outils pour les agents immobiliers"><i class="icon-chevron-right"></i>Outils immobiliers</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Faire des cartes pour des rapports personnalisés"><i class="icon-chevron-right"></i> Compte-rendu</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Recherche et de filtrage mappés données"><i class="icon-chevron-right"></i> Recherche et filtrage</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="le support de SSL et les données de carte sécurisé"><i class="icon-chevron-right"></i> Plans sécurisés</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="EmbedMaps">
+                        <div class="page-header">
+                            <h2>Maps Recherche avancée</h2>
+                        </div>
+
+                        <p> Avez-vous jamais eu envie de porter la capacité à filtrer les données dans Excel pour vous Maps? Nos &quot;Plans avancées&quot; vous permettent de faire exactement cela. L&#39;onglet Carte avancée permet les mêmes fonctionnalités que &quot;Plans Facile&quot; et plus encore. Personnalisez votre carte en ajoutant vos propres images et logo. Si vous voulez voir les données qui sont contenues dans une région de la carte, la fonction de données d&#39;exportation fournit cette.
+
+
+                        </p>
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <p> Regardez la vidéo pour faire une carte avec les filtres, les repères de mesure, un logo, l&#39;exportation de données, itinéraire, et un filtre de localisation.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-video widescreen">
+                            <iframe src="https://www.youtube.com/embed/fFE4rasTBsA" frameborder="0" allowfullscreen></iframe>
+
+                        </div>
+
+                        <h3>Plans avancées permettent une plus grande personnalisation:</h3>
+                        <ol>
+                            <li><a href="index.html#custImages">Ajouter des images personnalisées</a></li>
+                            <li><a href="index.html#add_filters">Ajouter les filtres</a> (Sélection multiple, seule sélection, nombre d&#39;éléments)</li>
+                            <li><a href="index.html#hide_data">Cacher données</a></li>
+                           <!-- <li>Distance Filtering</li>
+                            <li>Data Export</li> -->
+                        </ol>
+
+
+
+                        <div class="outer-div-center"  id="custImages">
+                            <div class="inner-div-center">
+                                <h4> Ajouter des images personnalisées (Voir <a href="../../../map/custom-images-and-multiselect-sample.html" target="_blank">exemple de carte </a>)</h4>
+                                <img src="http://www.easymapmaker.com/img/features/customizations.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add images">
+
+                            </div>
+                        </div>
+
+
+                        <p>Ajouter une image personnalisée ou le logo de votre carte en les téléchargeant. Vous pouvez télécharger jusqu&#39;à 50 images à 1 fois avec une taille allant jusqu&#39;à 10 Ko chacun. Pour utiliser plusieurs images, le groupe doit être défini. Les images peuvent être mises en correspondance avec les différents groupes (ou catégories). L&#39;image ci-dessous est un exemple de configuration d&#39;un groupe (pour être utilisé avec les images dans la photo ci-dessus).
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                            <img src="http://www.easymapmaker.com/img/features/custom_group.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add group images">
+                            </div>
+                    </div>
+
+                        </p>
+
+
+
+                        <div class="outer-div-center"  id="add_filters">
+                            <div class="inner-div-center">
+                                <h4>Ajouter des filtres d&#39;un simple clic.</h4>
+                                <img src="http://www.easymapmaker.com/img/features/filters_sample.png" style="margin-right: 20px; margin-bottom: 20px;" alt="add filters">
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="hide_data" class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Masquer les éléments que vous ne voulez pas que les utilisateurs voient</h4>
+                                <img src="http://www.easymapmaker.com/img/features/description_sample.png" style="margin-right: 20px; margin-bottom: 20px;" alt="montrer certains éléments">
+
+                            </div>
+                        </div>
+                        <p>Our <a href="http://www.easymapmaker.com/advanced">Maps Recherche avancée</a> vous permettent d&#39;avoir des données consultables et filtrables sur la carte mais pas affichées pour les téléspectateurs de la carte. Coordonnées peuvent maintenant être facilement cachés, ou des articles qui sont filtrés ou groupés sur Are ne peuvent être visibles avec les données source et caché des utilisateurs. Cela est aussi facile que de sélectionner les éléments à cacher. Par défaut, tous les éléments sont visibles.</p>
+
+
+                        <p>
+                        <div class="outer-div-center"><div id="outMapDiv" class="inner-div-center" width="100%" style="max-width: 610px;"><iframe  style="display: block;" height="500" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                                                                                                                    src="http://www.easymapmaker.com/map/dallas_real_estate_sample"/>
+                            </iframe></div></div>
+                        </p>
+
+                        <p> La carte ci-dessus est un exemple à l&#39;aide des groupes et des filtres  </p>
+
+
+                        <p> Plans avancés comprennent également la possibilité de masquer tous les en-têtes de l&#39;étiquette pour la description de marqueur par de-sélectionner la case à cocher &quot;Afficher étiquette&quot;. Cette option doit être utilisée avec prudence, sauf les données est évidente pour l&#39;utilisateur.</p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../fr.1.html">Accueil</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Caractéristiques</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contactez nous</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">politique de confidentialité</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

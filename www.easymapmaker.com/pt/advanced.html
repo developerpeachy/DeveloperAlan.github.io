@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+
+<title>Geocode e mapear vários locais a partir de dados do Excel</title>
+
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Mapear vários locais a partir de dados do Excel (.xls) de planilha em um mapa personalizado google. Criar um mapa gratuito; Visualização de mapas no celular, tablet e computadores">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+
+    <meta name="apple-mobile-web-app-title" content="Map Maker">
+    <LINK REL="apple-touch-icon-precomposed" HREF="http://www.easymapmaker.com/apple-touch-icon.png" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-config" content="none"/>
+
+
+
+    <link rel="shortcut icon" href="http://www.easymapmaker.com/favicon.ico" />
+<link rel="image_src" href="../img/facebook_emm_180.png" />
+
+
+<!---->    <link rel="stylesheet" href="../css/home.css.min.css">
+
+    <!--
+    <link rel="stylesheet" href="/css/bootstrap.css.min">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+
+
+    <link rel="stylesheet" href="/css/map_layout.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/btns.css"/>
+
+    <link rel="stylesheet" href="/css/bootstrap-multiselect.css">
+     -->
+
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/lte-ie-8.css"><![endif]-->
+
+    <!-- stuff for labels below the pin: -->
+
+
+    <!--   <link rel="stylesheet" href="/css/markerLabelColors.css"> -->
+
+    <link rel="stylesheet" href="../css/responsive-video.css">
+
+
+
+    <style>
+        #selectorData > p > label {
+            width: 200px;
+        }
+        #selectorData {
+
+            width: auto;
+        }
+    </style>
+
+      <!-- end label below pin -->
+
+    <script src="js/english_template.js"
+            type="text/javascript">
+    </script>
+	          
+	<script src="js/main_text_data.js" type="text/javascript"></script>
+
+	  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+	<!--
+    <script src="/js/bootstrap.js" type="text/javascript"></script>
+
+
+
+
+    <script src="/lang/globals.js"
+            type="text/javascript">
+    </script>
+
+    <script src="/lang/js_include.js"
+            type="text/javascript">
+    </script>
+
+
+    <script src="/js/json2.js"
+            type="text/javascript">
+    </script>
+
+        <script src="/js/bootstrap-multiselect.js"
+                type="text/javascript">
+        </script>
+
+
+        <script src="/js/markerclustererplus2.js"
+            type="text/javascript">
+    </script>
+
+    <script src="/lang/mapControl.js"
+               type="text/javascript">
+    </script>
+
+        <script type="text/javascript" src="/js/ajaxfileupload.js"></script>
+
+
+        <script src="/lang/main_page.js" type="text/javascript"></script>
+
+
+
+-->
+
+    <!--    -->
+  <!--  <link type="text/css"
+          href="//ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery-ui-dialog.min.js"></script>
+
+    <script src="/js/jquery.youtubepopup.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+    $("img.youtube").YouTubePopup({ idAttribute: 'id' });
+    });
+    </script>-->
+    <!-- -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40200441-1', 'easymapmaker.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+    <!--  -->  <script src="../lang/compiled/main_index_control.js.min" type="text/javascript"></script>  
+
+  <!--  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
+</head>
+<body onload="init();">
+
+
+<!--
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=409503345819080&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+-->
+
+<div id="container">
+
+<div id="banner" class="navbar-fixed-top">
+    <div id="background">
+        <h1>
+            <a href="../pt.1.html"></a>
+        </h1>
+
+
+    </div>
+    <div id="navHeader">
+        <ul class="nav nav-pills">
+            <li id="easyMaps" class="active"><a href="../pt.1.html" id="homeLink">Mapas fáceis</a></li>
+            <li id="advancedMaps"><a href="advanced.html" id="advancedLink">Mapas avançados</a></li>
+            <li id="features"><a href="features.1.html" id="featureLink">Características</a></li>
+            <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+            <li><a href="contact.html" id="contactLink">Contate-nos</a></li>
+        </ul>
+    </div>
+    <!-- end nav -->
+    <!-- end background -->
+</div>
+<!-- end banner -->
+
+
+
+<div id="mainBody">
+<div  id="mainMapDiv" class="row-fluid">
+<div class="span1" id="leftNav">
+   <!-- <div id="twitterDiv">
+        <a href="https://twitter.com/share" data-count="vertical" class="twitter-share-button" data-url="http://www.easymapmaker.com" data-via="easymapmaker" data-lang="en">Tweet</a>
+    </div>
+    <div id="fbLike" class="fb-like" data-href="http://www.easymapmaker.com" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+   -->
+   <!-- left nav -->
+</div>
+<!-- end div id="leftNav" -->
+
+<div class="span10" id="mapCreateDiv">
+<form id="processForm" name="processForm" onsubmit="return false;" action="advanced.html" autocomplete="off">
+
+<div id="spacing">
+
+</div>
+
+
+<div id="instructions" class="outer-div-center" style="padding: 0;">
+    <div style="width: 70%; text-align: left; display: inline-block;"><h5>Faça um mapa de simples em 3 passos simples:</h5>
+     <ol>
+         <li>Copiar e colar dados de sua planilha na tabela (ou usar um dos nossos exemplos).</li>
+         <li>(Opcional) Definir opções</li>
+         <li>Clique em &quot;Criar Map&quot;.</li>
+     </ol>
+
+        </div>
+    </div>
+<div id="GeneratedData"></div>
+
+<div id="toggleDiv">
+
+    <div id="prettyTable">
+        <div id="outerDisplayTable">
+            <table style="width: 100%" class="table table-bordered table-condensed" id="displayTable">
+
+            </table>
+
+        </div>
+
+
+
+        <!--
+         <div id="overTableMessage">
+
+        Copy/Paste Text
+
+
+         </div>  --><!-- end id="overTableMessage"> -->
+
+    </div> <!-- end pretty table div -->
+    <div id="tableText"  style="display: none">
+
+        <textarea title="" id="sourceData" ></textarea>
+
+
+
+    </div>
+
+    <div id="outerOverTable">
+        <div id="overTableMessage">
+
+
+        </div>
+    </div>
+
+
+</div> <!-- end toggle div -->
+
+<div id="sample" style="text-align: center; width: 100%; background-color: rgba(64, 64, 64, 0.2);">
+    <div id="innerSample" style="display: inline-block; "> Tente usar os nossos dados de exemplo:
+       <!-- <a id="useSample1">use sample 1</a>
+        <a id="useSample2">use sample 2</a> -->
+        <a id="useSample1" href="samples/emm_sample_1.xls" target="_blank" title="usar e baixar a amostra 1" rel="nofollow">Download amostra 1</a>
+        </div>
+    <div id="sample1_data" style="display: none" >
+    </div>
+
+    <div id="sample2_data" style="display: none" >
+    </div>
+</div>
+
+
+<div id="statusStuff" >
+
+    <div id="processingLine"><p></p>
+        <div id="lineCount"> </div>
+        <div id="lineVal"> </div> <p></p>
+        <div id="timeRemaining"> </div>
+    </div>
+
+    <div id="outerProgressDiv" style="display: none; " class="progress progress-striped">
+        <div style="width: 0%;" class="bar" id="progressDisplayDiv"></div>
+    </div>
+
+    <div id="buttons" >
+        <p id="headerInst">Certifique-se os dados incluem cabeçalhos e informações de localização.</p>
+        <p>  <button id="optionButton" class="btn btn-large btn-primary" style="white-space: nowrap;" type="button" autocomplete="off">Definir opções</button>
+            <button id="makeMapButton" class="btn btn-large btn-caution" style="white-space: nowrap;" type="button" autocomplete="off">Faça Mapa</button></p> </div>
+</div> <!-- end statusStuff div -->
+
+
+<div id="errorStuff" class="outer-div-center" style="display: none;">
+    <div id="errorMessageDiv" class="alert" style="display: inline-block; margin-bottom: 5px; width: 75%;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        Clique no <strong>Mostrar Erros</strong> botão para visualizar os erros de geo-codificação.
+
+    </div>
+
+    <div id="showHideError" style="padding-bottom: 5px;"><button id="errorButton" class="btn btn-mini btn-primary" style=" white-space: nowrap;" type="button">Mostrar Erros</button></div>
+    <div id="prettyErrorTable" class="outer-div-center" style="display: none; width: 75%;">
+
+
+    </div>
+</div>
+
+<!--
+<p>
+   <input type="submit" value="Validate Data" id="validate_data_button">
+   <input type="submit" value="Save Filter &amp; Group" id="save_filter_button">
+   <input type="submit" value="Save Map" id="save_data_button">
+   <input type="submit" value="Generate Map" id="generate_map_button">
+</p>
+-->
+</form>
+<div id="data2"></div>
+
+<div  id="mapOptions" style="display: none">
+    <div class="outer-div-center">
+        <div id="optionDescriptionLabel" class="inner-div-center">Opções foram automaticamente definidas, mas devem ser mudados se há algo errado. Alterar opções pode alterar a descrição da amostra marcador.</div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="span6">
+                <div id="outerSelectorData">
+                    <div id="selectorData">
+                        <p>
+                        <label id="region_sel_label" for="region_sel">Região</label>
+                        <select id="region_sel"  autocomplete="off">
+                            <option value="">Detectar automaticamente</option>
+                            <option value="ar">Argentina</option>
+                            <option value="at">Áustria</option>
+                            <option value="au">Austrália</option>
+                            <option value="be">Bélgica</option>
+                            <option value="br">Brasil</option>
+                            <option value="ca">Canadá</option>
+                            <option value="cn">China</option>
+                            <option value="co">Colômbia</option>
+                            <option value="dk">Dinamarca</option>
+                            <option value="fi">Finlândia</option>
+                            <option value="fr">França</option>
+                            <option value="de">Alemanha</option>
+                            <option value="in">Índia</option>
+                            <option value="id">Indonésia</option>
+                            <option value="ie">Irlanda</option>
+                            <option value="it">Itália</option>
+                            <option value="jp">Japão</option>
+                            <option value="my">Malásia</option>
+                            <option value="mx">México</option>
+                            <option value="nl">Holanda</option>
+                            <option value="nz">Nova Zelândia</option>
+                            <option value="no">Noruega</option>
+                            <option value="pt">Portugal</option>
+                            <option value="ph">Filipinas</option>
+                            <option value="ru">Rússia</option>
+                            <option value="sa">Arábia Saudita</option>
+                            <option value="sg">Cingapura</option>
+                            <option value="za">África do Sul</option>
+                            <option value="kr">Coreia do Sul</option>
+                            <option value="es">Espanha</option>
+                            <option value="se">Suécia</option>
+                            <option value="ch">Suíça</option>
+                            <option value="tw">Taiwan</option>
+                            <option value="ua">Ucrânia</option>
+                            <option value="uk">Reino Unido</option>
+                            <option value="us">Estados Unidos</option>
+                        </select>
+                        </p>
+
+
+
+
+                    </div>
+                    <div id="hideSelector" style="display: none;">
+                        <p>
+                        <label id="zoom_in_sel_label" for="zoom_in_sel">Mais Zoom
+                            <a title="" data-toggle="tooltip" id="zoomInToolTip" data-original-title="Defina o zoom-in máximo (detalhes) para ver o mapa"><i class="icon-question-sign"></i></a> </label>
+                        <select id="zoom_in_sel">
+                            <option value="20" selected>prédio</option>
+                            <option value="19">rua detalhada</option>
+                            <option value="18">rua</option>
+                            <option value="17">bairro detalhado</option>
+                            <option value="16">Vizinhança</option>
+                            <option value="15">Visão geral do bairro</option>
+                            <option value="14">cidade detalhado</option>
+                            <option value="13">Cidade</option>
+                            <option value="12">cidade detalhado</option>
+                            <option value="11">cidade</option>
+                            <option value="10">área metropolitana detalhado</option>
+                            <option value="9">metro de área ampla</option>
+                            <option value="8">seção de estado</option>
+                            <option value="7">Estado</option>
+                        </select>
+                        </p>
+                    </div>
+					
+					
+					       <div id="hideLangSelector" style="display: none;">
+<p>
+                        <label id="map_lang_sel_label" for="map_lang_sel">mapa Idioma
+                            <a title="" data-toggle="tooltip" id="mapLangToolTip" data-original-title="Definir o idioma para o mapa">
+                                <i class="icon-question-sign"></i></a> </label>
+                        <select id="map_lang_sel">
+							 <option value="" selected>Google padrão</option>
+							<option value="ar">árabe</option>
+                            <option value="bg">búlgaro</option>
+                            <option value="bn">bengali</option>
+                            <option value="ca">catalão</option>
+                            <option value="cs">checo</option>
+                            <option value="da">dinamarquês</option>
+                            <option value="de">alemão</option>
+                            <option value="el">grego</option>
+                            <option value="en">Inglês</option>
+                            <option value="en-AU">Inglês (australiano)</option>
+                            <option value="en-GB">Inglês (Grã-Bretanha)</option>
+                            <option value="es">espanhol</option>
+                            <option value="eu">basco</option>
+                            <option value="fa">obter</option>
+                            <option value="fi">finlandês</option>
+                            <option value="fil">Filipino</option>
+                            <option value="fr">francês</option>
+                            <option value="gl">galego</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="hi">não</option>
+                            <option value="hr">croata</option>
+                            <option value="hu">húngaro</option>
+                            <option value="id">indonésio</option>
+                            <option value="it">italiano</option>
+                            <option value="iw">hebraico</option>
+                            <option value="ja">japonês</option>
+                            <option value="kn">Kannada</option>
+                            <option value="ko">coreano</option>
+                            <option value="lt">lituano</option>
+                            <option value="lv">letão</option>
+                            <option value="ml">malayalam</option>
+                            <option value="mr">marata</option>
+                            <option value="nl">holandês</option>
+                            <option value="no">norueguês</option>
+                            <option value="pl">polonês</option>
+                            <option value="pt">português</option>
+                            <option value="pt-BR">Português (Brasil)</option>
+                            <option value="pt-PT">Português (Portugal)</option>
+                            <option value="ro">romeno</option>
+                            <option value="ru">russo</option>
+                            <option value="sk">eslovaco</option>
+                            <option value="sl">esloveno</option>
+                            <option value="sr">sérvio</option>
+                            <option value="sv">sueco</option>
+                            <option value="ta">tâmil</option>
+                            <option value="te">Telugu</option>
+                            <option value="th">tailandês</option>
+                            <option value="tl">Tagalog</option>
+                            <option value="tr">turco</option>
+                            <option value="uk">ucraniano</option>
+                            <option value="vi">vietnamita</option>
+                            <option value="zh-CN">Chinês simplificado)</option>
+                            <option value="zh-TW">Chinês tradicional)</option>
+                        </select>
+</p>
+                    </div>
+					
+                </div>
+
+            </div>
+
+
+
+            <div class="span4">
+
+                <div id="outerMarkerDesc">
+
+                    <div id="markerDescriptionLabel" ><h5>Descrição marcador Amostra</h5></div>
+
+                    <div id="markerDescriptionDiv">
+
+                    </div>
+
+                    <div id="streetViewAdvanced" style="display: none;">
+                    <p>
+                        <label for="streetViewCB" id="streetViewCB_label">Street View Imagem<a title="" data-toggle="tooltip" id="streetViewToolTip" data-original-title="Mostrar imagem street view quando disponível (e não existem outras imagens)">
+                            <i class="icon-question-sign"></i></a> </label>
+                        <input type="checkbox" value="false" name="streetView" id="streetViewCB" value="false">
+                    </p>
+                    </div>
+                </div>
+
+            </div> <!-- end span4 -->
+
+
+        </div>  <!-- ends row -->
+    </div> <!-- end container -->
+
+</div>
+
+<div id="outerCustoms" class="outer-div-center" style="display: none;">
+<div id="innerCustoms" class="inner-div-center">
+    <h4>personalizações <a id="toggleCustomizations" style="font-size: 11px; cursor: pointer; ">(mostra)</a></h4>
+    <div id="customizationsDiv" style="display: none;">
+    <div style="text-align: left;"><label for="searchText" style="width: 200px; margin-right: 10px; display: inline;"> Custom Search Texto:</label><input id="searchText"  type="text" placeholder="Pesquisar" MAXLENGTH=50 style="width: 156px;"></div>
+    <div style="text-align: left;"><label for="logoToUpload" style="width: 200px; margin-right: 10px; display: inline;">Logotipo personalizado:<a title="" data-toggle="tooltip" id="customLogoToolTip" data-original-title="Carregar um logotipo não maior do que 10KB. Dimensões ideais são 45x45."><i class="icon-question-sign"></i></a></label>
+        <span id="logoSpan" style="margin-right: 5px;"></span><input id="logoToUpload" type="file" size="45" name="logoToUpload" class="input" accept="image/*">        <button class="button" id="logoUpload" onclick="return ajaxFileUpload('logoToUpload');">Envio</button></p>
+    </div>
+
+        <div style="margin-top: 10px;" id="customImageId">
+
+        <h5 style="text-align: left;">Marcadores (pinos) <a title="" data-toggle="tooltip" id="customMarkersToolTip" data-original-title="Carregar até 50 marcadores, não maiores do que 10KB cada.">
+            <i class="icon-question-sign"></i></a> </h5>
+        <p style="margin-bottom: 1px;">Use vários marcadores se estiver usando o agrupamento / categorização</p>
+        <p><input id="fileToUpload" type="file" size="45" name="fileToUpload[]" class="input" multiple accept="image/*">
+        <button class="button" id="buttonUpload" onclick="return ajaxFileUpload('fileToUpload');">Envio</button></p>
+        <input type="hidden" id="imgKey" value="" autocomplete="off">
+        <div id="imageTable" style="display: none; background-color: white;">
+
+        </div>
+        <p>Mude a cor do cluster padrão para os seus marcadores personalizados:<select id="markerColor" name="colors">
+
+                    <option style="background-color: #00FFFF;"  value= "00FFFF" data-color="Blue green">Azul verde</option>
+                    <option style="background-color: #6B98FF;"  value= "6B98FF" data-color="Blue">Azul</option>
+                    <option style="background-color: #A52A2A;"  value= "A52A2A" data-color="Brown 2">Brown 2</option>
+                    <option style="background-color: #CB9D7C;"  value= "CB9D7C" data-color="Brown">Castanho</option>
+                    <option style="background-color: #DC143C;"  value= "DC143C" data-color="Crimson">Carmesim</option>
+                    <option style="background-color: #A9A9A9;"  value= "A9A9A9" data-color="Dark gray">Cinza escuro</option>
+                    <option style="background-color: #01BF00;"  value= "01BF00" data-color="Dark green">Verde escuro</option>
+                    <option style="background-color: #E14F9E;"  value= "E14F9E" data-color="Dark pink">Rosa escuro</option>
+                    <option style="background-color: #CCCC00;"  value= "CCCC00" data-color="Gold">Ouro</option>
+                    <option style="background-color: #97EC7D;"  value= "97EC7D" data-color="Green">Verde</option>
+                    <option style="background-color: #D3D3D3;"  value= "D3D3D3" data-color="Light gray">Cinza claro</option>
+                    <option style="background-color: #00FF00;"  value= "00FF00" data-color="Lime green">Verde limão</option>
+                    <option style="background-color: #FFE4B5;"  value= "FFE4B5" data-color="Mocassin">mocassim</option>
+                    <option style="background-color: #FD8D08;"  value= "FD8D08" data-color="Orange">laranja</option>
+                    <option style="background-color: #BCE3FF;"  value= "BCE3FF" data-color="Pale blue">Azul pálido</option>
+                    <option style="background-color: #CC0099;"  value= "CC0099" data-color="Pink purple">rosa roxo</option>
+                    <option style="background-color: #FDABFF;"  value= "FDABFF" data-color="Pink">Rosa</option>
+                    <option style="background-color: #C89BFF;"  value= "C89BFF" data-color="purple">roxo</option>
+                    <option style="background-color: #FF776B;"  value= "FF776B" data-color="Red" selected>Vermelho</option>
+                    <option style="background-color: #4169E1;"  value= "4169E1" data-color="Royal Blue">azul Real</option>
+                    <option style="background-color: #FFED5C;" value= "FFED5C" data-color="Yellow">Amarelo</option>
+        </select>
+        </p>
+    </div>
+    </div>
+
+</div>
+</div>
+
+
+<div id="outerMarkerDisplaySelects" class="outer-div-center" style="display: none;">
+    <div id="innerMarkerDisplaySelects" class="inner-div-center">
+        <h5 class="headerMargin">Escolha itens para mostrar na descrição marcador</h5>
+        <div id="markerDisplaySelects">
+            <table>
+                <tbody>
+                <tr>
+                    <td><label id="desc_from_label" for="noDisplay">Esconder de Descrição</label></td>
+                    <td></td>
+                    <td><label id="desc_to_label" for="toDisplay">Show em Descrição</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="noDisplay" name="hide markers" multiple="" ></select>
+                    </td>
+                    <td><input type="button" id="moveToDisplay" value="&gt;"> <br>
+                        <input type="button" id="removeFromDisplay" value="&lt;"> <br>
+                        <input type="button" id="moveAllToDisplay" value="&gt;&gt;"> <br>
+                        <input type="button" id="removeAllFromDisplay" value="&lt;&lt;"> <br>
+
+                    </td>
+                    <td>
+                        <select id="toDisplay" name="display markers" multiple="" ></select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div id="outerFilterSelects" class="outer-div-center" style="display: none;">
+    <div id="innerFilterSelects" class="inner-div-center">
+        <h5 class="headerMargin">Selecione até 12 itens a filtrar</h5>
+        <div id="filterSelects" >
+            <table>
+                <tbody>
+                <tr>
+                    <td><label id="filter_from_label" for="noFilter">Filtros Disponíveis</label></td>
+                    <td></td>
+                    <td><label id="filter_to_label" for="toFilter">Filtros Selecionados</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="noFilter" name="no filter" multiple="multiple" ></select>
+                    </td>
+                    <td><p><input type="button" id="moveToFilter" value="&gt;"></p>
+
+                        <p><input type="button" id="removeFromFilter" value="&lt;"></p>
+
+                        <p><input type="button" id="removeAllFromFilter" value="&lt;&lt;"></p>
+
+                    </td>
+                    <td>
+                        <select id="toFilter" name="filters" multiple=""  ></select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                <label for="dynamicFiltersCB" id="dynamicFiltersCB_label">Desativar filtros dinâmicos <a title="" data-toggle="tooltip" id="dynamicFiltersToolTip" data-original-title="Filtros dinâmicos causar dados de filtro disponíveis para alterar, similar aos filtros em excel">
+                    <i class="icon-question-sign"></i></a> </label>
+                <input type="checkbox" value="false" name="dynamicfilters" id="dynamicFiltersCB">
+            </p>
+            <p>
+                <label for="filterCountsCB" id="filterCountsCB_label">Visor contagem filtro <a title="" data-toggle="tooltip" id="filterCountsToolTip" data-original-title="Exibir o número de itens ao lado de cada filtro">
+                    <i class="icon-question-sign"></i></a> </label>
+                <input type="checkbox" value="false" name="filterCounts" id="filterCountsCB">
+            </p>
+
+            <p>
+                <label for="multiSelectFiltersCB" id="multiSelectFiltersCB_label">Mulit-Selecionar Filtros<a title="" data-toggle="tooltip" id="multiSelectFiltersToolTip" data-original-title="Selecione vários itens de um filtro. Não pode ser combinado com filtros dinâmicos.">
+                    <i class="icon-question-sign"></i></a> </label>
+                <input type="checkbox" value="false" name="multiSelectFilters" id="multiSelectFiltersCB">
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- This is the element in which the map will be displayed. -->
+<div id="outerMap" class="outer-div-center" style="display: none;">
+    <div id="mapMessage" class="inner-div-center" style="padding-bottom: 10px;">Verifique marcadores são corretamente localizados. Mover marcadores localizados incorretamente ou remover marcadores desnecessários. Salve o mapa quando parece correto.</div>
+    <div id="sameLocationMarkers" class="inner-div-center row-fluid" style="padding-bottom: 10px; display: none; ">Múltiplos marcadores estão no mesmo local. Eu quero mover<select id="moveAllMarkers"><option value="all">TODOS</option><option value="one">UM</option></select>de uma vez.</div>
+
+    <div>
+
+    <div id="mapWrapper">
+        <div id="filtersDiv">
+        </div>
+        <div id="mapContainer">
+          <div id="map" class="column left">
+         </div>
+          <div id="left" class="column leftDisplay" style="background-color: white; display: none;" >
+            <div id="left_header" class="dirHeader">
+                <a id="dirTabDisplay" style="margin-left: 5px;" class="activeDirHeader">Instruções</a>
+                <a id="nearbyTabDisplay">nas proximidades</a>
+                <img id="hideOptions" src="../img/hide_options.png" style="float: right; margin-right: 10px;  cursor: pointer;" alt="ocultar mais opções de exibição">
+            </div>
+            <div id="leftDirDisplay" class="leftDiv" style="background-color: white;">
+                <p> <label id="dirAddress1_label" for="dirAddress1" class="optionLabel">Start: </label><input id="dirAddress1"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                <p> <label id="dirAddress2_label" for="dirAddress2" class="optionLabel">End: </label> <input id="dirAddress2"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                <!--  <p><a href="#">add location</a></p> -->
+
+                <p style="text-align: right; margin-right: 50px;"><INPUT id="directionSubmit" value="Obter direções" TYPE="SUBMIT" />
+                    <INPUT id="clearDirSubmit" value="Claro" TYPE="SUBMIT" /> </p>
+                <div id="dirError" style="display: none; "></div>
+                <div id="dirTextDiv" style="padding: 10px; height: 275px; overflow: auto;"></div>
+
+            </div>
+            <div id="leftNearbyDisplay" class="leftDiv" style="display: none;">
+                <p><label id="nearAddress_label" for="nearAddress" class="optionLabel">Localização: </label><input id="nearAddress"  type="text"  SIZE=20 MAXLENGTH=200 style="width: 120px;"></p>
+                <p> <label id="nearRadius_label" for="nearRadius" class="optionLabel">Raio: </label><input id="nearRadius"  type="text"  SIZE=3 MAXLENGTH=3 style="text-align: right; width: 40px;" autocomplete="off">
+                    <label class="radio" style=" text-align: left; padding-left: 2px; display: inline;"><input type="radio" name="distType" value="mi" id='distMi' checked  style="float: none; margin-left: 0px;"> milhas </label>
+                    <label class="radio" style=" text-align: left;  padding-left: 2px; display: inline;"><input type="radio" name="distType" value="km"  id='distKM' style="float: none; margin-left: 0px;" > km </label></p>
+                <p><label class="checkboxText"><input type="checkbox" name="showCircle" value="false"  id='showCircle'   class="checkLabel" style="    margin-left: 80px;    margin-right: 10px;">show de círculo</label></p>
+                <p id="displayDistance"><label  class="checkboxText" ><input type="checkbox" name="showDistance" value="false"  id='showDistance'  class="checkLabel"><span class="checkboxText">mostrar distância</span></label></p>
+
+                <p style="text-align: right; margin-right: 50px;"><INPUT id="nearbySubmit" value="Procurar nas proximidades" TYPE="SUBMIT" />
+                    <INPUT id="clearNearbySubmit" value="Claro" TYPE="SUBMIT" /> </p>
+                <div id="nearbyError" style="display: none; "></div>
+            </div>
+
+          </div>
+        </div>
+        <div id="groupChecksDiv">
+        </div>
+    </div>
+
+    <div id="mapSaveStatus"  class="mapInfoStatus alert" style="display: none; ">
+
+    </div>
+
+    <div id="mapUrl" class="mapInfoStatus" style="display: none;">
+    </div>
+
+    <div id="bulkGeoUrl" class="mapInfoStatus" style="display: none;">
+    </div>
+
+     <div id="emailDisplay" class="alert mapInfoStatus" style="width: 555px; display: none;">
+         <button type="button" class="close" data-dismiss="alert">x</button>
+         <p style="margin-bottom: 0px;"><h6>E-mail foi enviado, mas podem aparecer em uma pasta de spam ou junk.</h6></p>
+     </div>
+
+    </div>
+</div>
+
+<div id="saveMapDiv" style="display: none; ">
+
+
+    <div id="mapModal" class="modal hide fade in" style="display: none; ">
+        <div class="modal-header">
+            <a id="closeSaveModal" class="close" data-dismiss="modal">x</a>
+            <h3>Digite os detalhes, em seguida, Salvar Mapa</h3>
+        </div>
+        <div class="modal-body">
+
+            <form id="saveMapForm" autocomplete="off">
+                <p><label for="titleInput" class="modalLabel">Título</label><input id="titleInput"  type="text" placeholder="(Opcional) Mapa Título" MAXLENGTH=250 ></p>
+                <p><label for="descriptionInput" class="modalLabel">Descrição</label> <textarea id="descriptionInput"  placeholder="(Opcional) Mapa Descrição" MAXLENGTH=500 rows="2"  ></textarea></p>
+                <p><label for="emailInput" class="modalLabel">O email </label><input id="emailInput"  type="text" placeholder="(Opcional) Endereço de e-mail" MAXLENGTH=100  ></p>
+                <p><small>Digite um endereço de e-mail, se você quiser editar o seu mapa ou receber notificações para o seu mapa.</small></p>
+
+                <p style="margin-top: 5px; margin-bottom: 8px;">
+                    <label class="checkbox" style="text-align: left; ">
+                        <input id="genKmlCB" type="checkbox">
+                        Gerar KML para uso com o Google Earth.
+                    </label> &nbsp;
+                </p>
+
+                <h4 style="margin-top: 10px;">Mapear Nível de proteção: </h4>
+                <label class="radio" style=" text-align: left;">
+                    <input type="radio" name="protectionLevel" value="private" id="protectionLevel_private" checked> Privado - O mapa não será compartilhado, exceto por você.
+                </label>
+                <label class="radio" style="text-align: left;">
+                    <input type="radio" name="protectionLevel" value="public" id="protectionLevel_public" > Público - Mapa pode ser compartilhado e encontrado usando google.
+                </label>
+
+   				<span style=" text-align: left;     clear: left; float: left;font-size: 1.1em; margin-right: 10px;">
+                   Ao utilizar este serviço, você concorda com a <a href="https://developers.google.com/maps/terms" target="_blank">termos de serviço do Google</a>.
+
+                </span>
+            </form>
+
+
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+            <a id="mapSaveButton" class="btn btn-success">Salvar Mapa</a>
+            <a id="closeSaveButton" class="btn" data-dismiss="modal">Fechar</a>
+        </div>
+    </div>
+
+    <div class="outer-div-center"><button id="mapModalButton" class="btn btn-large btn-primary" type="button" data-loading-text="Saving ..." autocomplete="off">Lançamento Mapa Salvar</button></div>
+</div>
+
+
+
+<!-- This is the element in which the group checkboxes will be displayed -->
+
+<div class="span10"> <!-- end  	id="mapCreateDiv" -->
+
+
+
+</div>
+<!-- end right nav -->
+
+</div>
+<!-- end row fluid -->
+
+<div class="span1" id="rightNav">
+   <!--  right nav -->
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- end main body -->
+
+
+
+<!-- end container-->
+
+
+
+<div id="bottomInst">
+<div class="container">
+
+    <div class="row">
+        <div class="span4"><h2 style="margin-left: 20px;">1.Copiar e colar dados</h2><p><img src="../img/home/small_excel.png" alt="copiar e colar dados planilha excel"/></p><p>Use EasyMapMaker para mapear excel ou outros dados da planilha em um mapa do google. EasyMapMaker assume a tarefa de planejar manualmente vários locais em um mapa. O primeiro passo é copiar os dados planilha incluindo os cabeçalhos das colunas para a tabela clicando sobre a mesa para revelar uma caixa de texto.</p></div>
+        <div class="span4"><h2 style="margin-left: 20px;">2. Definir opções</h2><p><img src="../img/home/options_small.png" alt="Definir opções para o seu mapa"/></p><p>Defina as opções para o seu mapa. Certifique-se de definir as informações de localização. As informações de localização podem consistir de muitas combinações de endereço (rua, cidade, estado, CEP), bem como a latitude e longitude (definida explicitamente em colunas separadas). Toda a localização pode ser em uma coluna e ser definida como o endereço, ou pode ser em várias colunas. Defina outras opções, se os dados contém-los. Use mapas avançados para adicionar filtros, adicionar um painel à esquerda direcção com um filtro de raio, ocultar determinados dados, fazer upload de um logotipo personalizado ou usar marcadores personalizados (pinos).</p></div>
+        <div class="span4"><h2 style="margin-left: 20px;">3. Faça Mapa</h2><p><img src="../img/home/map_small.png" alt="clique no botão para gerar o mapa"/></p><p>Clique em Faça Mapa e esperar por dados de localização de endereços a serem traduzidos em latitude e longitude para que ele possa ser colocado no mapa. Uma vez que os dados estão no mapa, os pinos podem ser movidos ou removidos. Uma vez que o mapa parece ser bom, salvá-lo. Um e-mail será enviado para os seus registros para acessar o mapa no futuro. Depois que o mapa é salvo, será fornecido o mapa url. Esta url pode ser alterado para algo mais fácil de lembrar.
+        </p></div>
+    </div>
+</div> <!-- end instruction container -->
+
+
+    </div>
+
+<div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+    <div class="row">
+        <div class="span8 sp8">
+
+            <ul class="footerList">
+                <li class="footerItem"><a href="../pt.1.html">Início</a></li>
+                <li class="footerItem"><a href="features.1.html">Características</a></li>
+			  <li class="footerItem"><a href="faq/index.html">Perguntas frequentes</a></li>
+
+                <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+                <li class="footerItem"><a href="contact.html">Contate-nos</a></li>
+                <li class="footerItem"><a href="support/privacy-policy.html">política de Privacidade</a></li>
+            </ul>
+        </div>
+            <div class="index-social span3 sp3">
+                <div style="margin-top:14px; text-align: right;">
+                    <a  target="_blank" href="https://www.youtube.com/user/easymapmaker"><div class="footer-sprite sprite-youtube" rel="tooltip" data-original-title="Vídeos do YouTube"></div></a>
+                    <a target="_blank" href="https://plus.google.com/108989277805007525733" rel="publisher"><div class="footer-sprite sprite-gplus-32" rel="tooltip" data-original-title="Google Plus"></div></a>
+                    <a target="_blank" href="http://www.facebook.com/easymapmaker"><div class="footer-sprite sprite-fb-icon" rel="tooltip" data-original-title="Junte-se a nós no Facebook."></div></a>
+                    <a  target="_blank" href="https://twitter.com/easymapmaker"><div class="footer-sprite sprite-tw-icon" rel="tooltip" data-original-title="Siga-nos no Twitter"></div></a>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

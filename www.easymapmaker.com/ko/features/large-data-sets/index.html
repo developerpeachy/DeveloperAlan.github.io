@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <title>여러 위치 및 대규모 데이터 세트를지도</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="빠르고 쉽게 사용자 정의 구글지도에 여러 위치를지도. 당신은 엑셀 (XLS) 스프레드 시트 데이터에서 한 번에 수천 개의 항목을 매핑 할 수 있습니다">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+    <link rel="stylesheet" href="../../../css/responsive-video.css">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+
+        /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+        #GeoAddresses {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        #GeoAddresses > ol > li{
+            margin-bottom: 7px;
+        }
+        #GeoAddresses > p {
+            margin-bottom: 15px;
+        }
+                                   */
+        @media (max-width: 480px) {
+            #ipadImg {
+                max-width: 300px;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../ko.1.html" id="homeLink">쉬운지도</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">고급지도</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">풍모</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">블로그</a></li>
+                <li><a href="../../contact.html" id="contactLink">문의</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> 풍모</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="매핑 할 좌표로 주소 정보를 번역"><i class="icon-chevron-right"></i> 주소 지오 코딩</a></li>
+                            <li class=""><a href="../advanced/index.html" title="지도 필터 및 사용자 지정지도 레이블 추가"><i class="icon-chevron-right"></i> 고급지도</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="코딩없이 사용자 정의 Google지도 만들기"><i class="icon-chevron-right"></i> 사용자 정의 Google지도</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="지리적 트렌드를 찾아 내고 당신의 데이터로 더 많은 작업을 수행"><i class="icon-chevron-right"></i> 데이터 분석</a></li>
+                            <li class=""><a href="../directions/index.html" title="모든지도 길 찾기"><i class="icon-chevron-right"></i> 지도</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="설정을 수정하고 편집 페이지를 사용하여지도" ><i class="icon-chevron-right"></i> 편집지도</a></li>
+                            <li class=""><a href="../embedded/index.html" title="쉽게 귀하의 사이트에지도 추가"><i class="icon-chevron-right"></i> 임베디드지도</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="붙여 넣기 및 버튼을 클릭하여 엑셀 데이터를지도"><i class="icon-chevron-right"></i> Excel 데이터지도</a></li>
+                            <!-- <li class=""><a href="/ko/features/ip_address_geocoding/" title="IP 주소를 매핑 할 우리의 집의 IP 위치 정보 서비스를 사용"><i class="icon-chevron-right"></i> IP 주소 지오 코딩</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="당신의 엑셀 데이터에서 KML 문서를 생성"><i class="icon-chevron-right"></i> Google 어스 KML</a></li>
+                            <li class="active"><a href="index.html" title="당신의지도에 많은 양의 데이터를 추가합니다."><i class="icon-chevron-right"></i> 대형 데이터 세트</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="아이폰, 아이 패드, 안드로이드 및 기타 인기있는 장치에 대한지도 지원"><i class="icon-chevron-right"></i>모바일지도</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="부동산 에이전트에 대 한 좋은 도구"><i class="icon-chevron-right"></i>부동산 도구</a></li>
+                            <li class=""><a href="../reporting/index.html" title="사용자 정의 보고서에 대한지도를 확인"><i class="icon-chevron-right"></i> 보고</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="검색 및 필터 매핑 데이터"><i class="icon-chevron-right"></i> 검색 및 필터링</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="SSL 지원 및 보안지도 데이터"><i class="icon-chevron-right"></i> 안전지도</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="GeoAddresses">
+                        <div class="page-header">
+                            <h2>무료지도에서지도 여러 (또는 수천)의 위치</h2>
+                        </div>
+
+                        <p>어떻게 빨리하지 않을 경우 수천지도상의 위치 (우편 번호, 도시, 주, 우편 번호, 국가, 위도와 경도 좌표 등)의 수백을 배치합니까? EasyMapMaker.com는이 목적을 위해 설계되었습니다. 복사 및 항목의 수백 또는 수천을 붙여 넣을 수 있습니다 경우를 매핑 할 수 있습니다.</p>
+
+                        <!-- <p> TODO: add a sample video here</p> -->
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <p> 항목의 수백 또는 수천 매핑하는 방법에 대한 샘플 동영상을 확인.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-video widescreen" temprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                            <span style="display: none;" itemprop="name">How to make a map with over 500 locations</span>
+                            <meta itemprop="duration" content="T04M09S" />
+                            <meta itemprop="thumbnailURL" content="http://i.ytimg.com/vi/obTs0HwnVKo/hqdefault.jpg" />
+                            <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/obTs0HwnVKo" />
+                            <iframe  src="https://www.youtube.com/embed/obTs0HwnVKo" frameborder="0" allowfullscreen></iframe>
+                            <span style="display: none;" itemprop="description">Make a map with easymapmaker.com with over 500 locations from your excel or other spreadsheet data.  Go to http://www.easymapmaker.com to make your own map.</span>
+                        </div>
+
+                        <p>Google지도 매핑 할 수있는 데이터의 양에 모자를 넣어하지 않습니다 maps.Our 서비스에 10 만 항목까지 매핑 할 수 있습니다, 그래서 당신은 허용 된 최대 데이터 양까지 매핑 할 수 있습니다.
+                        </p>
+                        <p>왜 엑셀의 이전 버전도 지원할 것이다 thandata 이상 매핑 할 때 사용될 수있는 데이터의 양을 제한 서비스에 대해 결제?
+                        </p>
+                        <p>
+                            많은 양의 데이터에 대한 주문이 매핑 될, 모든 개별 마커는 볼 수 없습니다. 클러스터 또는 인근 마커의 그룹이 지원하고 자동으로 150 개 이상의 항목이있을 때 설정된다. 지도는 일반적으로 브라우저에 따라 성능 문제없이 2500 마커를 표시 할 수 있습니다. 대용량 데이터 매핑 될 때까지 클러스터에 100만큼 밀도가 될 수 있습니다 마커를 결합하면 쉽게 할 수 있습니다. 지도를 확대하면 개별 마커를 표시 할 수 있습니다.
+                        </p>
+
+
+                        <h3>
+                            데이터의 라지 양을지도하는 2 가지 방법이 있습니다
+                        </h3>
+                        <h5>위도 및 경도 좌표 1. 데이터</h5>
+                        <ol>
+                            <li>데이터가 필요한 위도와 경도 좌표를 가지고 있는지 확인하십시오</li>
+                            <li>지도에서 확인 우리 <a href="../../../ko.1.html">정규병</a> 또는 <a href="../../advanced.html">많은</a> 지도를 만드는 페이지</li>
+                            <li>Save the Map</li>
+                        </ol>
+
+                        <h5 id="bulkgeo">주소 (더 위도와 경도 좌표 없음) 2. 데이터</h5>
+                        <p>두 번째 옵션은 데이터가 위도와 경도 데이터가없는 경우입니다.</p>
+                        <ol>
+                            <li>우리의 일반 또는 고급지도 제작 페이지에서지도를 확인</li>
+                            <li>250 좌표가 매핑 된 후지도를 저장</li>
+                            <li>자동으로 대량 지​​역에 남아있는 데이터를 생성 된 링크를 클릭 (노란색 이미지의 부분을 강조)
+                                <br>
+                                <img src="http://www.easymapmaker.com/img/features/bulk_url_highlighted_50.png">
+                            </li>
+                            <li>모든 250 위치가 처리 된 후 지오 코딩 위치는 자동으로 저장됩니다.</li>
+
+                            <li>모든 위치가 처리 된 후, 편집지도 페이지는 최종 조정을 위해로드됩니다.</li>
+
+                        </ol>
+
+                       <!-- <p>TODO: add some images</p> -->
+
+
+
+                        <p></p>
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../ko.1.html">집</a></li>
+        <li class="footerItem"><a href="../../features.1.html">풍모</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">자주하는 질문</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">블로그</a></li>
+        <li class="footerItem"><a href="../../contact.html">문의</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">개인 정보 정책</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

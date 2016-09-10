@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="it" lang="it">
+<head>
+    <title>Mappe per Immobiliare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mappa annunci immobiliari per un file di dati foglio Excel. Semplicemente e incollare i dati">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/lightbox.css">
+
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+
+    <style>
+
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+
+        section > p {
+            margin-bottom: 15px;
+        }
+
+
+
+
+         #outMapDiv {
+             width: 600px;
+         }
+
+        @media (max-width: 767px) {
+            #outMapDiv {
+                width: 500px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            #outMapDiv {
+                width: 300px;
+            }
+        }
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../it.1.html" id="homeLink">Mappe Facile</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Mappe avanzate</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Caratteristiche</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contattaci</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Caratteristiche</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Tradurre le informazioni sugli indirizzi in coordinate mappabili"><i class="icon-chevron-right"></i> indirizzo Geocoding</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Aggiungere filtri mappa personalizzata etichette"><i class="icon-chevron-right"></i> Mappe avanzate</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="L&#39;abitudine Google Maps senza alcuna codifica"><i class="icon-chevron-right"></i> Google Custom Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Trova le tendenze geografiche e fare di più con i tuoi dati"><i class="icon-chevron-right"></i> Analisi dei dati</a></li>
+                            <li class=""><a href="../directions/index.html" title="Indicazioni stradali su tutte le mappe"><i class="icon-chevron-right"></i> Indicazioni</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Modifica le impostazioni e la mappa usando la nostra pagina di modifica" ><i class="icon-chevron-right"></i> Mappe Modifica</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Aggiungi mappe per il tuo sito senza sforzo"><i class="icon-chevron-right"></i> mappe incorporate</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Mappare i dati di Excel con una pasta e un pulsante di scatto"><i class="icon-chevron-right"></i> Mappe dati Excel</a></li>
+                            <!-- <li class=""><a href="/it/features/ip_address_geocoding/" title="Utilizza la nostra casa in servizio ip di geolocalizzazione per mappare gli indirizzi IP"><i class="icon-chevron-right"></i> Indirizzo IP Geocoding</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Generare un documento KML dai dati di Excel"><i class="icon-chevron-right"></i> KML per Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Aggiungere grandi quantità di dati per le mappe."><i class="icon-chevron-right"></i> Grandi insiemi di dati</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="Supporto Map per iPhone, iPad, Android e altri dispositivi popolari"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+                            <li class="active"><a href="index.html" title="Grandi strumenti per agenti immobiliari"><i class="icon-chevron-right"></i>Strumenti Real Estate</a></li>
+                            <li class=""><a href="../reporting/index.html" title="Fare mappe per report personalizzati"><i class="icon-chevron-right"></i> Segnalazione</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Ricerca e di filtro dei dati mappata"><i class="icon-chevron-right"></i> Ricerca e filtraggio</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="Estensione SSL e carta sicura dei dati"><i class="icon-chevron-right"></i> Mappe sicure</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="DataAnalysis">
+                        <div class="page-header">
+                            <h2>Mappa annunci immobiliari</h2>
+                        </div>
+
+                        <p>
+                            (<a href="http://www.easymapmaker.com">EasyMapMaker</a>) Il nostro servizio è stato progettato con le inserzioni immobiliari in mente. Se si dispone di un elenco di proprietà in un database o foglio di calcolo, si può facilmente importare i dati in nostro servizio per l&#39;uso. È possibile effettuare filtri personalizzati per cose come il numero di camere da letto, bagni, footage gamme quadrati, data di costruito. Combinando il nostro servizio con la potenza di Excel permette alle mappe di dinamica con pochi clic.
+
+
+                        </p>
+
+                        <p>È possibile mappare le vendite precedenti, confronti, immobili in affitto, i tipi di annunci (vendite allo scoperto, pignoramenti, in vendita dal proprietario, REOs, ecc). Il nostro servizio prenderà i vostri dati con indirizzi, consentirà di selezionare i filtri sulle mappe avanzati e la mappa sarà generato e condivisibile a chiunque si desidera.(<a href="../../advanced.html">EasyMapMaker</a>)
+
+                        </p>
+
+                        <p>
+                            È possibile aggiungere link ad un sito esterno per tutti i dettagli della proprietà e anche mettere un link all&#39;immagine per gli utenti di vedere quando fanno clic su un marcatore. Inoltre la mappa è visualizzabile su dispositivi mobili (meno alcune caratteristiche dovute alla dimensione dello schermo).
+
+                        </p>
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Vedere un esempio di annunci immobiliari:</h4>
+                                <div id="outMapDiv">
+                                <iframe width="100%" height="500" frameborder="0"  style="border:1px solid #aaa;border-radius:10px; z-index:  100; -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; "
+                                        frameborder="0" src="http://www.easymapmaker.com/map/dallas_real_estate_sample" class="img-rounded"/>
+                                </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <p>
+                            Per fare una mappa come questo da soli, scaricare il file di esempio e seguire le istruzioni: (<a href="http://www.easymapmaker.com/samples/another_dallas_sample_viewable.xls">
+							Scaricare</a> )
+                        <ol>
+                            <li>#Copy and paste data from the spreadsheet into the  <a href="http://www.easymapmaker.com/advanced">advanced map form</a></li>
+                            <li>Fai clic su &quot;Opzioni Set&quot;</li>
+                            <li>Impostare il gruppo di essere FASCIA PREZZO  (<a href="http://www.easymapmaker.com/img/features/real_estate_sample_select_menu.png" rel="lightbox" title="Selezionare i valori per impostare">esposizione di immagine</a>)</li>
+                            <li>Nella sezione &quot;Scegli elementi da mostrare nella descrizione marker&quot;, nascondere la fascia di prezzo</li>
+                            <li>In &quot;Selezionare fino a 12 elementi da filtrare&quot; sezione, assicurarsi che Tipo, letti e bagni si trovano nella sezione filtro
+                                (<a href="http://www.easymapmaker.com/img/features/real_estate_sample_filters.png" rel="lightbox" title="Values to filter and hide">esposizione di immagine</a>)</li></li>
+                            <li>Fa clic su &quot;Fai la mappa&quot; e sei d&#39;oro dopo aver salvato la mappa! </li>
+                        </ol>
+                        Mentre EasyMapMaker.com è in grado di generare gli intervalli dai dati, per ottenere l&#39;intervallo desiderato, è meglio utilizzare Excel (come è stato fatto nel file di esempio).
+                        </p>
+
+                        <p></p>
+                        <p></p>
+
+                        <p>
+                            Mappa i propri dati immobiliari andando sia la pagina di carta facile per una rapida mappatura della pagina avanzata per abilitare i filtri.
+							<a href="../../../it.1.html">facile mappa</a> | <a href="../../advanced.html">Avanzate</a>
+                        </p>
+
+
+                        <p></p>
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+
+<div id="footer">
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../it.1.html">Casa</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Caratteristiche</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contattaci</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">politica sulla riservatezza</a></li>
+    </ul>
+</div>
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.easymapmaker.com/js/lightbox.js" type="text/javascript"></script>
+</html>

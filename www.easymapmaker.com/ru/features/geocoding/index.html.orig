@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="ru" lang="ru">
+<head>
+    <title>Геокодировании адреса, почтовые индексы, и другую информацию местоположения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Геокодировании адреса (почтовые индексы, цитирует, Штаты) и другую информацию о местоположении, чтобы разместить на пользовательской карте.">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+                /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+        #GeoAddresses {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        #GeoAddresses > ol > li{
+            margin-bottom: 7px;
+        }
+        #GeoAddresses > p {
+            margin-bottom: 15px;
+        }
+                        */
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/ru/" id="homeLink">Легкие Карты</a></li>
+                <li id="advancedMaps"><a href="/ru/advanced" id="advancedLink">Расширенный Карты</a></li>
+                <li id="features" class="active"><a href="/ru/features/" id="featuresLink">Особенности</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Блог</a></li>
+                <li><a href="/ru/contact" id="contactLink">Свяжитесь с нами</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="/ru/features/"><i class="icon-chevron-right"></i> Особенности</a></li>
+                            <li class="active"><a href="/ru/features/geocoding/" title="Перевести адресную информацию в отображаемыми координат"><i class="icon-chevron-right"></i> адрес геокодирования</a></li>
+                            <li class=""><a href="/ru/features/advanced/" title="Добавить карту фильтры и пользовательские карты этикетки"><i class="icon-chevron-right"></i> Расширенный Карты</a></li>
+                            <li class=""><a href="/ru/features/custom-google-maps/" title="Создание пользовательских Google Maps без программирования"><i class="icon-chevron-right"></i> Пользовательские карты Google</a></li>
+                            <li class=""><a href="/ru/features/data-analysis/" title="Найти географические тенденции и делать больше с вашими данными"><i class="icon-chevron-right"></i> Анализ данных</a></li>
+                            <li class=""><a href="/ru/features/directions/" title="Проложить маршрут по всем своим картам"><i class="icon-chevron-right"></i> Направления</a></li>
+                            <li class=""><a href="/ru/features/map-edit/" title="Изменение настроек и карту с помощью нашего страницу редактирования" ><i class="icon-chevron-right"></i> Редактировать Карты</a></li>
+                            <li class=""><a href="/ru/features/embedded/" title="Добавить карты на ваш сайт легко"><i class="icon-chevron-right"></i> Встроенные Карты</a></li>
+                            <li class=""><a href="/ru/features/map-excel-data/" title="Карта данных первенствовать пастой и нажатие кнопки"><i class="icon-chevron-right"></i> Карты данных Excel</a></li>
+                            <!-- <li class=""><a href="/ru/features/ip_address_geocoding/" title="Используйте нашу в доме IP геолокации службу для сопоставления IP-адреса"><i class="icon-chevron-right"></i> IP-адрес геокодирования</a></li> -->
+                            <li class=""><a href="/ru/features/kml/" title="Создать документ KML из ваших данных первенствовать"><i class="icon-chevron-right"></i> KML для Google Earth</a></li>
+                            <li class=""><a href="/ru/features/large-data-sets/" title="Добавить большие объемы данных на свой карт."><i class="icon-chevron-right"></i> Больших массивов данных</a></li>
+                            <li class=""><a href="/ru/features/mobile-maps/" title="Поддержка Карта для iPhone, IPAD, Android и других популярных устройств"><i class="icon-chevron-right"></i>Мобильные Карты</a></li>
+                            <li class=""><a href="/ru/features/real-estate/" title="Большие инструменты для агентов по недвижимости"><i class="icon-chevron-right"></i>Инструменты Недвижимость</a></li>
+                            <li class=""><a href="/ru/features/reporting/" title="Сделать карты для пользовательских отчетов"><i class="icon-chevron-right"></i> Составление отчетов</a></li>
+                            <li class=""><a href="/ru/features/searching-filtering/" title="Фильтры поиска Подключенные данные"><i class="icon-chevron-right"></i> Поиск и фильтрация</a></li>
+                            <li class=""><a href="/ru/features/map-data-security/" title="поддержка SSL и безопасный картографические данные"><i class="icon-chevron-right"></i> Безопасные Карты</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="GeoAddresses">
+                        <div class="page-header">
+                            <h2>Адрес Геокодирование простой способ</h2>
+                        </div>
+
+                        <p>Геокодирование это процесс перевода адрес, город, штат, почтовый индекс и другой информации о местоположении, в карте-состоянии (широты и долготы) координаты. Если информация о местоположении уже содержит широту и долготу информации, нет необходимости геокодировать данные и карта может быть сделано в качестве лишь несколько секунд.</p>
+
+                        <p>Вы можете геокодировать адресную информацию из таблицы Excel путем вставки данных в
+                            <a href="http://www.easymapmaker.com">наш сервис</a>.  
+							
+							Мы используем API Карт Google, чтобы сделать геокодирования для вас. После того как все детали были привязана к местности, они будут размещены на карте. Иногда адреса или места не могут быть найдены, в других случаях они получают размещены в неправильном месте. Когда штифты отображаются на неправильном месте они могут быть перемещены при редактировании карты.
+                        </p>
+
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Копирования и вставки данных из Excel</h4>
+                                <img src="/img/copy_paste_data_small.png" alt="Копирование и вставка данных">
+                            </div>
+                        </div>
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Места Пакетное геокодирования.</h4>
+
+                                <img src="/img/image_processing.png" alt="geocode addresses">
+                            </div>
+                        </div>
+
+                        <p>
+                            Наша служба дает качению оценку на времени, которое потребуется, чтобы закончить геокодирования на основе того, насколько быстро некоторые из предыдущих пунктов были обработаны. Как правило, меньше списки обрабатывать более быстрыми темпами, чем большими объемами данных. Google, гео-кодер замедляет после 250 адреса. Если существует более 250 адресов геокодировать, карта будет остановить и представить сообщение. После сохранения карты, другие адреса могут быть геокодированы автоматически от насыпной странице геокодера. Это будет обрабатывать 250 адресов одновременно, то перезагрузите страницу. Когда гео-кодирования более 250 адресов будет завершена, будет отображаться страница редактирования.
+                        </p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+    <div class="row">
+        <div class="span8 sp8">
+
+            <ul class="footerList">
+				        <li class="footerItem"><a href="/ru/">Главная</a></li>
+        <li class="footerItem"><a href="/ru/features/">Особенности</a></li>
+        <li class="footerItem"><a href="/ru/faq/">Вопросы-Ответы</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Блог</a></li>
+        <li class="footerItem"><a href="/ru/contact">Свяжитесь с нами</a></li>
+        <li class="footerItem"><a href="/ru/support/privacy-policy.html">политика конфиденциальности</a></li>
+            </ul>
+        </div>
+        <div class="index-social span3 sp3">
+            <div style="margin-top:14px; text-align: right;">
+                <a rel="nofollow" target="_blank" href="https://www.youtube.com/user/easymapmaker"><div class="footer-sprite sprite-youtube" rel="tooltip" data-original-title="Youtube videos"></div></a>
+                <a target="_blank" href="https://plus.google.com/108989277805007525733" rel="publisher"><div class="footer-sprite sprite-gplus-32" rel="tooltip" data-original-title="Google Plus"></div></a>
+                <a rel="nofollow" target="_blank" href="http://www.facebook.com/easymapmaker"><div class="footer-sprite sprite-fb-icon" rel="tooltip" data-original-title="Join us on Facebook."></div></a>
+                <a rel="nofollow" target="_blank" href="https://twitter.com/easymapmaker"><div class="footer-sprite sprite-tw-icon" rel="tooltip" data-original-title="Follow Us on Twitter"></div></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>

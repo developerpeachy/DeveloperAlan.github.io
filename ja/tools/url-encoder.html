@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encode and decode data for a url compatibility">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>URL Decoder/Encoder</title>
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <style type="text/css">
+        <!--
+        body {background: white; color: black;}
+        form {margin: 0;}
+        /*h1 {font-family: Arial, sans-serif; line-height: 0.85em; border-bottom: 2px solid;
+          margin-bottom: 0.33em; padding-bottom: 0;}*/
+
+        textarea {background: #EEF;  width: 100%;}
+
+        #footer1 {border-top: 1px solid #000; color: #999; font: italic 75% sans-serif;}
+        #footer1 p {margin: 0 0 1em 0;}
+        #footer1 img {float: right; margin: 0 0 0.5em 2em;}
+        -->
+    </style>
+    <script type="text/javascript">
+        function encode() {
+            var obj = document.getElementById('dencoder');
+            var unencoded = obj.value;
+            obj.value = encodeURIComponent(unencoded).replace(/'/g,"%27").replace(/"/g,"%22");
+        }
+        function decode() {
+            var obj = document.getElementById('dencoder');
+            var encoded = obj.value;
+            obj.value = decodeURIComponent(encoded.replace(/\+/g,  " "));
+        }
+    </script>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/ja/" id="homeLink">簡単な地図</a></li>
+                <li id="advancedMaps"><a href="/ja/advanced" id="advancedLink">高度なマップ</a></li>
+                <li id="support" class="active"><a href="/ja/support/" id="featuresLink">サポート</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">ブログ</a></li>
+                <li><a href="/ja/contact" id="contactLink">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="/ja/faq/" title="よくある質問"><i class="icon-chevron-right"></i>よくある質問</a></li>
+                            <li class=""><a href="/ja/findMyMaps" title="メールアドレスにより、すべてのマップを探します"><i class="icon-chevron-right"></i> あなたのマップを探します</a></li>
+                            <li class=""><a href="/ja/tools/pdf/" title="画像はPDFファイルに変換"><i class="icon-chevron-right"></i> PDFへの画像</a></li>
+
+                            <li class=""><a href="/ja/support/privacy-policy.html" title="個人情報保護方針"><i class="icon-chevron-right"></i> 個人情報保護方針</a></li>
+                            <li class="active"><a href="/ja/tools/url-encoder.html" title="あなたのURLをエンコード"><i class="icon-chevron-right"></i>URLエンコーダ</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+                    <form onsubmit="return false;">
+                        <h1>URL Decoder/Encoder</h1>
+
+                        <textarea cols="100" rows="20" id="dencoder"></textarea>
+                        <div>
+                            <input type="button" onclick="decode()" value="Decode">
+                            <input type="button" onclick="encode()" value="Encode">
+                        </div>
+
+                        <ul>
+                            <li>Input a string of text and encode or decode it as you like.</li>
+                            <li>Handy for turning encoded JavaScript URLs from complete gibberish into readable gibberish.</li>
+                            <li>If you'd like to have the URL Decoder/Encoder for offline use, just view source and save to your hard drive.</li>
+                        </ul>
+
+                    </form>
+
+
+
+
+                    <div id="footer1">
+                        <img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights.gif">
+                        <p>
+                            <br>
+                            The URL Decoder/Encoder is licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by-sa/2.0/" rel="license">Attribution-ShareAlike 2.0</a> License.
+                        </p>
+                        <p>
+                            This tool is provided without warranty, guarantee, or much in the way of explanation.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+<div id="footer">
+
+
+            <ul class="footerList">
+                <li class="footerItem"><a href="/ja/">ホーム</a></li>
+                <li class="footerItem"><a href="/ja/features/">特徴</a></li>
+                <li class="footerItem"><a href="/ja/faq/">よくある質問</a></li>
+                <li class="footerItem"><a href="http://blog.easymapmaker.com">ブログ</a></li>
+                <li class="footerItem"><a href="/ja/contact">お問い合わせ</a></li>
+                <li class="footerItem"><a href="/ja/support/privacy-policy.html">個人情報保護方針</a></li>
+            </ul>
+
+</div>
+
+
+</body>
+</html>

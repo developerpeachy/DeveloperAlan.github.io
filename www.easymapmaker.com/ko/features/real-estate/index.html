@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="ko" lang="ko">
+<head>
+    <title>부동산에 대한지도</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="엑셀 스프레드 시트 데이터 파일의 부동산 목록을지도. 간단하고 데이터를 붙여">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/lightbox.css">
+
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+
+    <style>
+
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+
+        section > p {
+            margin-bottom: 15px;
+        }
+
+
+
+
+         #outMapDiv {
+             width: 600px;
+         }
+
+        @media (max-width: 767px) {
+            #outMapDiv {
+                width: 500px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            #outMapDiv {
+                width: 300px;
+            }
+        }
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../ko.1.html" id="homeLink">쉬운지도</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">고급지도</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">풍모</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">블로그</a></li>
+                <li><a href="../../contact.html" id="contactLink">문의</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> 풍모</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="매핑 할 좌표로 주소 정보를 번역"><i class="icon-chevron-right"></i> 주소 지오 코딩</a></li>
+                            <li class=""><a href="../advanced/index.html" title="지도 필터 및 사용자 지정지도 레이블 추가"><i class="icon-chevron-right"></i> 고급지도</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="코딩없이 사용자 정의 Google지도 만들기"><i class="icon-chevron-right"></i> 사용자 정의 Google지도</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="지리적 트렌드를 찾아 내고 당신의 데이터로 더 많은 작업을 수행"><i class="icon-chevron-right"></i> 데이터 분석</a></li>
+                            <li class=""><a href="../directions/index.html" title="모든지도 길 찾기"><i class="icon-chevron-right"></i> 지도</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="설정을 수정하고 편집 페이지를 사용하여지도" ><i class="icon-chevron-right"></i> 편집지도</a></li>
+                            <li class=""><a href="../embedded/index.html" title="쉽게 귀하의 사이트에지도 추가"><i class="icon-chevron-right"></i> 임베디드지도</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="붙여 넣기 및 버튼을 클릭하여 엑셀 데이터를지도"><i class="icon-chevron-right"></i> Excel 데이터지도</a></li>
+                            <!-- <li class=""><a href="/ko/features/ip_address_geocoding/" title="IP 주소를 매핑 할 우리의 집의 IP 위치 정보 서비스를 사용"><i class="icon-chevron-right"></i> IP 주소 지오 코딩</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="당신의 엑셀 데이터에서 KML 문서를 생성"><i class="icon-chevron-right"></i> Google 어스 KML</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="당신의지도에 많은 양의 데이터를 추가합니다."><i class="icon-chevron-right"></i> 대형 데이터 세트</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="아이폰, 아이 패드, 안드로이드 및 기타 인기있는 장치에 대한지도 지원"><i class="icon-chevron-right"></i>모바일지도</a></li>
+                            <li class="active"><a href="index.html" title="부동산 에이전트에 대 한 좋은 도구"><i class="icon-chevron-right"></i>부동산 도구</a></li>
+                            <li class=""><a href="../reporting/index.html" title="사용자 정의 보고서에 대한지도를 확인"><i class="icon-chevron-right"></i> 보고</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="검색 및 필터 매핑 데이터"><i class="icon-chevron-right"></i> 검색 및 필터링</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="SSL 지원 및 보안지도 데이터"><i class="icon-chevron-right"></i> 안전지도</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="DataAnalysis">
+                        <div class="page-header">
+                            <h2>부동산 목록지도</h2>
+                        </div>
+
+                        <p>
+                            (<a href="http://www.easymapmaker.com">EasyMapMaker</a>) 우리의 서비스는 마음에있는 부동산 목록으로 설계되었습니다. 데이터베이스 나 스프레드 시트의 속성 목록이있는 경우, 당신은 쉽게 사용하기위한 우리의 서비스로 데이터를 가져올 수 있습니다. 당신은 침실, 욕실 수, 평방 피트 범위, 구축 날짜 같은 것들에 대한 사용자 정의 필터를 만들 수 있습니다. 엑셀의 힘으로 우리의 서비스를 결합하면 단 몇 번의 클릭만으로 동적으로지도를 할 수 있습니다.
+
+
+                        </p>
+
+                        <p>당신은 (소유자, REOs 등으로 판매 짧은 판매, 압류,) 이전 판매, 비교, 임대 주택, 명부의 유형을 매핑 할 수 있습니다. 우리의 서비스는 주소와 데이터를 가지고 고급지도에 필터를 선택할 수 있도록하고지도를 생성하고 원하는 사람에게 공유 될 것입니다.(<a href="../../advanced.html">EasyMapMaker</a>)
+
+                        </p>
+
+                        <p>
+                            당신은 호텔의 모든 내용은 외부 웹 사이트에 대한 링크를 추가하고 심지어 그들이 마커를 클릭하면 볼 수 사용자를 위해 이미지에 대한 링크를 넣을 수 있습니다. 게다가지도는 모바일 장치 (마이너스 화면 크기로 인해 일부 기능)에서 볼 수 있습니다.
+
+                        </p>
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>부동산 목록의 예를 참조하십시오 :</h4>
+                                <div id="outMapDiv">
+                                <iframe width="100%" height="500" frameborder="0"  style="border:1px solid #aaa;border-radius:10px; z-index:  100; -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; "
+                                        frameborder="0" src="http://www.easymapmaker.com/map/dallas_real_estate_sample" class="img-rounded"/>
+                                </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <p>
+                            이 자신과 같은지도를 만들려면 샘플 파일을 다운로드하고 지시 사항을 따르십시오 : (<a href="http://www.easymapmaker.com/samples/another_dallas_sample_viewable.xls">
+							다운로드</a> )
+                        <ol>
+                            <li>#Copy and paste data from the spreadsheet into the  <a href="http://www.easymapmaker.com/advanced">advanced map form</a></li>
+                            <li>&quot;옵션 설정&quot;을 클릭하여</li>
+                            <li>가격 범위로 그룹을 설정  (<a href="http://www.easymapmaker.com/img/features/real_estate_sample_select_menu.png" rel="lightbox" title="선택 값을 설정합니다">쇼 이미지</a>)</li>
+                            <li>&quot;마커 설명에 표시 할 항목을 선택&quot;섹션에서 가격 범위를 숨기</li>
+                            <li>에서, &quot;절에 필터링하는 12 개의 항목 선택&quot;확인 HOME 유형, 침대, 그리고 BATHS는 필터 섹션에 설정되어 있는지 확인
+                                (<a href="http://www.easymapmaker.com/img/features/real_estate_sample_filters.png" rel="lightbox" title="Values to filter and hide">쇼 이미지</a>)</li></li>
+                            <li>&quot;지도 만들기&quot;를 클릭하면지도를 저장 한 후 황금 있습니다! </li>
+                        </ol>
+                        EasyMapMaker.com가 원하는 범위를 얻기 위해, 데이터의 범위를 생성 할 수 있지만, 그것은 (샘플 파일에서 수행되었을 때) 엑셀을 사용하는 것이 가장 좋습니다.
+                        </p>
+
+                        <p></p>
+                        <p></p>
+
+                        <p>
+                            필터를 사용하려면 고급 페이지의 빠른 매핑 중 하나를 쉽게지도 페이지로 이동하여 자신의 부동산 데이터를 매핑합니다.
+							<a href="../../../ko.1.html">쉽게지도</a> | <a href="../../advanced.html">많은</a>
+                        </p>
+
+
+                        <p></p>
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+
+
+<div id="footer">
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../ko.1.html">집</a></li>
+        <li class="footerItem"><a href="../../features.1.html">풍모</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">자주하는 질문</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">블로그</a></li>
+        <li class="footerItem"><a href="../../contact.html">문의</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">개인 정보 정책</a></li>
+    </ul>
+</div>
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.easymapmaker.com/js/lightbox.js" type="text/javascript"></script>
+</html>

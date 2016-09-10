@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="it" lang="it">
+<head>
+    <title>Mappa dati in modo da rapporti visivi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trasforma i tuoi dati di localizzazione in report visivi con filtri, ricerche a distanza basato, e indicatore di raggruppamento dai dati di Excel">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+           /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+        #GeoAddresses {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        #GeoAddresses > ol > li{
+            margin-bottom: 7px;
+        }
+        #GeoAddresses > p {
+            margin-bottom: 15px;
+        }
+                           */
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="http://www.easymapmaker.com/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="../../../it.1.html" id="homeLink">Mappe Facile</a></li>
+                <li id="advancedMaps"><a href="../../advanced.html" id="advancedLink">Mappe avanzate</a></li>
+                <li id="features" class="active"><a href="../../features.1.html" id="featuresLink">Caratteristiche</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="../../contact.html" id="contactLink">Contattaci</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="../../features.1.html"><i class="icon-chevron-right"></i> Caratteristiche</a></li>
+                            <li class=""><a href="../geocoding/index.html" title="Tradurre le informazioni sugli indirizzi in coordinate mappabili"><i class="icon-chevron-right"></i> indirizzo Geocoding</a></li>
+                            <li class=""><a href="../advanced/index.html" title="Aggiungere filtri mappa personalizzata etichette"><i class="icon-chevron-right"></i> Mappe avanzate</a></li>
+                            <li class=""><a href="../custom-google-maps/index.html" title="L&#39;abitudine Google Maps senza alcuna codifica"><i class="icon-chevron-right"></i> Google Custom Maps</a></li>
+                            <li class=""><a href="../data-analysis/index.html" title="Trova le tendenze geografiche e fare di più con i tuoi dati"><i class="icon-chevron-right"></i> Analisi dei dati</a></li>
+                            <li class=""><a href="../directions/index.html" title="Indicazioni stradali su tutte le mappe"><i class="icon-chevron-right"></i> Indicazioni</a></li>
+                            <li class=""><a href="../map-edit/index.html" title="Modifica le impostazioni e la mappa usando la nostra pagina di modifica" ><i class="icon-chevron-right"></i> Mappe Modifica</a></li>
+                            <li class=""><a href="../embedded/index.html" title="Aggiungi mappe per il tuo sito senza sforzo"><i class="icon-chevron-right"></i> mappe incorporate</a></li>
+                            <li class=""><a href="../map-excel-data/index.html" title="Mappare i dati di Excel con una pasta e un pulsante di scatto"><i class="icon-chevron-right"></i> Mappe dati Excel</a></li>
+                            <!-- <li class=""><a href="/it/features/ip_address_geocoding/" title="Utilizza la nostra casa in servizio ip di geolocalizzazione per mappare gli indirizzi IP"><i class="icon-chevron-right"></i> Indirizzo IP Geocoding</a></li> -->
+                            <li class=""><a href="../kml/index.html" title="Generare un documento KML dai dati di Excel"><i class="icon-chevron-right"></i> KML per Google Earth</a></li>
+                            <li class=""><a href="../large-data-sets/index.html" title="Aggiungere grandi quantità di dati per le mappe."><i class="icon-chevron-right"></i> Grandi insiemi di dati</a></li>
+                            <li class=""><a href="../mobile-maps/index.html" title="Supporto Map per iPhone, iPad, Android e altri dispositivi popolari"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+                            <li class=""><a href="../real-estate/index.html" title="Grandi strumenti per agenti immobiliari"><i class="icon-chevron-right"></i>Strumenti Real Estate</a></li>
+                            <li class="active"><a href="index.html" title="Fare mappe per report personalizzati"><i class="icon-chevron-right"></i> Segnalazione</a></li>
+                            <li class=""><a href="../searching-filtering/index.html" title="Ricerca e di filtro dei dati mappata"><i class="icon-chevron-right"></i> Ricerca e filtraggio</a></li>
+                            <li class=""><a href="../map-data-security/index.html" title="Estensione SSL e carta sicura dei dati"><i class="icon-chevron-right"></i> Mappe sicure</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="GeoAddresses">
+                        <div class="page-header">
+                            <h2>Usare le mappe per fare report personalizzati</h2>
+                        </div>
+
+                        <p>Avete dei dati che è necessario desidera visualizzare in modo più visivo? Mappa i dati con informazioni di indirizzo per rendere facilmente i propri report personalizzati.</p>
+
+                        <p>Giornalisti e giornalista può classificare i propri dati per consentire alle persone di visualizzare più facilmente i dati raccolti sulle mappe. statistiche sulla criminalità, informazioni di vendita, informazioni meteo, eventuali altri dati con informazioni sulla posizione possono essere rapidamente e facilmente mappate.
+                        </p>
+
+                        <p>Gli studenti possono mappare luoghi storici o qualsiasi altra cosa sulle proprie mappe personalizzate da includere con alcune assegnazioni per aggiungere un grande impatto visivo.
+                        </p>
+
+                        <p>
+                        Il personale di vendita in grado di monitorare le vendite alle regioni, clienti o molte differenti combinazioni di dati con mappe avanzate (<a href="http://www.easymapmaker/it/advanced"> ottenere la mappatura</a>).
+                        I responsabili delle vendite possono vedere le vendite per gli individui, i clienti, i prodotti, o altre informazioni su mappe.
+                    </p>
+
+                        <p>
+
+                            Il nostro servizio rende segnalazione visiva facile copia e incolla. Se è possibile utilizzare un computer, è possibile fare una mappa! (<a href="http://www.easymapmaker/it/advanced"> ottenere la mappatura</a>).
+                        </p>
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Copia e Incolla dati da Excel</h4>
+                                <img src="http://www.easymapmaker.com/img/copy_paste_data_small.png" alt="copia e incolla dei dati di Excel">
+                            </div>
+                        </div>
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>luoghi Batch Geocode.</h4>
+
+                                <img src="http://www.easymapmaker.com/img/image_processing.png" alt="data geocode">
+                            </div>
+                        </div>
+
+                        <p>
+                            Il nostro servizio fornisce una stima rotolando sul tempo necessario per finire il geocoding in base a quanto velocemente alcune delle voci precedenti sono stati elaborati. Generalmente le liste più piccole processo ad un ritmo più veloce di set di dati più grandi.
+                        </p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../../../it.1.html">Casa</a></li>
+        <li class="footerItem"><a href="../../features.1.html">Caratteristiche</a></li>
+        <li class="footerItem"><a href="../../faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="../../contact.html">Contattaci</a></li>
+        <li class="footerItem"><a href="../../support/privacy-policy.html">politica sulla riservatezza</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

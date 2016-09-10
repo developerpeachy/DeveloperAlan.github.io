@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <title>Map your data to make visual reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turn your location data into visual reports with filters, distance based searches, and marker grouping from your excel data">
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="/css/feature_page.css.min">
+
+    <!--
+          <link rel="stylesheet" href="/css/main.css">
+
+
+          <link rel="stylesheet" href="/css/bootstrap.css">
+          <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+          <link rel="stylesheet" href="/css/docs.css">
+          <link rel="stylesheet" href="/css/features.css"> -->
+
+
+    <style>
+           /*
+        .outer-div-center {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .inner-div-center {
+            display: inline-block;
+        }
+
+        #GeoAddresses {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        #GeoAddresses > ol > li{
+            margin-bottom: 7px;
+        }
+        #GeoAddresses > p {
+            margin-bottom: 15px;
+        }
+                           */
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <div id="banner" class="navbar-fixed-top">
+        <div id="background">
+            <h1>
+                <a href="/"></a>
+            </h1>
+
+
+        </div>
+        <div id="navHeader">
+            <ul class="nav nav-pills">
+                <li id="easyMaps" ><a href="/" id="homeLink">Easy Maps</a></li>
+                <li id="advancedMaps"><a href="/advanced" id="advancedLink">Advanced Maps</a></li>
+                <li id="features" class="active"><a href="/features/" id="featuresLink">Features</a></li>
+                <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+                <li><a href="/contact" id="contactLink">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- end nav -->
+        <!-- end background -->
+    </div>
+    <!-- end banner -->
+
+    <div id="spacing">
+
+    </div>
+
+
+    <div class="row-fluid">
+        <div  class="span1" >
+        </div>
+        <div class="span10">
+
+            <div class="row-fluid" >
+                <div class="span3" >
+                    <div>
+                        <ul class="nav nav-list bs-docs-sidenav affix">
+                            <li class=""><a href="/features/"><i class="icon-chevron-right"></i> Features</a></li>
+                            <li class=""><a href="/features/geocoding/" title="Translate address information into mappable coordinates"><i class="icon-chevron-right"></i> Address Geocoding</a></li>
+                            <li class=""><a href="/features/advanced/" title="Add map filters and custom map labels"><i class="icon-chevron-right"></i> Advanced Maps</a></li>
+                            <li class=""><a href="/features/custom-google-maps/" title="Make Custom Google Maps without any coding"><i class="icon-chevron-right"></i> Custom Google Maps</a></li>
+                            <li class=""><a href="/features/data-analysis/" title="Find geographical trends and do more with your data"><i class="icon-chevron-right"></i> Data Analysis</a></li>
+                            <li class=""><a href="/features/directions/" title="Get directions on all your maps"><i class="icon-chevron-right"></i> Directions</a></li>
+                            <li class=""><a href="/features/map-edit/" title="Edit your settings and map using our edit page"><i class="icon-chevron-right"></i> Edit Maps</a></li>
+                            <li class=""><a href="/features/embedded/" title="Add maps to your site effortlessly"><i class="icon-chevron-right"></i> Embedded Maps</a></li>
+                            <li class=""><a href="/features/map-excel-data/" title="Map your excel data with a paste and a button click"><i class="icon-chevron-right"></i> Excel Data Maps</a></li>
+                            <!-- <li class=""><a href="/features/ip_address_geocoding/" title="Use our in house ip geolocation service to map ip addresses"><i class="icon-chevron-right"></i> IP Address Geocoding</a></li> -->
+                            <li class=""><a href="/features/kml/" title="Generate a KML document from your excel data"><i class="icon-chevron-right"></i> KML for Google Earth</a></li>
+                            <li class=""><a href="/features/large-data-sets/" title="Add large amounts of data to your maps."><i class="icon-chevron-right"></i> Large Data Sets</a></li>
+                            <li class=""><a href="/features/mobile-maps/" title="Map support for iPhone, iPad, Android and other popular devices"><i class="icon-chevron-right"></i>Mobile Maps</a></li>
+                            <li class=""><a href="/features/real-estate/" title="Great tools for real estate agents"><i class="icon-chevron-right"></i>Real Estate Tools</a></li>
+                            <li class="active"><a href="/features/reporting/" title="Make maps for custom reports"><i class="icon-chevron-right"></i> Reporting</a></li>
+                            <li class=""><a href="/features/searching-filtering/" title="Search and Filter Mapped data"><i class="icon-chevron-right"></i> Searching and Filtering</a></li>
+                            <li class=""><a href="/features/map-data-security/" title="SSL support, secure map data, and password protected maps"><i class="icon-chevron-right"></i> Secure Maps</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="span9">
+
+
+
+
+                    <!-- start sample content-->
+
+
+
+
+                    <!-- Modal
+                    ================================================== -->
+                    <section id="GeoAddresses">
+                        <div class="page-header">
+                            <h2>Use maps to make custom reports</h2>
+                        </div>
+
+                        <p>Do you have data that you need want to display in a more visual way?  Map your data with address information
+                        to easily make your own custom reports.</p>
+
+                        <p>Reporters and journalist can map their data to allow people to more easily visualize collected data on maps.
+                            Crime statistics, sales information, weather information, any other data with location information can be quickly and easily mapped.
+                        </p>
+
+                        <p>Students can map historical locations or anything else on their own custom maps to include with some assignments to add a great visual appeal.
+                        </p>
+
+                        <p>
+                        Sales personnel can track sales by regions, customers, or many different combinations of data with <a href="http://www.easymapmaker/advanced">advanced maps</a>.
+                        Sales managers can see sales by individuals, customers, products, or other information on maps.
+                    </p>
+
+                        <p>
+
+                            Our service makes visual reporting as easy a copy and pasting.  If you can use a computer, you can <a href="http://www.easymapmaker">make a map</a>!
+                        </p>
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Copy and Paste Data from Excel</h4>
+                                <img src="/img/copy_paste_data_small.png" alt="copy and paste excel data">
+                            </div>
+                        </div>
+
+
+
+                        <div class="outer-div-center">
+                            <div class="inner-div-center">
+                                <h4>Batch Geocode locations.</h4>
+
+                                <img src="/img/image_processing.png" alt="geocode data">
+                            </div>
+                        </div>
+
+                        <p>
+                            Our service gives a rolling estimate on the time it will take to finish the geocoding based on how fast
+                            some of the previous items have been processed.  Generally smaller lists process at a faster rate than larger
+                            data sets.
+                        </p>
+
+
+                    </section>
+
+
+
+
+
+
+                    <!-- end sample  content-->
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="rightNav" class="span1" >
+        </div>
+    </div>
+
+
+
+    <div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="/">Home</a></li>
+        <li class="footerItem"><a href="/features/">Features</a></li>
+        <li class="footerItem"><a href="/faq/">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="/contact">Contact Us</a></li>
+        <li class="footerItem"><a href="/support/privacy-policy.html">Privacy Policy</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

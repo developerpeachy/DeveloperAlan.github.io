@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <title>Faire une carte avec EasyMapMaker.com</title>
+    <meta name="description" content="Carte de votre Excel (XLS) et des données de feuille de calcul pour voir vos données sur une carte de Google personnalisée">
+	<meta charset="UTF-8">
+
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/main.css">
+
+
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/docs.css">
+    <link rel="stylesheet" href="http://www.easymapmaker.com/css/features.css">
+    <link rel="stylesheet" href="../css/responsive-video.css">
+
+    <style>
+
+
+        .grayTd {
+            border:1px solid #dddddd;    background-color: #dddddd;
+        }
+
+        .lightBlue {
+            background-color: #d9edf7;
+        }
+        .lightYellow {
+            background-color: #fcf8e3;
+        }
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+<div id="banner" class="navbar-fixed-top">
+    <div id="background">
+        <h1>
+            <a href="http://www.easymapmaker.com/"></a>
+        </h1>
+
+
+    </div>
+    <div id="navHeader">
+        <ul class="nav nav-pills">
+            <li id="easyMaps" ><a href="../fr.1.html" id="homeLink">Plans faciles</a></li>
+            <li id="advancedMaps"><a href="advanced.html" id="advancedLink">Maps Recherche avancée</a></li>
+            <li id="features" class="active"><a href="features.1.html" id="featureLink">Caractéristiques</a></li>
+            <li><a href="http://blog.easymapmaker.com" id="blogLink">Blog</a></li>
+            <li><a href="contact.html" id="contactLink">Contactez nous</a></li>
+        </ul>
+    </div>
+    <!-- end nav -->
+    <!-- end background -->
+</div>
+<!-- end banner -->
+
+<div id="spacing">
+
+</div>
+
+
+<div class="row-fluid">
+<div  class="span1" >
+</div>
+<div class="span10">
+
+<div class="row-fluid" >
+<div class="span3" >
+    <div>
+        <ul class="nav nav-list bs-docs-sidenav affix">
+            <li class="active"><a href="features.1.html"><i class="icon-chevron-right"></i> Caractéristiques</a></li>
+            <li class=""><a href="features/geocoding/index.html" title="Traduire les informations d&#39;adresse en coordonnées cartographiables"><i class="icon-chevron-right"></i> géocodage d&#39;adresses</a></li>
+            <li class=""><a href="features/advanced/index.html" title="Ajouter des filtres de carte et carte personnalisée étiquettes"><i class="icon-chevron-right"></i> Maps Recherche avancée</a></li>
+            <li class=""><a href="features/custom-google-maps/index.html" title="Faites des Google Maps sans codage"><i class="icon-chevron-right"></i> Personnalisés Google Maps</a></li>
+            <li class=""><a href="features/data-analysis/index.html" title="Trouver les tendances géographiques et faire plus avec vos données"><i class="icon-chevron-right"></i> L&#39;analyse des données</a></li>
+            <li class=""><a href="features/directions/index.html" title="Obtenir les directions sur toutes vos cartes"><i class="icon-chevron-right"></i> Directions</a></li>
+            <li class=""><a href="features/map-edit/index.html" title="Modifier les paramètres et la carte à l&#39;aide de notre page d&#39;édition" ><i class="icon-chevron-right"></i> Modifier Plans</a></li>
+            <li class=""><a href="features/embedded/index.html" title="Ajouter des cartes à votre site sans effort"><i class="icon-chevron-right"></i> Plans intégrés</a></li>
+            <li class=""><a href="features/map-excel-data/index.html" title="Carte vos données Excel avec une pâte et un clic de bouton"><i class="icon-chevron-right"></i> Cartes de données Excel</a></li>
+            <!-- <li class=""><a href="/fr/features/ip_address_geocoding/" title="Utilisez notre maison services IP de géolocalisation pour mapper les adresses IP"><i class="icon-chevron-right"></i> Adresse IP géocodage</a></li> -->
+            <li class=""><a href="features/kml/index.html" title="Générer un document KML de vos données excel"><i class="icon-chevron-right"></i> KML pour Google Earth</a></li>
+            <li class=""><a href="features/large-data-sets/index.html" title="Ajouter de grandes quantités de données sur votre carte."><i class="icon-chevron-right"></i> Grands ensembles de données</a></li>
+            <li class=""><a href="features/mobile-maps/index.html" title="support de la carte pour iPhone, iPad, Android et autres appareils populaires"><i class="icon-chevron-right"></i>mobile Maps</a></li>
+            <li class=""><a href="features/real-estate/index.html" title="D&#39;excellents outils pour les agents immobiliers"><i class="icon-chevron-right"></i>Outils immobiliers</a></li>
+            <li class=""><a href="features/reporting/index.html" title="Faire des cartes pour des rapports personnalisés"><i class="icon-chevron-right"></i> Compte-rendu</a></li>
+            <li class=""><a href="features/searching-filtering/index.html" title="Recherche et de filtrage mappés données"><i class="icon-chevron-right"></i> Recherche et filtrage</a></li>
+            <li class=""><a href="features/map-data-security/index.html" title="le support de SSL et les données de carte sécurisé"><i class="icon-chevron-right"></i> Plans sécurisés</a></li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="span9">
+
+
+
+
+    <!-- start sample content-->
+
+
+
+
+
+    <!-- Overview
+    ================================================== -->
+    <section id="overview">
+        <div class="page-header">
+            <h2>Les cartes sont une partie intégrante de la vie, de voir comment la cartographie peut être facile</h2>
+        </div>
+
+        <p>La plupart d&#39;entre nous utilisent des cartes de tous les jours.  <a href="../fr.1.html">EasyMapMaker</a> a été conçu pour rendre google maps facilement à partir de vos données. Il accepte les mêmes informations d&#39;emplacement que vous attendez de Google, y compris les adresses, codes postaux, villes, états, et coordonnées de latitude et de longitude.  </p>
+
+        <!-- <p> TODO: add a sample map here</p> -->
+
+        <h3>Il est vraiment aussi facile</h3>
+        <ol>
+            <li>Copier et coller des données de votre feuille de calcul dans 
+			<a href="http://www.easymapmaker.com">notre formulaire
+			</a></li>
+            <li>Définissez les options appropriées (en option)</li>
+            <li>(Facultatif pour les cartes de pointe) Téléchargez votre logo personnalisé (45x45 idéalement) et / ou télécharger vos propres marqueurs / broches</li>
+            <li>(Facultatif pour les cartes de pointe) Réglez les éléments à afficher et filtres</li>
+            <li>Cliquez sur &quot;Faire de carte&quot; (tout est fait!)</li>
+        </ol>
+
+        <!-- <p> TODO: add a sample video here</p> -->
+        <div class="outer-div-center">
+            <div class="inner-div-center">
+                <p> Regardez la vidéo de l&#39;échantillon de la façon de faire une carte de base.</p>
+            </div>
+
+        </div>
+        <div class="flex-video widescreen" temprop="video" itemscope itemtype="http://schema.org/VideoObject">
+            <span style="display: none;" itemprop="name">Vue d&#39;ensemble de faire une carte avec easymapmaker.com</span>
+            <meta itemprop="duration" content="T02M57S" />
+            <meta itemprop="thumbnailURL" content="http://i.ytimg.com/vi/fCTmHobORgk/hqdefault.jpg" />
+            <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/obTs0HwnVKo" />
+            <iframe  src="https://www.youtube.com/embed/fCTmHobORgk" frameborder="0" allowfullscreen></iframe>
+            <span style="display: none;" itemprop="description">La cartographie est aussi facile. Faire une carte de base avec http://www.EasyMapMaker.com en quelques clics. Si vous avez un données avec des informations de localisation dans une feuille de calcul, vous pouvez rapidement faire une carte google.</span>
+        </div>
+
+        <div>
+            <h4>Si cela ne suffit pas Contrôle cette grande liste de caractéristiques à prendre de meilleures cartes!</h4>
+            </div>
+
+
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">Fonctionnalité</th>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">Facile (simples) Cartes</th>
+                    <th style="    border:1px solid #dddddd;    background-color: #dddddd;">Maps Recherche avancée</th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="grayTd">Cartes gratuites</td>
+                    <td colspan="2"  class="lightBlue">Oui. Toutes les cartes sont entièrement libres.</td>
+        </tr>
+        <tr>
+            <td class="grayTd">Grands ensembles de données (géocodage plus de 10.000 adresses par jour)</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Marker Clustering (pour les localités voisines)</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Filtrage par catégorie (couleurs de marqueurs multiples)</td>
+                    <td class="lightBlue">Oui jusqu&#39;à 10 couleurs de marqueurs différents</td>
+                    <td class="lightBlue">Oui jusqu&#39;à 20 couleurs de marqueurs différents</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Pins numérotées</td>
+                    <td class="lightBlue">Oui (1-99)</td>
+                    <td class="lightBlue">Oui (1-99)</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Marker (Pin) Étiquette</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">Recherche (et la boîte de navigation)</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Personnalisé style CSS</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Logo personnalisé</td>
+                    <td class="lightBlue">Oui. Disponible en tant que paramètre url (logo =)</td>
+                    <td class="lightBlue">Oui. Disponible via un paramètre d&#39;URL ou le téléchargement d&#39;un logo.</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">(Détail) limite de Zoom-in</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">KML Generation (Google Earth)</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">Mobile et cartes Tablet (automatiquement)</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">Directions</td>
+                    <td class="lightBlue">Oui (pas de navigation de texte)</td>
+                    <td class="lightBlue">Oui (tour à tour texte navigation avec «plus d&#39;options»)</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">services de localisation</td>
+                    <td class="lightBlue">Oui (dispositifs mobiles et tablettes)</td>
+                    <td class="lightBlue">Oui (dispositifs mobiles et tablettes)</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Facile à modifier / supprimer la carte</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Intégrer carte</td>
+                    <td class="lightBlue">Oui</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">la sécurité</td>
+                    <td class="lightBlue">Oui. (Utilisez <a href="../index.html">https</a> )</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+
+                <tr>
+                    <td class="grayTd">Soutien</td>
+                    <td colspan="2" class="lightBlue">Oui. Utilisez la page de contact.</td>
+                </tr>
+
+
+                <tr>
+                    <td class="grayTd">Plan d&#39;exportation de données</td>
+                    <td  class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Distance Filtre</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Jusqu&#39;à 12 listes de filtres dynamiques</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Nombre de produits disponibles dans la liste de filtre</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Multi-sélectionner les filtres</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Dissimulation de données</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">Zoom-in seulement boîte de recherche</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui</td>
+                </tr>
+                <tr>
+                    <td class="grayTd">marqueurs personnalisés / broches</td>
+                    <td class="lightYellow">Non</td>
+                    <td class="lightBlue">Oui. Disponible à télécharger.</td>
+                </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <p>EasyMapMaker est non seulement un excellent moyen de visualiser les données de géolocalisation; il permet également à l&#39;analyse de données complexes à travers des filtres, des couleurs de marqueur, broches personnalisées, la recherche, le filtrage à distance, l&#39;exportation de données et bien plus encore.</p>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- end sample  content-->
+
+
+</div>
+
+</div>
+</div>
+<div id="rightNav" class="span1" >
+</div>
+</div>
+
+
+
+<div id="push"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <ul class="footerList">
+        <li class="footerItem"><a href="../fr.1.html">Accueil</a></li>
+        <li class="footerItem"><a href="features.1.html">Caractéristiques</a></li>
+        <li class="footerItem"><a href="faq/index.html">FAQ</a></li>
+        <li class="footerItem"><a href="http://blog.easymapmaker.com">Blog</a></li>
+        <li class="footerItem"><a href="contact.html">Contactez nous</a></li>
+        <li class="footerItem"><a href="support/privacy-policy.html">politique de confidentialité</a></li>
+    </ul>
+
+</div>
+
+</body>
+
+</html>
