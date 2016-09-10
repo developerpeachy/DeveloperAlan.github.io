@@ -1,0 +1,26 @@
+{
+  "name": "www.easymapmaker.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeveloperAlan/DeveloperAlan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeveloperAlan/DeveloperAlan.github.io/issues"
+  },
+  "homepage": "https://github.com/DeveloperAlan/DeveloperAlan.github.io",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "^1.0.2"
+  }
+}
