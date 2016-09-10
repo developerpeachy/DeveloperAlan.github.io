@@ -4612,7 +4612,7 @@ function fUNQ56(ipAddress) {
 
     $.ajax({
         type: 'GET',
-        url: '/location',
+        url: 'http://www.easymapmaker/location',
         data: { ip_addr: ipAddress },
         dataType: 'json',
         success:function(data, status, result){
@@ -4648,7 +4648,7 @@ function fUNQ57() {
 
     $.ajax({
         type: 'GET',
-        url: '/location',
+        url: 'http://www.easymapmaker/location',
         dataType: 'json',
         success:function(data, status, result){
 
@@ -4678,7 +4678,7 @@ function fUNQ58(mapId) {
 
     $.ajax({
         type: 'POST',
-        url: '/savekml',
+        url: 'http://www.easymapmaker/savekml',
         data: { kml: kmlData, Id: mapId },
         cache: false,
         dataType: 'json',
