@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
 <head>
 
-<title>NearMiss Map</title>
+    <title>NearMiss Map</title>
     <script type="text/javascript" src="/js/xlsx.core2.min.js"></script>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Transport ">
     <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
 
     <meta name="apple-mobile-web-app-title" content="Map Maker">
-    <LINK REL="apple-touch-icon-precomposed" HREF="/apple-touch-icon.png" >
+    <LINK REL="apple-touch-icon-precomposed" HREF="/apple-touch-icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="msapplication-config" content="none"/>
+    <meta name="msapplication-config" content="none" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="image_src" href="http://www.easymapmaker.com/img/facebook_emm_180.png" />
     <link rel="stylesheet" href="https://www.easymapmaker.com/css/home.min.css">
     <style>
-            .features img{
-                float: left;
-            }
-            .features h4{
-                margin-left: 20px;   padding-left: 10px;    padding-top: 20px;   overflow: hidden;
-            }
-            .features p{
-                display:inline-block;  margin-left: 20px;    overflow: hidden;  font-family: verdana;
-                font-size: 1.1em;
-            }
-
+        .features img {
+            float: left;
+        }
+        
+        .features h4 {
+            margin-left: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+        
+        .features p {
+            display: inline-block;
+            margin-left: 20px;
+            overflow: hidden;
+            font-family: verdana;
+            font-size: 1.1em;
+        }
+        
         ul.footerList {
             display: block;
             list-style-type: none;
@@ -35,17 +44,14 @@
             padding: 0 0 0 20px;
             text-align: left;
         }
-
-
+        
         li.footerItem {
             display: block;
-
         }
-
+        
         .index-social a div {
             float: left;
         }
-
     </style>
 
 
@@ -55,181 +61,127 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="compiled/main_index_control.js.min" type="text/javascript"></script>
 </head>
+
 <body onload="init();">
-<div id="container">
+    <div id="container">
 
-    <div id="banner" class="navbar-fixed-top">
-        <div id="background">
-            <h1>
-                <a href="/"></a>
-            </h1>
-        </div>
-        <!-- end nav -->
-        <!-- end background -->
-    </div>
-    <!-- end banner -->
-    <div id="mainBody">
-        <div  id="mainMapDiv" class="row-fluid">
-            <div class="span1" id="leftNav">
-
+        <div id="banner" class="navbar-static-top">
+            <div id="background">
+                <h1>
+                    <a href="/"></a>
+                </h1>
             </div>
-            <!-- end div id="leftNav" -->
-
-            <div class="span10" id="mapCreateDiv">
-<div id="processForm" name="processForm" >
-
-                    <div id="spacing">
-
-                    </div>
-
-<!--  
-    <div class="outer-div-center" >
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3106532256460106"
-             data-ad-slot="4609867556"
-             data-ad-format="auto"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
--->
-
-<div id="instructions" class="row" style="padding: 0;">
-    <div class="span2">
-        <div style="margin-top: 30px; text-align: right;">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="2NWFJ9V2XVSU4">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
+            <!-- end nav -->
+            <!-- end background -->
         </div>
-    </div>
-    <div  class="span10">
-        <div style="width: 80%;"><h5> Make and Easy Map in 3 simple steps: </h5>
-                            <ol>
-         <li>Copy and Paste your spreadsheet data into the table, or drag your excel file into the table (or use one of our samples).</li>
-                                <li>(Optional) Set Options</li>
-                                <li>Click &quot;Make Map&quot;.</li>
-                            </ol>
-                            <a id="demoVideoId" style="display: none;">Watch a sample video to see how easy mapping is.</a>
-        </div>
-                            <div class="flex-video widescreen" style="display:none;"  id="demoVideoDisplaySimple">
-                                <div class="youtube-player" data-id="fCTmHobORgk"></div>
-                            </div>
-
-                            <div class="flex-video widescreen" style="display:none;"  id="demoVideoDisplayAdvanced">
-                                <div class="youtube-player" data-id="fFE4rasTBsA"></div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div id="GeneratedData"></div>
-
-                    <div id="toggleDiv">
-
-                        <div id="prettyTable">
-                            <div id="outerDisplayTable">
-                                <table style="width: 100%" class="table table-bordered table-condensed" id="displayTable">
-
-                                </table>
-
-                            </div>
-
-
-
-
-
-                        </div> <!-- end pretty table div -->
-                        <div id="tableText"  style="display: none">
-
-                            <textarea title="" id="sourceData" ></textarea>
-
-
-
-                        </div>
-
-                        <div id="outerOverTable">
-                            <div id="overTableMessage">
-
-
-                            </div>
-                        </div>
-
-
-                    </div> <!-- end toggle div -->
-                    <script src="/js/xlsx.core2.min.js"></script>
-                    <div id="sample" style="text-align: center; width: 100%; background-color: rgba(64, 64, 64, 0.2);">
-                        <div id="innerSample" style="display: inline-block; "> Try using our sample data:
-                            <!-- <a id="useSample1">use sample 1</a>
-                             <a id="useSample2">use sample 2</a> -->
-                            <a id="useSample1" href="/samples/emm_sample_1.xls" target="_blank" title="use & download sample 1" rel="nofollow"> download sample 1</a>
-                            <a id="useSample2" target="_blank" href="/samples/emm_sample_2.xls" title="use & download sample 2" rel="nofollow">download sample 2</a>  </div>
-                        <div id="sample1_data" style="display: none" >
-                        </div>
-
-                        <div id="sample2_data" style="display: none" >
-                        </div>
-                    </div>
-
-
-                    <div id="statusStuff" >
-
-                        <div id="processingLine"><p></p>
-                            <div id="lineCount"> </div>
-                            <div id="lineVal"> </div> <p></p>
-                            <div id="timeRemaining"> </div>
-                        </div>
-
-                        <div id="outerProgressDiv" style="display: none; " class="progress progress-striped">
-                            <div style="width: 0%;" class="bar" id="progressDisplayDiv"></div>
-                        </div>
-
-                        <div id="buttons" >
-                            <p id="headerInst">Make sure the data includes headers and location information. </p>
-                            <p>  <button id="optionButton" class="btn btn-large btn-primary" style="width: 135px; white-space: nowrap;" type="button" autocomplete="off">Set Options</button>
-            <button id="makeMapButton" class="btn btn-large btn-caution" style="white-space: nowrap;" type="button" autocomplete="off">Make Map</button></p> </div>
-                    </div> <!-- end statusStuff div -->
-
-
-                    <div id="errorStuff" class="outer-div-center" style="display: none;">
-                        <div id="errorMessageDiv" class="alert" style="display: inline-block; margin-bottom: 5px; width: 75%;">
-                            <button type="button" class="close" data-dismiss="alert">x</button>
-                            Click the <strong>Show Errors</strong> button to view errors from geo-coding.
-
-                        </div>
-
-                        <div id="showHideError" style="padding-bottom: 5px;"><button id="errorButton" class="btn btn-mini btn-primary" style=" white-space: nowrap;" type="button">Show Errors</button></div>
-                        <div id="prettyErrorTable" class="outer-div-center" style="display: none; width: 75%;">
-
-
-                        </div>
-                    </div>
-
+        <!-- end banner -->
+        <div id="mainBody">
+            <div id="mainMapDiv" class="row-fluid">
+                <div class="span1" id="leftNav">
 
                 </div>
-                <div id="data2"></div>
+                <!-- end div id="leftNav" -->
 
-                <div  id="mapOptions" style="display: none">
-                    <div class="outer-div-center">
-                        <div id="optionDescriptionLabel" class="inner-div-center">Options have been automatically set, but they should be changed if anything is wrong.  Changing options can change the marker description sample.</div>
-                    </div>
+                <div class="span10" id="mapCreateDiv">
+                    <div id="processForm" name="processForm">
 
-                    <div class="container">
+                        <div id="instructions" class="row" style="padding: 0;">
+                            <div id="GeneratedData"></div>
+
+                            <div id="toggleDiv">
+
+                                <div id="prettyTable">
+                                    <div id="outerDisplayTable">
+                                        <table style="width: 100%" class="table table-bordered table-condensed" id="displayTable">
+
+                                        </table>
+
+                                    </div>
 
 
-                        <div class="row">
 
 
-                            <div class="span6">
-                                <div id="outerSelectorData">
-                                    <div id="selectorData">
-                                        <label id="region_sel_label" for="region_sel">Region</label>
-                                        <select id="region_sel"  autocomplete="off">
+
+                                </div>
+                                <!-- end pretty table div -->
+                                <div id="tableText" style="display: none">
+
+                                    <textarea title="" id="sourceData"></textarea>
+
+
+
+                                </div>
+
+                                <div id="outerOverTable">
+                                    <div id="overTableMessage">
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- end toggle div -->
+
+
+                            <div id="statusStuff">
+
+                                <div id="processingLine">
+                                    <p></p>
+                                    <div id="lineCount"> </div>
+                                    <div id="lineVal"> </div>
+                                    <p></p>
+                                    <div id="timeRemaining"> </div>
+                                </div>
+
+                                <div id="outerProgressDiv" style="display: none; " class="progress progress-striped">
+                                    <div style="width: 0%;" class="bar" id="progressDisplayDiv"></div>
+                                </div>
+
+                                <div id="buttons">
+                                    <p id="headerInst">Make sure the data includes headers and location information. </p>
+                                    <p> <button id="optionButton" class="btn btn-large btn-primary" style="width: 135px; white-space: nowrap;"
+                                            type="button" autocomplete="off">Set Options</button>
+                                        <button id="makeMapButton" class="btn btn-large btn-caution" style="white-space: nowrap;" type="button" autocomplete="off">Make Map</button></p>
+                                </div>
+                            </div>
+                            <!-- end statusStuff div -->
+
+
+                            <div id="errorStuff" class="outer-div-center" style="display: none;">
+                                <div id="errorMessageDiv" class="alert" style="display: inline-block; margin-bottom: 5px; width: 75%;">
+                                    <button type="button" class="close" data-dismiss="alert">x</button> Click the <strong>Show Errors</strong>                                    button to view errors from geo-coding.
+
+                                </div>
+
+                                <div id="showHideError" style="padding-bottom: 5px;"><button id="errorButton" class="btn btn-mini btn-primary" style=" white-space: nowrap;" type="button">Show Errors</button></div>
+                                <div id="prettyErrorTable" class="outer-div-center" style="display: none; width: 75%;">
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="data2"></div>
+
+                        <div id="mapOptions" style="display: none">
+                            <div class="outer-div-center">
+                                <div id="optionDescriptionLabel" class="inner-div-center">Options have been automatically set, but they should be changed if anything is wrong. Changing
+                                    options can change the marker description sample.</div>
+                            </div>
+
+                            <div class="container">
+
+
+                                <div class="row">
+
+
+                                    <div class="span6">
+                                        <div id="outerSelectorData">
+                                            <div id="selectorData">
+                                                <label id="region_sel_label" for="region_sel">Region</label>
+                                                <select id="region_sel" autocomplete="off">
                                             <option value="">Auto-Detect</option>
                                             <option value="ar">Argentina</option>
                                             <option value="at">Austria</option>
@@ -278,11 +230,11 @@
 
 
 
-                                    </div>
-                                    <div id="hideSelector" style="display: none;">
-                                        <label id="zoom_in_sel_label" for="zoom_in_sel">Zoom In
+                                            </div>
+                                            <div id="hideSelector" style="display: none;">
+                                                <label id="zoom_in_sel_label" for="zoom_in_sel">Zoom In
                                             <a title="" data-toggle="tooltip" id="zoomInToolTip" data-original-title="Set the maximum zoom-in (details) for the map"><i class="icon-question-sign"></i></a> </label>
-                                        <select id="zoom_in_sel">
+                                                <select id="zoom_in_sel">
                                             <option value="20" selected>building</option>
                                             <option value="19">street detailed</option>
                                             <option value="18">street</option>
@@ -298,15 +250,15 @@
                                             <option value="8">state section</option>
                                             <option value="7">state</option>
                                         </select>
-                                    </div>
+                                            </div>
 
 
 
-                                    <div id="hideLangSelector" style="display: none;">
-                                        <label id="map_lang_sel_label" for="map_lang_sel">Map Language
+                                            <div id="hideLangSelector" style="display: none;">
+                                                <label id="map_lang_sel_label" for="map_lang_sel">Map Language
                                             <a title="" data-toggle="tooltip" id="mapLangToolTip" data-original-title="Set the language for the map">
                                                 <i class="icon-question-sign"></i></a> </label>
-                                        <select id="map_lang_sel">
+                                                <select id="map_lang_sel">
                                             <option value="" selected>Google default</option>
                                             <option value="ar">Arabic</option>
                                             <option value="bg">Bulgarian</option>
@@ -363,56 +315,67 @@
                                             <option value="zh-TW">Chinese (Traditional)</option>
                                         </select>
 
-                                    </div>
+                                            </div>
 
 
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="span4">
-
-                                <div id="outerMarkerDesc">
-
-                                    <div id="markerDescriptionLabel" ><h5>Sample marker description</h5></div>
-
-                                    <div id="markerDescriptionDiv">
+                                        </div>
 
                                     </div>
 
+
+
+                                    <div class="span4">
+
+                                        <div id="outerMarkerDesc">
+
+                                            <div id="markerDescriptionLabel">
+                                                <h5>Sample marker description</h5>
+                                            </div>
+
+                                            <div id="markerDescriptionDiv">
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- end span4 -->
+
+
                                 </div>
-
-                            </div> <!-- end span4 -->
-
-
-                        </div>  <!-- ends row -->
-                    </div> <!-- end container -->
-
-                </div>
-
-                <div id="outerCustoms" class="outer-div-center" style="display: none;">
-                    <div id="innerCustoms" class="inner-div-center">
-    <h4>Custom Images <a id="toggleCustomizations" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
-                        <div id="customizationsDiv" style="display: none;">
-                            <div style="text-align: left;"><label for="logoToUpload" style="width: 200px; margin-right: 10px; display: inline;">Custom logo:<a title="" data-toggle="tooltip" id="customLogoToolTip" data-original-title="Upload 1 logo no larger than 10KB.  Ideal dimensions are 45x45."><i class="icon-question-sign"></i></a></label>
-        <span id="logoSpan" style="margin-right: 5px;"></span><input id="logoToUpload" type="file" size="45" name="logoToUpload" class="input" accept="image/*">        <button class="button" id="logoUpload" onclick="return ajaxFileUpload('logoToUpload');">Upload</button></p>
+                                <!-- ends row -->
                             </div>
+                            <!-- end container -->
 
-                            <div style="margin-top: 10px;" id="customImageId">
+                        </div>
 
-                                <h5 style="text-align: left;">Markers (pins) <a title="" data-toggle="tooltip" id="customMarkersToolTip" data-original-title="Upload up to 50 markers, no larger than 10KB each.">
-                                    <i class="icon-question-sign"></i></a> </h5>
-                                <p style="margin-bottom: 1px;">Use multiple markers if using grouping/categorization</p>
-                                <p><input id="fileToUpload" type="file" size="45" name="fileToUpload[]" class="input" multiple accept="image/*">
-                                    <button class="button" id="buttonUpload" onclick="return ajaxFileUpload('fileToUpload');" autocomplete="off">Upload</button></p>
-                                <input type="hidden" id="imgKey" value="" autocomplete="off">
-                                <div id="imageTable" style="display: none; background-color: white;">
+                        <div id="outerCustoms" class="outer-div-center" style="display: none;">
+                            <div id="innerCustoms" class="inner-div-center">
+                                <h4>Custom Images <a id="toggleCustomizations" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
+                                <div id="customizationsDiv" style="display: none;">
+                                    <div style="text-align: left;"><label for="logoToUpload" style="width: 200px; margin-right: 10px; display: inline;">Custom logo:<a title="" data-toggle="tooltip" id="customLogoToolTip" data-original-title="Upload 1 logo no larger than 10KB.  Ideal dimensions are 45x45."><i class="icon-question-sign"></i></a></label>
+                                        <span id="logoSpan" style="margin-right: 5px;"></span><input id="logoToUpload" type="file"
+                                            size="45" name="logoToUpload" class="input" accept="image/*"> <button class="button"
+                                            id="logoUpload" onclick="return ajaxFileUpload('logoToUpload');">Upload</button></p>
+                                    </div>
 
-                                </div>
+                                    <div style="margin-top: 10px;" id="customImageId">
 
-                                <p>Change the default cluster color for your custom markers: <select id="markerColor" name="colors">
+                                        <h5 style="text-align: left;">Markers (pins)
+                                            <a title="" data-toggle="tooltip" id="customMarkersToolTip" data-original-title="Upload up to 50 markers, no larger than 10KB each.">
+                                                <i class="icon-question-sign"></i></a>
+                                        </h5>
+                                        <p style="margin-bottom: 1px;">Use multiple markers if using grouping/categorization</p>
+                                        <p><input id="fileToUpload" type="file" size="45" name="fileToUpload[]" class="input"
+                                                multiple accept="image/*">
+                                            <button class="button" id="buttonUpload" onclick="return ajaxFileUpload('fileToUpload');" autocomplete="off">Upload</button></p>
+                                        <input type="hidden" id="imgKey" value="" autocomplete="off">
+                                        <div id="imageTable" style="display: none; background-color: white;">
+
+                                        </div>
+
+                                        <p>Change the default cluster color for your custom markers: <select id="markerColor"
+                                                name="colors">
 
                                     <option style="background-color: #00FFFF;"  value= "00FFFF">Blue green</option>
                                     <option style="background-color: #6B98FF;"  value= "6B98FF">Blue</option>
@@ -436,189 +399,194 @@
                                     <option style="background-color: #4169E1;"  value= "4169E1">Royal Blue</option>
                                     <option style="background-color: #FFED5C;" value= "FFED5C">Yellow</option>
                                 </select>
-                                </p>
+                                        </p>
+
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
 
-                    </div>
-                </div>
 
+                        <div id="outerMarkerDisplaySelects" class="outer-div-center" style="display: none;">
+                            <div id="innerMarkerDisplaySelects" class="inner-div-center">
+                                <h5 class="headerMargin">Choose items to show in marker description <a style="font-size: 11px; cursor: pointer; "
+                                        id="toggleMarkerDisplay">(show)</a></h5>
+                                <div id="markerDisplaySelects">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><label id="desc_from_label" for="noDisplay">Hide from Description</label></td>
+                                                <td></td>
+                                                <td><label id="desc_to_label" for="toDisplay">Show in Description</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select id="noDisplay" name="hide markers" multiple=""></select>
+                                                </td>
+                                                <td><input type="button" id="moveToDisplay" value="&gt;"> <br>
+                                                    <input type="button" id="removeFromDisplay" value="&lt;"> <br>
+                                                    <input type="button" id="moveAllToDisplay" value="&gt;&gt;"> <br>
+                                                    <input type="button" id="removeAllFromDisplay" value="&lt;&lt;"> <br>
 
-                <div id="outerMarkerDisplaySelects" class="outer-div-center" style="display: none;">
-                    <div id="innerMarkerDisplaySelects" class="inner-div-center">
-        <h5 class="headerMargin">Choose items to show in marker description   <a style="font-size: 11px; cursor: pointer; " id="toggleMarkerDisplay">(show)</a></h5>
-                        <div id="markerDisplaySelects">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td><label id="desc_from_label" for="noDisplay">Hide from Description</label></td>
-                                    <td></td>
-                                    <td><label id="desc_to_label" for="toDisplay">Show in Description</label></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <select id="noDisplay" name="hide markers" multiple="" ></select>
-                                    </td>
-                                    <td><input type="button" id="moveToDisplay" value="&gt;"> <br>
-                                        <input type="button" id="removeFromDisplay" value="&lt;"> <br>
-                                        <input type="button" id="moveAllToDisplay" value="&gt;&gt;"> <br>
-                                        <input type="button" id="removeAllFromDisplay" value="&lt;&lt;"> <br>
-
-                                    </td>
-                                    <td>
-                                        <select id="toDisplay" name="display markers" multiple="" ></select>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                                </td>
+                                                <td>
+                                                    <select id="toDisplay" name="display markers" multiple=""></select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
 
-                <div id="outerFilterSelects" class="outer-div-center" style="display: none;">
-                    <div id="innerFilterSelects" class="inner-div-center">
-        <h5 class="headerMargin">Select up to 12 items to filter on
-            <a style="font-size: 11px; cursor: pointer; " id="toggleFilters">(show)</a></h5>
-                        <div id="filterSelects" >
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td><label id="filter_from_label" for="noFilter">Available Filters</label></td>
-                                    <td></td>
-                                    <td><label id="filter_to_label" for="toFilter">Selected Filters</label></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <select id="noFilter" name="no filter" multiple="multiple" ></select>
-                                    </td>
-                                    <td><p><input type="button" id="moveToFilter" value="&gt;"></p>
+                        <div id="outerFilterSelects" class="outer-div-center" style="display: none;">
+                            <div id="innerFilterSelects" class="inner-div-center">
+                                <h5 class="headerMargin">Select up to 12 items to filter on
+                                    <a style="font-size: 11px; cursor: pointer; " id="toggleFilters">(show)</a></h5>
+                                <div id="filterSelects">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><label id="filter_from_label" for="noFilter">Available Filters</label></td>
+                                                <td></td>
+                                                <td><label id="filter_to_label" for="toFilter">Selected Filters</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select id="noFilter" name="no filter" multiple="multiple"></select>
+                                                </td>
+                                                <td>
+                                                    <p><input type="button" id="moveToFilter" value="&gt;"></p>
 
-                                        <p><input type="button" id="removeFromFilter" value="&lt;"></p>
+                                                    <p><input type="button" id="removeFromFilter" value="&lt;"></p>
 
-                                        <p><input type="button" id="removeAllFromFilter" value="&lt;&lt;"></p>
+                                                    <p><input type="button" id="removeAllFromFilter" value="&lt;&lt;"></p>
 
-                                    </td>
-                                    <td>
-                                        <select id="toFilter" name="filters" multiple=""  ></select>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p>
-                                <label for="dynamicFiltersCB" id="dynamicFiltersCB_label">Disable dynamic filters <a title="" data-toggle="tooltip" id="dynamicFiltersToolTip" data-original-title="Dynamic filters cause available filter data to change, similar to filters in excel">
+                                                </td>
+                                                <td>
+                                                    <select id="toFilter" name="filters" multiple=""></select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        <label for="dynamicFiltersCB" id="dynamicFiltersCB_label">Disable dynamic filters <a title="" data-toggle="tooltip" id="dynamicFiltersToolTip" data-original-title="Dynamic filters cause available filter data to change, similar to filters in excel">
                                     <i class="icon-question-sign"></i></a> </label>
-                                <input type="checkbox" value="false" name="dynamicfilters" id="dynamicFiltersCB" autocomplete="off">
-                            </p>
-                            <p>
-                                <label for="filterCountsCB" id="filterCountsCB_label">Display filter count <a title="" data-toggle="tooltip" id="filterCountsToolTip" data-original-title="Display the number of items next to each filter">
+                                        <input type="checkbox" value="false" name="dynamicfilters" id="dynamicFiltersCB" autocomplete="off">
+                                    </p>
+                                    <p>
+                                        <label for="filterCountsCB" id="filterCountsCB_label">Display filter count <a title="" data-toggle="tooltip" id="filterCountsToolTip" data-original-title="Display the number of items next to each filter">
                                     <i class="icon-question-sign"></i></a> </label>
-                                <input type="checkbox" value="false" name="filterCounts" id="filterCountsCB" autocomplete="off">
-                            </p>
+                                        <input type="checkbox" value="false" name="filterCounts" id="filterCountsCB" autocomplete="off">
+                                    </p>
 
-                            <p>
-                                <label for="multiSelectFiltersCB" id="multiSelectFiltersCB_label">Mulit-Select Filters <a title="" data-toggle="tooltip" id="multiSelectFiltersToolTip" data-original-title="Select multiple items from a filter.  Cannot be combined with dynamic filters.">
+                                    <p>
+                                        <label for="multiSelectFiltersCB" id="multiSelectFiltersCB_label">Mulit-Select Filters <a title="" data-toggle="tooltip" id="multiSelectFiltersToolTip" data-original-title="Select multiple items from a filter.  Cannot be combined with dynamic filters.">
                                     <i class="icon-question-sign"></i></a> </label>
-                                <input type="checkbox" value="false" name="multiSelectFilters" id="multiSelectFiltersCB" autocomplete="off">
-                            </p>
+                                        <input type="checkbox" value="false" name="multiSelectFilters" id="multiSelectFiltersCB" autocomplete="off">
+                                    </p>
 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
 
 
-    <!-- start new search stuff -->
-    <div id="outerSearchDisplay" class="outer-div-center" style="display: none;">
-        <div id="innerSearchSelects" class="inner-div-center">
+                        <!-- start new search stuff -->
+                        <div id="outerSearchDisplay" class="outer-div-center" style="display: none;">
+                            <div id="innerSearchSelects" class="inner-div-center">
 
 
-            <h5 class="headerMargin">Search Box Customizations
-                <a style="font-size: 11px; cursor: pointer; " id="toggleSearchOptions">(show)</a></h5>
-            <div id="searchSelects" class="customizations_layout" >
-                <p>
-                    <label for="disableSearchCB" id="disableSearchCB_label">Remove Search Box <a title="" data-toggle="tooltip" id="disableSearchTip" data-original-title="The search box will be removed.">
+                                <h5 class="headerMargin">Search Box Customizations
+                                    <a style="font-size: 11px; cursor: pointer; " id="toggleSearchOptions">(show)</a></h5>
+                                <div id="searchSelects" class="customizations_layout">
+                                    <p>
+                                        <label for="disableSearchCB" id="disableSearchCB_label">Remove Search Box <a title="" data-toggle="tooltip" id="disableSearchTip" data-original-title="The search box will be removed.">
                         <i class="icon-question-sign"></i></a> </label>
-                    <input type="checkbox" value="false" name="searchBoxDisable" id="disableSearchCB" autocomplete="off">
-                </p>
+                                        <input type="checkbox" value="false" name="searchBoxDisable" id="disableSearchCB" autocomplete="off">
+                                    </p>
 
-                <div id="showEnabledSearchDiv">
-                <p>
-                    <label for="mobileSearchCB" id="mobileSearchCB_label">Enable Mobile Search <a title="" data-toggle="tooltip" id="mobileSerchToolTip" data-original-title="Have the search box appear on mobile devices.  Due to size issues it is does not appear by default.">
+                                    <div id="showEnabledSearchDiv">
+                                        <p>
+                                            <label for="mobileSearchCB" id="mobileSearchCB_label">Enable Mobile Search <a title="" data-toggle="tooltip" id="mobileSerchToolTip" data-original-title="Have the search box appear on mobile devices.  Due to size issues it is does not appear by default.">
                         <i class="icon-question-sign"></i></a> </label>
-                    <input type="checkbox" value="false" name="filterCounts" id="mobileSearchCB" autocomplete="off">
-                </p>
-                <div style="text-align: left;"><label for="searchText" style="width: 200px; margin-right: 10px; display: inline;">Custom Search Text:</label><input id="searchText"  type="text" placeholder="Search" MAXLENGTH=50 style="width: 156px;"></div>
+                                            <input type="checkbox" value="false" name="filterCounts" id="mobileSearchCB" autocomplete="off">
+                                        </p>
+                                        <div style="text-align: left;"><label for="searchText" style="width: 200px; margin-right: 10px; display: inline;">Custom Search Text:</label>
+                                            <input
+                                                id="searchText" type="text" placeholder="Search" MAXLENGTH=50 style="width: 156px;"></div>
 
 
-                <p>
-                <h5 style="margin: 0;  text-align: left;">Location based search: </h5>
-                <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="nearestSearch" value="nearestSearch" name="searchType" checked>Find marker at nearest location</label>
-                <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="centerMapSearch" value="centerSearch" name="searchType"> Center map on location</label>
-                </p>
-                <h5 style="margin: 0; ">Select Searchable items </h5>
+                                        <p>
+                                            <h5 style="margin: 0;  text-align: left;">Location based search: </h5>
+                                            <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="nearestSearch" value="nearestSearch" name="searchType" checked>Find marker at nearest location</label>
+                                            <label class="radio" style=" text-align: left;"><input type="radio" autocomplete="off" id="centerMapSearch" value="centerSearch" name="searchType"> Center map on location</label>
+                                        </p>
+                                        <h5 style="margin: 0; ">Select Searchable items </h5>
 
-                <table>
-                    <tbody>
-                    <tr>
-                        <td><label id="search_from_label" for="noFilter">Do not search (filter) on items</label></td>
-                        <td></td>
-                        <td><label id="search_to_label" for="toFilter">Searchable (filter) Items</label></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select id="noSearch" name="no search" multiple="multiple" ></select>
-                        </td>
-                        <td><p><input type="button" id="moveToSearch" value="&gt;"></p>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><label id="search_from_label" for="noFilter">Do not search (filter) on items</label></td>
+                                                    <td></td>
+                                                    <td><label id="search_to_label" for="toFilter">Searchable (filter) Items</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select id="noSearch" name="no search" multiple="multiple"></select>
+                                                    </td>
+                                                    <td>
+                                                        <p><input type="button" id="moveToSearch" value="&gt;"></p>
 
-                            <p><input type="button" id="removeFromSearch" value="&lt;"></p>
+                                                        <p><input type="button" id="removeFromSearch" value="&lt;"></p>
 
-                            <p><input type="button" id="moveAllToSearch" value="&gt;&gt;"></p>
+                                                        <p><input type="button" id="moveAllToSearch" value="&gt;&gt;"></p>
 
-                        </td>
-                        <td>
-                            <select id="toSearch" name="search" multiple=""  ></select>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                </div>
+                                                    </td>
+                                                    <td>
+                                                        <select id="toSearch" name="search" multiple=""></select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-            </div>
-        </div>
-    </div>
-    <!-- end new search stuff -->
-
-
-    <!-- start custom radius stuff -->
-    <div id="outerMisc" class="outer-div-center" style="display: none;">
-        <div id="innerMisc" class="inner-div-center">
-            <h4>Radius Around point <a id="togglePinRadius" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
-
-            <div id="searchRadiusId" class="customizations_layout">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end new search stuff -->
 
 
-                <p>
-                    <label for="enableMarkerRadiusCB" id="enableMarkerRadiusCB_label">Enable Radius around Pins <a title="" data-toggle="tooltip" id="enableRadiusTip" data-original-title="The markers on the page can have a circle with a given radius around them.">
+                        <!-- start custom radius stuff -->
+                        <div id="outerMisc" class="outer-div-center" style="display: none;">
+                            <div id="innerMisc" class="inner-div-center">
+                                <h4>Radius Around point <a id="togglePinRadius" style="font-size: 11px; cursor: pointer; ">(show)</a></h4>
+
+                                <div id="searchRadiusId" class="customizations_layout">
+
+
+                                    <p>
+                                        <label for="enableMarkerRadiusCB" id="enableMarkerRadiusCB_label">Enable Radius around Pins <a title="" data-toggle="tooltip" id="enableRadiusTip" data-original-title="The markers on the page can have a circle with a given radius around them.">
                         <i class="icon-question-sign"></i></a> </label>
-                    <input type="checkbox" value="false" name="markerRadiusEnable" id="enableMarkerRadiusCB" autocomplete="off">
-                </p>
+                                        <input type="checkbox" value="false" name="markerRadiusEnable" id="enableMarkerRadiusCB" autocomplete="off">
+                                    </p>
 
 
-                <div id="showSearchRadiusDiv" style="display: none;">
+                                    <div id="showSearchRadiusDiv" style="display: none;">
 
 
 
-                    <p>
-                    <h5 style="margin: 0;  text-align: left;">Radius Units: </h5>
-                    <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusMiles" value="miles" name="radiusUnits" checked>miles</label>
-                    <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusKM" value="km" name="radiusUnits"> kilometers</label>
-                    </p>
+                                        <p>
+                                            <h5 style="margin: 0;  text-align: left;">Radius Units: </h5>
+                                            <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusMiles" value="miles" name="radiusUnits" checked>miles</label>
+                                            <label class="radio " style=" text-align: left;"><input type="radio" autocomplete="off" id="radiusKM" value="km" name="radiusUnits"> kilometers</label>
+                                        </p>
 
-                    <label id="selectableRadius" for="predefinedRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
+                                        <label id="selectableRadius" for="predefinedRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
     text-align: right;     width: 160px;">Radius distance:</label>
-                    <select id="predefinedRadiusSelect" style="  margin-bottom: 3px;   width: 200px;" autocomplete="off">
+                                        <select id="predefinedRadiusSelect" style="  margin-bottom: 3px;   width: 200px;" autocomplete="off">
                         <option  value= "-1">Use Custom Value</option>
 
                         <option  value= "1">1</option>
@@ -631,206 +599,229 @@
                         <option  value= "200">200</option>
                     </select>
 
-                    <div id="dataRadiusSelectDiv" style="display: none;">
-                        <label id="dataRadiusSelectLabel" for="dataRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
+                                        <div id="dataRadiusSelectDiv" style="display: none;">
+                                            <label id="dataRadiusSelectLabel" for="dataRadiusSelect" style="  clear: left;     float: left;     font-size: 1.1em;    margin-right: 10px;
     text-align: right;     width: 160px;">Select column:</label>
 
-                        <select id="dataRadiusSelect" style="  margin-bottom: 3px;
+                                            <select id="dataRadiusSelect" style="  margin-bottom: 3px;
     width: 200px; ">
 
                         </select>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
-    <!-- end custom radius stuff -->
-
-
-                <!-- This is the element in which the map will be displayed. -->
-                <div id="outerMap" class="outer-div-center" style="display: none;">
-    <div id="mapMessage" class="inner-div-center" style="padding-bottom: 10px; max-width: 800px;">Verify markers are correctly located.  Move incorrectly located markers or remove unneeded markers. After changing options or data, click  &quot; Update Map &quot;. Save the map when it looks correct.</div>
-                    <div id="sameLocationMarkers" class="inner-div-center row-fluid" style="padding-bottom: 10px; display: none;">Multiple markers are in the same location. I want to move <select id="moveAllMarkers"><option value="all">ALL</option><option value="one">ONE</option></select> at one time.</div>
-
-        <div id="updateMap" class="outer-div-center" >
-            <button id="mapUpdateButton" class="btn  btn-success" style="white-space: nowrap;" type="button">Update Map</button>
-        </div>
-                    <div>
-
-    <div id="mapWrapper" >
-        <div id="mapHeader" style="left:0;right:0; z-index:100; top:0px; min-height: 45px; border: 2px solid black"
-             class="mapDefaultFont">
-            <div id="searchDiv" class="search-query">
-                <input id="searchBox" style="max-width: 125px; margin-bottom: 0px; margin-top: 3px;" class="search-query" type="text" placeholder="Search"
-                       onkeypress="return handleSearchSubmit(event)" value=""><img id="searchImg" class="search-query"
-                                                                                   src="https://cdn.easymapmaker.com/img/search.png"
-                                                                                   onclick="runSearch();" Title="Search, Filter, or Find nearest location"
-                                                                                   alt="search map">
-
-            </div>
-
-            <div id="filtersDiv" class="mapFilterFont"></div>
-
-                            </div>
-                            <div id="mapContainer">
-                                <div id="map" class="column left">
-                                </div>
-                                <div id="left" class="column leftDisplay" style="background-color: white; display: none;" >
-                                    <div id="left_header" class="dirHeader">
-                                        <a id="dirTabDisplay" style="margin-left: 5px;" class="activeDirHeader">Directions</a>
-                                        <a id="nearbyTabDisplay">Nearby</a>
-                <img id="hideOptions" src="https://cdn.easymapmaker.com/img/hide_options.png" style="float: right; margin-right: 10px;  cursor: pointer;" alt="hide more options display">
-                                    </div>
-                                    <div id="leftDirDisplay" class="leftDiv" style="background-color: white;">
-                                        <p> <label id="dirAddress1_label" for="dirAddress1" class="optionLabel">Start: </label><input id="dirAddress1"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
-                                        <p> <label id="dirAddress2_label" for="dirAddress2" class="optionLabel">End: </label> <input id="dirAddress2"  type="text"  SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
-                                        <!--  <p><a href="#">add location</a></p> -->
-
-                                        <p style="text-align: right; margin-right: 50px;"><INPUT id="directionSubmit" value="Get Directions" TYPE="SUBMIT" />
-                                            <INPUT id="clearDirSubmit" value="Clear" TYPE="SUBMIT" /> </p>
-                                        <div id="dirError" style="display: none; "></div>
-                                        <div id="dirTextDiv" style="padding: 10px; height: 275px; overflow: auto;"></div>
+                                        </div>
 
                                     </div>
-                                    <div id="leftNearbyDisplay" class="leftDiv" style="display: none;">
-                                        <p><label id="nearAddress_label" for="nearAddress" class="optionLabel">Location: </label><input id="nearAddress"  type="text"  SIZE=20 MAXLENGTH=200 style="width: 120px;"></p>
-                                        <p> <label id="nearRadius_label" for="nearRadius" class="optionLabel">Radius: </label><input id="nearRadius"  type="text"  SIZE=3 MAXLENGTH=3 style="text-align: right; width: 40px;" autocomplete="off">
-                                            <label class="radio" style=" text-align: left; padding-left: 2px; display: inline;"><input type="radio" name="distType" value="mi" id='distMi' checked  style="float: none; margin-left: 0px;"> miles </label>
-                                            <label class="radio" style=" text-align: left;  padding-left: 2px; display: inline;"><input type="radio" name="distType" value="km"  id='distKM' style="float: none; margin-left: 0px;" > km </label></p>
-                                        <p><label class="checkboxText"><input type="checkbox" name="showCircle" value="false"  id='showCircle'   class="checkLabel" style="    margin-left: 80px;    margin-right: 10px;">show circle</label></p>
-                                        <p id="displayDistance"><label  class="checkboxText" ><input type="checkbox" name="showDistance" value="false"  id='showDistance'  class="checkLabel"><span class="checkboxText">show distance</span></label></p>
 
-                                        <p style="text-align: right; margin-right: 50px;"><INPUT id="nearbySubmit" value="Find Nearby" TYPE="SUBMIT" />
-                                            <INPUT id="clearNearbySubmit" value="Clear" TYPE="SUBMIT" /> </p>
-                                        <div id="nearbyError" style="display: none; "></div>
-                                    </div>
 
                                 </div>
+
                             </div>
-                            <div id="groupChecksDiv">
+                        </div>
+                        <!-- end custom radius stuff -->
+
+
+                        <!-- This is the element in which the map will be displayed. -->
+                        <div id="outerMap" class="outer-div-center" style="display: none;">
+                            <div id="mapMessage" class="inner-div-center" style="padding-bottom: 10px; max-width: 800px;">Verify markers are correctly located. Move incorrectly located markers or remove unneeded markers.
+                                After changing options or data, click &quot; Update Map &quot;. Save the map when it looks
+                                correct.</div>
+                            <div id="sameLocationMarkers" class="inner-div-center row-fluid" style="padding-bottom: 10px; display: none;">Multiple markers are in the same location. I want to move <select id="moveAllMarkers"><option value="all">ALL</option><option value="one">ONE</option></select>                                at one time.</div>
+
+                            <div id="updateMap" class="outer-div-center">
+                                <button id="mapUpdateButton" class="btn  btn-success" style="white-space: nowrap;" type="button">Update Map</button>
+                            </div>
+                            <div>
+
+                                <div id="mapWrapper">
+                                    <div id="mapHeader" style="left:0;right:0; z-index:100; top:0px; min-height: 45px; border: 2px solid black" class="mapDefaultFont">
+                                        <div id="searchDiv" class="search-query">
+                                            <input id="searchBox" style="max-width: 125px; margin-bottom: 0px; margin-top: 3px;" class="search-query" type="text" placeholder="Search"
+                                                onkeypress="return handleSearchSubmit(event)" value="">
+                                            <img
+                                                id="searchImg" class="search-query" src="https://cdn.easymapmaker.com/img/search.png"
+                                                onclick="runSearch();" Title="Search, Filter, or Find nearest location" alt="search map">
+
+                                        </div>
+
+                                        <div id="filtersDiv" class="mapFilterFont"></div>
+
+                                    </div>
+                                    <div id="mapContainer">
+                                        <div id="map" class="column left">
+                                        </div>
+                                        <div id="left" class="column leftDisplay" style="background-color: white; display: none;">
+                                            <div id="left_header" class="dirHeader">
+                                                <a id="dirTabDisplay" style="margin-left: 5px;" class="activeDirHeader">Directions</a>
+                                                <a id="nearbyTabDisplay">Nearby</a>
+                                                <img id="hideOptions" src="https://cdn.easymapmaker.com/img/hide_options.png" style="float: right; margin-right: 10px;  cursor: pointer;"
+                                                    alt="hide more options display">
+                                            </div>
+                                            <div id="leftDirDisplay" class="leftDiv" style="background-color: white;">
+                                                <p> <label id="dirAddress1_label" for="dirAddress1" class="optionLabel">Start: </label>
+                                                    <input
+                                                        id="dirAddress1" type="text" SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                                                <p> <label id="dirAddress2_label" for="dirAddress2" class="optionLabel">End: </label>                                                    <input id="dirAddress2" type="text" SIZE=20 MAXLENGTH=200 class="leftTextWidth"></p>
+                                                <!--  <p><a href="#">add location</a></p> -->
+
+                                                <p style="text-align: right; margin-right: 50px;">
+                                                    <INPUT id="directionSubmit" value="Get Directions" TYPE="SUBMIT" />
+                                                    <INPUT id="clearDirSubmit" value="Clear" TYPE="SUBMIT" /> </p>
+                                                <div id="dirError" style="display: none; "></div>
+                                                <div id="dirTextDiv" style="padding: 10px; height: 275px; overflow: auto;"></div>
+
+                                            </div>
+                                            <div id="leftNearbyDisplay" class="leftDiv" style="display: none;">
+                                                <p><label id="nearAddress_label" for="nearAddress" class="optionLabel">Location: </label>
+                                                    <input
+                                                        id="nearAddress" type="text" SIZE=20 MAXLENGTH=200 style="width: 120px;"></p>
+                                                <p> <label id="nearRadius_label" for="nearRadius" class="optionLabel">Radius: </label>
+                                                    <input
+                                                        id="nearRadius" type="text" SIZE=3 MAXLENGTH=3 style="text-align: right; width: 40px;"
+                                                        autocomplete="off">
+                                                        <label class="radio" style=" text-align: left; padding-left: 2px; display: inline;"><input type="radio" name="distType" value="mi" id='distMi' checked  style="float: none; margin-left: 0px;"> miles </label>
+                                                        <label class="radio" style=" text-align: left;  padding-left: 2px; display: inline;"><input type="radio" name="distType" value="km"  id='distKM' style="float: none; margin-left: 0px;" > km </label></p>
+                                                <p><label class="checkboxText"><input type="checkbox" name="showCircle" value="false"  id='showCircle'   class="checkLabel" style="    margin-left: 80px;    margin-right: 10px;">show circle</label></p>
+                                                <p id="displayDistance"><label class="checkboxText"><input type="checkbox" name="showDistance" value="false"  id='showDistance'  class="checkLabel"><span class="checkboxText">show distance</span></label></p>
+
+                                                <p style="text-align: right; margin-right: 50px;">
+                                                    <INPUT id="nearbySubmit" value="Find Nearby" TYPE="SUBMIT" />
+                                                    <INPUT id="clearNearbySubmit" value="Clear" TYPE="SUBMIT" /> </p>
+                                                <div id="nearbyError" style="display: none; "></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div id="groupChecksDiv">
+                                    </div>
+                                </div>
+
+                                <div id="mapSaveStatus" class="mapInfoStatus alert" style="display: none; ">
+
+                                </div>
+                                <p style="height: 1px;">&nbsp;</p>
+
+                                <div id="mapUrl" class="mapInfoStatus" style="display: none;">
+                                </div>
+                                <p style="height: 1px;">&nbsp;</p>
+
+                                <div id="bulkGeoUrl" class="mapInfoStatus" style="display: none;">
+                                </div>
+                                <p style="height: 1px;">&nbsp;</p>
+
+                                <div id="emailDisplay" class="alert mapInfoStatus" style="width: 555px; display: none;">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <p style="margin-bottom: 0px;">
+                                        <h6>Email has been sent but may show up in a spam or junk folder. </h6>
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
 
-                        <div id="mapSaveStatus"  class="mapInfoStatus alert" style="display: none; ">
-
-                        </div><p style="height: 1px;">&nbsp;</p>
-
-                        <div id="mapUrl" class="mapInfoStatus" style="display: none;">
-                        </div><p style="height: 1px;">&nbsp;</p>
-
-                        <div id="bulkGeoUrl" class="mapInfoStatus" style="display: none;">
-                        </div><p style="height: 1px;">&nbsp;</p>
-
-                        <div id="emailDisplay" class="alert mapInfoStatus" style="width: 555px; display: none;">
-                            <button type="button" class="close" data-dismiss="alert">x</button>
-                            <p style="margin-bottom: 0px;"><h6>Email has been sent but may show up in a spam or junk folder. </h6></p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="saveMapDiv" style="display: none; ">
+                        <div id="saveMapDiv" style="display: none; ">
 
 
-                    <div id="mapModal" class="modal hide fade in" style="display: none; ">
-                        <div class="modal-header">
-                            <a id="closeSaveModal" class="close" data-dismiss="modal">x</a>
-                            <h3>Enter details then Save Map</h3>
-                        </div>
-                        <div class="modal-body">
+                            <div id="mapModal" class="modal hide fade in" style="display: none; ">
+                                <div class="modal-header">
+                                    <a id="closeSaveModal" class="close" data-dismiss="modal">x</a>
+                                    <h3>Enter details then Save Map</h3>
+                                </div>
+                                <div class="modal-body">
 
-                            <form id="saveMapForm" autocomplete="off">
-                                <p><label for="titleInput" class="modalLabel">Title</label><input id="titleInput"  type="text" placeholder="(Optional) Map Title" MAXLENGTH=250 ></p>
-                                <p><label for="descriptionInput" class="modalLabel">Description</label> <textarea id="descriptionInput"  placeholder="(Optional) Map Description" MAXLENGTH=500 rows="2"  ></textarea></p>
-                                <p><label for="emailInput" class="modalLabel">Email </label><input id="emailInput"  type="text" placeholder="(Optional) E-mail address" MAXLENGTH=100  ></p>
-                                <p><small>Enter an email address if you want to edit your map or receive notifications for your map.</small></p>
+                                    <form id="saveMapForm" autocomplete="off">
+                                        <p><label for="titleInput" class="modalLabel">Title</label><input id="titleInput" type="text"
+                                                placeholder="(Optional) Map Title" MAXLENGTH=250></p>
+                                        <p><label for="descriptionInput" class="modalLabel">Description</label> <textarea id="descriptionInput"
+                                                placeholder="(Optional) Map Description" MAXLENGTH=500 rows="2"></textarea></p>
+                                        <p><label for="emailInput" class="modalLabel">Email </label><input id="emailInput" type="text"
+                                                placeholder="(Optional) E-mail address" MAXLENGTH=100></p>
+                                        <p><small>Enter an email address if you want to edit your map or receive notifications for your map.</small></p>
 
-                                <p style="margin-top: 5px; margin-bottom: 8px;">
-                                    <label class="checkbox" style="text-align: left; ">
+                                        <p style="margin-top: 5px; margin-bottom: 8px;">
+                                            <label class="checkbox" style="text-align: left; ">
                                         <input id="genKmlCB" type="checkbox">
                                         Generate KML for use with Google Earth.
                                     </label> &nbsp;
-                                </p>
-<div id="mapProtection">
-                                <h4 style="margin-top: 10px;">Map Protection level: </h4>
-                                <label class="radio" style=" text-align: left;">
+                                        </p>
+                                        <div id="mapProtection">
+                                            <h4 style="margin-top: 10px;">Map Protection level: </h4>
+                                            <label class="radio" style=" text-align: left;">
                                     <input type="radio" name="protectionLevel" value="private" id="protectionLevel_private" checked> Private - The map will not be shared except by you.
                                 </label>
-                                <label class="radio" style="text-align: left;">
+                                            <label class="radio" style="text-align: left;">
                                     <input type="radio" name="protectionLevel" value="public" id="protectionLevel_public" > Public - Map may be shared and found using google.
                                 </label>
-</div>
-                <div id="mapPasswordProtection" style="display: none;">
-                    <h4 style="margin-top: 10px;">Map Password </h4>
-                    <p><small>Enter a password for extra protection for your map.</small></p>
+                                        </div>
+                                        <div id="mapPasswordProtection" style="display: none;">
+                                            <h4 style="margin-top: 10px;">Map Password </h4>
+                                            <p><small>Enter a password for extra protection for your map.</small></p>
 
-                    <p><label for="pwInput" class="modalLabel">Password </label><input id="pwInput"  type="password" placeholder="(Optional) password" MAXLENGTH="50"  ></p>
+                                            <p><label for="pwInput" class="modalLabel">Password </label><input id="pwInput"
+                                                    type="password" placeholder="(Optional) password" MAXLENGTH="50"></p>
 
-               </div>
-   				<span style=" text-align: left;     clear: left; float: left;font-size: 1.1em; margin-right: 10px;">
+                                        </div>
+                                        <span style=" text-align: left;     clear: left; float: left;font-size: 1.1em; margin-right: 10px;">
                     By using this service, you agree to the <a href="https://developers.google.com/maps/terms" target="_blank">google terms of service</a>.
 
                 </span>
-                            </form>
+                                    </form>
+
+
+                                </div>
+                                <div class="modal-footer" style="text-align: center;">
+                                    <a id="mapSaveButton" class="btn btn-success">Save Map</a>
+                                    <a id="closeSaveButton" class="btn" data-dismiss="modal">Close</a>
+                                </div>
+                            </div>
+
+                            <div class="outer-div-center"><button id="mapModalButton" class="btn btn-large btn-primary" type="button" data-loading-text="Saving..."
+                                    autocomplete="off" style="margin-top: 5px;">Launch Map Save</button></div>
+                        </div>
+
+
+
+                        <!-- This is the element in which the group checkboxes will be displayed -->
+
+                        <div class="span10">
+                            <!-- end  	id="mapCreateDiv" -->
+
 
 
                         </div>
-                        <div class="modal-footer" style="text-align: center;">
-                            <a id="mapSaveButton" class="btn btn-success">Save Map</a>
-                            <a id="closeSaveButton" class="btn" data-dismiss="modal">Close</a>
-                        </div>
+                        <!-- end right nav -->
+
+                    </div>
+                    <!-- end row fluid -->
+
+                    <div class="span1" id="rightNav">
+                        <!--  right nav -->
                     </div>
 
-                    <div class="outer-div-center"><button id="mapModalButton" class="btn btn-large btn-primary" type="button" data-loading-text="Saving..."  autocomplete="off" style="margin-top: 5px;">Launch Map Save</button></div>
-                </div>
-
-
-
-                <!-- This is the element in which the group checkboxes will be displayed -->
-
-                <div class="span10"> <!-- end  	id="mapCreateDiv" -->
-
-
 
                 </div>
-                <!-- end right nav -->
 
-            </div>
-            <!-- end row fluid -->
 
-            <div class="span1" id="rightNav">
-                <!--  right nav -->
+
             </div>
 
 
+
+            <!-- end main body -->
+
+            <!-- end container-->
         </div>
 
-
+        <div id="push"></div>
 
     </div>
 
 
-
-    <!-- end main body -->
-
-    <!-- end container-->
+    <div id="footer">
+        <div class="row">
+            <p>&copy; By Alan Ng, Ben Foo, Rosalie Prom and Sarah Huang.</p>
+        </div>
     </div>
 
-    <div id="push"></div>
-
-</div>
-
-
-<div id="footer">
-    <div class="row">        
-        <p>&copy; By Alan Ng, Ben Foo, Rosalie Prom and Sarah Huang.</p>
     </div>
-</div>
-
-</div>
 </body>
+
 </html>
